@@ -4,29 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="XL SATU - Internet rumah fiber optic unlimited dengan kecepatan hingga 400 Mbps. First Media Jadi XL SATU menawarkan paket internet terbaik untuk keluarga Indonesia.">
-  <meta name="keywords" content="internet rumah, wifi unlimited, fiber optic, xl satu, first media, internet rumah cepat">
+  <meta name="keywords" content="internet rumah, wifi unlimited, fiber optic, xl satu, first media">
   <meta name="author" content="XL SATU">
-  <meta name="language" content="Indonesian">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#05a986">
   
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://satu.xl.co.id/">
   <meta property="og:title" content="First Media Jadi XL SATU | Internet Rumah Terbaik untuk Keluarga">
   <meta property="og:description" content="Internet rumah fiber optic unlimited dengan kecepatan hingga 400 Mbps. Gratis biaya instalasi!">
   <meta property="og:image" content="https://static-xlsatu.xl.co.id/images/post/7180eb84-2dac-4a9d-9ed2-8619178ef982.jpg">
   
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://satu.xl.co.id/">
-  <meta property="twitter:title" content="First Media Jadi XL SATU | Internet Rumah Terbaik">
-  <meta property="twitter:description" content="Internet rumah fiber optic unlimited dengan kecepatan hingga 400 Mbps.">
-  <meta property="twitter:image" content="https://static-xlsatu.xl.co.id/images/post/7180eb84-2dac-4a9d-9ed2-8619178ef982.jpg">
-  
   <link rel="canonical" href="https://satu.xl.co.id/">
   <link rel="icon" href="https://satu.xl.co.id/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="https://satu.xl.co.id/apple-touch-icon.png">
   
   <title>First Media Jadi XL SATU | Internet Rumah Terbaik untuk Keluarga</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +45,7 @@
     /* ── HEADER ── */
     header {
       background: var(--white);
-      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
       position: sticky; 
       top: 0; 
       z-index: 100;
@@ -64,23 +53,23 @@
     .header-inner {
       max-width: 1200px; 
       margin: 0 auto;
-      padding: 14px 24px;
+      padding: 12px 24px;
       display: flex; 
       align-items: center; 
       justify-content: space-between;
     }
     .logo img { 
-      height: 36px; 
+      height: 32px; 
       width: auto;
     }
     nav { 
       display: flex; 
       align-items: center; 
-      gap: 32px; 
+      gap: 28px; 
     }
     nav a {
-      font-size: 14px; 
-      font-weight: 600; 
+      font-size: 13px; 
+      font-weight: 500; 
       color: var(--text);
       text-decoration: none; 
       transition: color .2s;
@@ -88,34 +77,31 @@
     nav a:hover, 
     nav a:focus { 
       color: var(--green); 
-      outline: none;
     }
     .btn-wa-header {
       background: var(--green); 
       color: var(--white);
-      padding: 10px 22px; 
-      border-radius: 999px;
-      font-size: 14px; 
-      font-weight: 700;
+      padding: 9px 20px; 
+      border-radius: 6px;
+      font-size: 13px; 
+      font-weight: 600;
       text-decoration: none; 
       display: flex; 
       align-items: center; 
-      gap: 8px;
-      transition: background .2s, transform .2s;
+      gap: 6px;
+      transition: background .2s;
       border: none;
       cursor: pointer;
     }
-    .btn-wa-header:hover,
-    .btn-wa-header:focus { 
+    .btn-wa-header:hover { 
       background: var(--green-dark);
-      transform: translateY(-2px);
-      outline: none;
     }
 
     /* ── HERO SLIDER ── */
     .slider { 
       position: relative; 
-      overflow: hidden; 
+      overflow: hidden;
+      background: #f0f0f0;
     }
     .slides { 
       display: flex; 
@@ -128,32 +114,29 @@
     }
     .slide img { 
       width: 100%; 
-      height: 480px; 
+      height: 420px; 
       object-fit: cover; 
       display: block;
-      loading: lazy;
     }
     .slider-dots {
       position: absolute; 
-      bottom: 14px; 
+      bottom: 16px; 
       left: 50%; 
       transform: translateX(-50%);
       display: flex; 
-      gap: 6px;
+      gap: 8px;
     }
     .dot {
-      width: 8px; 
-      height: 8px; 
+      width: 10px; 
+      height: 10px; 
       border-radius: 50%;
-      background: rgba(255,255,255,.5); 
+      background: rgba(255,255,255,.4); 
       cursor: pointer; 
-      transition: background .2s;
+      transition: background .3s;
       border: none;
     }
-    .dot:hover,
-    .dot:focus {
-      background: rgba(255,255,255,.8);
-      outline: none;
+    .dot:hover { 
+      background: rgba(255,255,255,.7);
     }
     .dot.active { 
       background: var(--white); 
@@ -162,32 +145,29 @@
       position: absolute; 
       top: 50%; 
       transform: translateY(-50%);
-      background: rgba(255,255,255,.85); 
+      background: rgba(255,255,255,.8); 
       border: none; 
       border-radius: 50%;
-      width: 40px; 
-      height: 40px; 
+      width: 36px; 
+      height: 36px; 
       display: flex; 
       align-items: center; 
       justify-content: center;
       cursor: pointer; 
-      font-size: 18px; 
+      font-size: 16px; 
       color: var(--text); 
       z-index: 5;
-      box-shadow: 0 2px 8px rgba(0,0,0,.15);
-      transition: background .2s, transform .2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,.12);
+      transition: background .2s;
     }
-    .slider-btn:hover,
-    .slider-btn:focus {
-      background: rgba(255,255,255,.95);
-      transform: translateY(-50%) scale(1.1);
-      outline: none;
+    .slider-btn:hover {
+      background: var(--white);
     }
     .slider-btn.prev { 
-      left: 16px; 
+      left: 12px; 
     }
     .slider-btn.next { 
-      right: 16px; 
+      right: 12px; 
     }
 
     /* ── QUICK ACTIONS ── */
@@ -203,82 +183,79 @@
       gap: 0;
     }
     .qa-item {
+      flex: 1;
       display: flex; 
       align-items: center; 
-      gap: 10px;
-      padding: 16px 28px; 
+      gap: 12px;
+      padding: 14px 0;
       cursor: pointer;
-      border-bottom: 3px solid transparent;
+      border-bottom: 2px solid transparent;
       text-decoration: none; 
       color: var(--text);
       transition: border-color .2s, color .2s;
-      font-size: 13px; 
-      font-weight: 600;
+      font-size: 12px; 
+      font-weight: 500;
+      justify-content: center;
     }
     .qa-item:hover, 
     .qa-item.active,
     .qa-item:focus { 
       border-bottom-color: var(--green); 
       color: var(--green);
-      outline: none;
     }
     .qa-item img { 
-      width: 22px; 
-      height: 22px; 
+      width: 20px; 
+      height: 20px; 
       object-fit: contain;
     }
 
     /* ── SECTION TITLE ── */
     .section-title {
       text-align: center; 
-      margin-bottom: 8px;
-      font-size: 26px; 
+      margin-bottom: 4px;
+      font-size: 24px; 
       font-weight: 800; 
       color: var(--text);
     }
     .section-sub {
       text-align: center; 
       color: var(--text-muted);
-      font-size: 14px; 
-      margin-bottom: 36px;
+      font-size: 13px; 
+      margin-bottom: 32px;
     }
 
     /* ── PAKET CARDS ── */
     .paket-section { 
       background: var(--gray-bg); 
-      padding: 56px 24px; 
+      padding: 48px 24px; 
     }
     .paket-grid {
       max-width: 1100px; 
       margin: 0 auto;
       display: grid; 
       grid-template-columns: repeat(3, 1fr); 
-      gap: 24px;
+      gap: 20px;
     }
     .paket-card {
       background: var(--white); 
-      border-radius: 20px;
+      border-radius: 12px;
       overflow: hidden; 
-      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      box-shadow: 0 1px 3px rgba(0,0,0,.05);
       display: flex; 
       flex-direction: column;
       position: relative;
-      transition: transform .2s, box-shadow .2s;
+      transition: box-shadow .2s;
     }
     .paket-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,.12);
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
     }
     .paket-card-header {
-      padding: 24px 24px 0;
+      padding: 20px 20px 0;
       color: var(--white); 
-      min-height: 120px;
+      min-height: 100px;
       display: flex; 
       flex-direction: column; 
       justify-content: flex-end;
-      border-radius: 16px 16px 0 0; 
-      position: relative; 
-      overflow: hidden;
     }
     .paket-card-header.value { 
       background: linear-gradient(135deg, #1a6b5a 0%, #0d9e7a 100%); 
@@ -290,22 +267,22 @@
       background: linear-gradient(135deg, #6b2fa0 0%, #9b4fd4 100%); 
     }
     .paket-title { 
-      font-size: 18px; 
-      font-weight: 800; 
-      margin-bottom: 4px; 
+      font-size: 16px; 
+      font-weight: 700; 
+      margin-bottom: 2px; 
     }
     .paket-subtitle { 
-      font-size: 12px; 
-      opacity: .85; 
-      margin-bottom: 18px; 
+      font-size: 11px; 
+      opacity: .8; 
+      margin-bottom: 12px; 
     }
     .speed-meter { 
-      margin: 0 24px 0; 
+      margin: 0 0 0 0;
     }
     .speed-label { 
       display: flex; 
       justify-content: space-between; 
-      font-size: 11px; 
+      font-size: 10px; 
       color: var(--text-muted); 
       margin-bottom: 4px; 
       font-weight: 600; 
@@ -313,8 +290,8 @@
     .speed-bar-bg { 
       background: #e5e7eb; 
       border-radius: 999px; 
-      height: 8px; 
-      margin-bottom: 6px; 
+      height: 6px; 
+      margin-bottom: 4px; 
       position: relative; 
     }
     .speed-bar-fill { 
@@ -325,45 +302,45 @@
       left: 0; 
     }
     .speed-bar-dot { 
-      width: 16px; 
-      height: 16px; 
+      width: 14px; 
+      height: 14px; 
       border-radius: 50%; 
       background: var(--white); 
-      border: 3px solid; 
+      border: 2px solid; 
       position: absolute; 
       top: 50%; 
       transform: translateY(-50%); 
     }
     .speed-note { 
-      font-size: 11px; 
+      font-size: 10px; 
       color: var(--text-muted); 
-      margin-bottom: 16px; 
+      margin-bottom: 12px; 
     }
 
     .paket-body { 
-      padding: 16px 24px 24px; 
+      padding: 12px 20px 20px; 
       flex: 1; 
       display: flex; 
       flex-direction: column; 
     }
     .ideal-label { 
-      font-size: 11px; 
+      font-size: 9px; 
       font-weight: 700; 
       color: var(--text-muted); 
       text-transform: uppercase; 
-      letter-spacing: .5px; 
-      margin-bottom: 8px; 
+      letter-spacing: .4px; 
+      margin-bottom: 6px; 
     }
     .ideal-tags { 
       display: flex; 
       flex-wrap: wrap; 
-      gap: 6px; 
-      margin-bottom: 20px; 
+      gap: 4px; 
+      margin-bottom: 12px; 
     }
     .tag {
-      font-size: 11px; 
-      font-weight: 600;
-      padding: 4px 10px; 
+      font-size: 10px; 
+      font-weight: 500;
+      padding: 3px 8px; 
       border-radius: 999px;
       border: 1px solid var(--border); 
       color: var(--text-muted);
@@ -371,43 +348,43 @@
     .fitur-list { 
       display: flex; 
       flex-direction: column; 
-      gap: 10px; 
-      margin-bottom: 20px; 
+      gap: 8px; 
+      margin-bottom: 12px; 
     }
     .fitur-item { 
       display: flex; 
       align-items: center; 
-      gap: 10px; 
-      font-size: 13px; 
-      font-weight: 600; 
+      gap: 8px; 
+      font-size: 12px; 
+      font-weight: 500; 
     }
     .fitur-item img { 
-      width: 28px; 
-      height: 28px;
+      width: 24px; 
+      height: 24px;
     }
 
     .price-box { 
       margin-top: auto; 
     }
     .price-before { 
-      font-size: 13px; 
+      font-size: 12px; 
       color: var(--text-muted); 
-      text-decoration: line-through; 
+      text-decoration: line-through;
     }
     .price-main { 
-      font-size: 28px; 
+      font-size: 24px; 
       font-weight: 800; 
-      color: var(--text); 
+      color: var(--text);
     }
     .price-main span { 
-      font-size: 14px; 
+      font-size: 12px; 
       font-weight: 500; 
       color: var(--text-muted); 
     }
     .price-ppn { 
-      font-size: 12px; 
+      font-size: 11px; 
       color: var(--text-muted); 
-      margin-bottom: 14px; 
+      margin-bottom: 10px; 
     }
     .btn-pilih {
       display: block; 
@@ -415,38 +392,34 @@
       text-align: center;
       background: var(--green); 
       color: var(--white);
-      padding: 14px; 
-      border-radius: 12px;
-      font-size: 14px; 
+      padding: 12px; 
+      border-radius: 6px;
+      font-size: 12px; 
       font-weight: 700;
       text-decoration: none; 
       border: none; 
       cursor: pointer;
-      transition: background .2s, transform .2s;
+      transition: background .2s;
     }
-    .btn-pilih:hover,
-    .btn-pilih:focus { 
+    .btn-pilih:hover { 
       background: var(--green-dark);
-      transform: translateY(-2px);
-      outline: none;
     }
     .badge-laris {
       position: absolute; 
-      top: 12px; 
-      right: 12px;
+      top: 10px; 
+      right: 10px;
       background: #ff6b00; 
       color: var(--white);
-      font-size: 10px; 
+      font-size: 9px; 
       font-weight: 700; 
       text-transform: uppercase;
-      padding: 4px 10px; 
+      padding: 3px 8px; 
       border-radius: 999px; 
-      letter-spacing: .5px;
     }
 
     /* ── ABOUT SECTION ── */
     .about-section { 
-      padding: 64px 24px; 
+      padding: 56px 24px; 
       background: var(--white); 
     }
     .about-inner {
@@ -454,43 +427,42 @@
       margin: 0 auto;
       display: grid; 
       grid-template-columns: 1fr 1fr; 
-      gap: 60px; 
+      gap: 48px; 
       align-items: center;
     }
     .about-text h2 { 
-      font-size: 28px; 
+      font-size: 24px; 
       font-weight: 800; 
-      margin-bottom: 16px; 
+      margin-bottom: 12px; 
     }
     .about-text p { 
-      font-size: 15px; 
+      font-size: 14px; 
       color: var(--text-muted); 
       line-height: 1.7; 
     }
     .about-video { 
       position: relative; 
-      border-radius: 16px; 
+      border-radius: 12px; 
       overflow: hidden; 
       cursor: pointer;
     }
     .about-video img { 
       width: 100%; 
-      display: block; 
-      border-radius: 16px;
+      display: block;
     }
     .play-btn {
       position: absolute; 
       top: 50%; 
       left: 50%; 
       transform: translate(-50%,-50%);
-      width: 64px; 
-      height: 64px; 
+      width: 56px; 
+      height: 56px; 
       background: rgba(255,255,255,.9);
       border-radius: 50%; 
       display: flex; 
       align-items: center; 
       justify-content: center;
-      font-size: 24px; 
+      font-size: 20px; 
       color: var(--green);
       transition: transform .2s;
     }
@@ -500,10 +472,10 @@
 
     /* ── FITUR PILLS ── */
     .fitur-pills {
-      background: var(--white); 
+      background: var(--gray-bg); 
       border-top: 1px solid var(--border); 
       border-bottom: 1px solid var(--border);
-      padding: 20px 24px;
+      padding: 16px 24px;
     }
     .fitur-pills-inner {
       max-width: 1100px; 
@@ -511,44 +483,44 @@
       display: flex; 
       flex-wrap: wrap; 
       justify-content: center; 
-      gap: 32px;
+      gap: 24px;
     }
     .pill-item { 
       display: flex; 
       align-items: center; 
-      gap: 10px; 
-      font-size: 13px; 
-      font-weight: 700; 
+      gap: 8px; 
+      font-size: 12px; 
+      font-weight: 600; 
       color: var(--text); 
     }
     .pill-item img { 
-      width: 28px; 
-      height: 28px;
+      width: 24px; 
+      height: 24px;
     }
 
     /* ── MYXL SECTION ── */
     .myxl-section { 
-      background: #f0faf7; 
-      padding: 64px 24px; 
+      background: var(--white); 
+      padding: 56px 24px; 
     }
     .myxl-inner {
       max-width: 1100px; 
       margin: 0 auto;
       display: grid; 
       grid-template-columns: 1fr 1fr; 
-      gap: 60px; 
+      gap: 48px; 
       align-items: center;
     }
     .myxl-text h2 { 
-      font-size: 28px; 
+      font-size: 24px; 
       font-weight: 800; 
-      margin-bottom: 12px; 
+      margin-bottom: 8px; 
     }
     .myxl-text p { 
-      font-size: 15px; 
+      font-size: 14px; 
       color: var(--text-muted); 
       line-height: 1.7; 
-      margin-bottom: 24px; 
+      margin-bottom: 20px; 
     }
     .store-btns { 
       display: flex; 
@@ -556,18 +528,18 @@
       flex-wrap: wrap; 
     }
     .store-btn img { 
-      height: 44px;
+      height: 40px;
       width: auto;
     }
     .myxl-img img { 
       width: 100%; 
-      max-width: 400px;
+      max-width: 340px;
     }
 
     /* ── BANTUAN ── */
     .bantuan-section { 
-      padding: 64px 24px; 
-      background: var(--white); 
+      padding: 56px 24px; 
+      background: var(--gray-bg); 
     }
     .bantuan-inner { 
       max-width: 800px; 
@@ -575,33 +547,32 @@
     }
     .faq-item {
       border-bottom: 1px solid var(--border); 
-      padding: 16px 0;
+      padding: 12px 0;
       cursor: pointer;
     }
     .faq-q {
       display: flex; 
       justify-content: space-between; 
       align-items: center;
-      font-size: 14px; 
+      font-size: 13px; 
       font-weight: 600; 
       gap: 16px;
       transition: color .2s;
     }
-    .faq-item:hover .faq-q,
-    .faq-item:focus-within .faq-q {
+    .faq-item:hover .faq-q {
       color: var(--green);
     }
     .faq-q .icon { 
       color: var(--green); 
-      font-size: 16px; 
+      font-size: 14px; 
       flex-shrink: 0; 
       transition: transform .3s; 
     }
     .faq-a { 
-      font-size: 14px; 
+      font-size: 13px; 
       color: var(--text-muted); 
       line-height: 1.6; 
-      margin-top: 10px; 
+      margin-top: 8px; 
       display: none; 
     }
     .faq-item.open .faq-a { 
@@ -614,26 +585,23 @@
       display: inline-flex; 
       align-items: center; 
       gap: 8px;
-      margin-top: 24px; 
+      margin-top: 20px; 
       color: var(--green); 
-      font-size: 14px; 
+      font-size: 13px; 
       font-weight: 700;
       text-decoration: none; 
-      border: 1.5px solid var(--green);
-      padding: 10px 20px; 
-      border-radius: 999px; 
-      transition: background .2s, transform .2s;
+      border: 1px solid var(--green);
+      padding: 10px 18px; 
+      border-radius: 6px; 
+      transition: background .2s;
     }
-    .more-btn:hover,
-    .more-btn:focus {
+    .more-btn:hover {
       background: var(--green-light);
-      transform: translateX(4px);
-      outline: none;
     }
 
     /* ── HUBUNGI KAMI ── */
     .hubungi-section {
-      padding: 64px 24px;
+      padding: 56px 24px;
       background: linear-gradient(135deg, #0d7a5f 0%, #05a986 100%);
       color: var(--white);
     }
@@ -646,64 +614,58 @@
       align-items: center;
     }
     .hubungi-text h2 { 
-      font-size: 28px; 
+      font-size: 24px; 
       font-weight: 800; 
       margin-bottom: 8px; 
     }
     .hubungi-text p { 
-      font-size: 15px; 
+      font-size: 14px; 
       opacity: .85; 
-      margin-bottom: 32px; 
+      margin-bottom: 24px; 
     }
     .contact-grid { 
       display: grid; 
       grid-template-columns: 1fr 1fr; 
-      gap: 24px; 
+      gap: 20px; 
     }
     .contact-box { 
-      background: rgba(255,255,255,.15); 
-      border-radius: 14px; 
-      padding: 20px; 
+      background: rgba(255,255,255,.12); 
+      border-radius: 8px; 
+      padding: 16px; 
     }
     .contact-box h4 { 
-      font-size: 13px; 
+      font-size: 11px; 
       font-weight: 700; 
-      opacity: .8; 
-      margin-bottom: 10px; 
+      opacity: .75; 
+      margin-bottom: 8px; 
       text-transform: uppercase; 
-      letter-spacing: .5px; 
+      letter-spacing: .4px; 
     }
     .contact-item { 
       display: flex; 
       flex-direction: column; 
-      margin-bottom: 8px; 
+      margin-bottom: 6px; 
     }
     .contact-label { 
-      font-size: 11px; 
+      font-size: 10px; 
       opacity: .7; 
     }
     .contact-num { 
-      font-size: 18px; 
+      font-size: 16px; 
       font-weight: 800;
       color: var(--white);
       text-decoration: none;
-      transition: opacity .2s;
-    }
-    .contact-num:hover,
-    .contact-num:focus {
-      opacity: .8;
-      outline: none;
     }
     .hubungi-img img { 
-      width: 220px;
+      width: 200px;
       height: auto;
     }
 
     /* ── FOOTER ── */
     footer { 
       background: #1a1a1a; 
-      color: rgba(255,255,255,.7); 
-      padding: 32px 24px; 
+      color: rgba(255,255,255,.6); 
+      padding: 24px;
     }
     .footer-inner {
       max-width: 1200px; 
@@ -711,144 +673,98 @@
       display: flex; 
       justify-content: space-between; 
       align-items: center; 
-      flex-wrap: wrap; 
       gap: 16px;
     }
     .footer-logo {
-      height: 28px;
+      height: 24px;
       width: auto;
       filter: brightness(0) invert(1);
-      opacity: .7;
-      margin-bottom: 10px;
-      display: block;
+      opacity: .5;
+    }
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .footer-copy { 
+      font-size: 11px; 
     }
     .footer-links { 
       display: flex; 
-      gap: 20px; 
-      font-size: 13px; 
+      gap: 16px; 
+      font-size: 11px; 
     }
     .footer-links a { 
-      color: rgba(255,255,255,.6); 
+      color: rgba(255,255,255,.5); 
       text-decoration: none;
       transition: color .2s;
     }
-    .footer-links a:hover,
-    .footer-links a:focus { 
-      color: var(--white);
-      outline: none;
+    .footer-links a:hover { 
+      color: rgba(255,255,255,.8);
     }
     .footer-socials { 
       display: flex; 
-      gap: 12px; 
+      gap: 10px; 
     }
     .footer-socials a {
-      width: 36px; 
-      height: 36px; 
+      width: 32px; 
+      height: 32px; 
       border-radius: 50%;
       background: rgba(255,255,255,.1);
       display: flex; 
       align-items: center; 
       justify-content: center;
       color: var(--white); 
-      font-size: 16px; 
+      font-size: 14px; 
       text-decoration: none;
-      transition: background .2s, transform .2s;
+      transition: background .2s;
     }
-    .footer-socials a:hover,
-    .footer-socials a:focus { 
+    .footer-socials a:hover { 
       background: var(--green);
-      transform: translateY(-2px);
-      outline: none;
-    }
-    .footer-copy { 
-      font-size: 12px; 
     }
 
     /* ── FLOATING WA ── */
     .float-wa {
       position: fixed; 
-      bottom: 24px; 
-      right: 24px; 
+      bottom: 20px; 
+      right: 20px; 
       z-index: 200;
       background: #25d366; 
       color: var(--white);
       border-radius: 999px; 
-      padding: 14px 20px;
+      padding: 12px 18px;
       display: flex; 
       align-items: center; 
       gap: 10px;
       text-decoration: none; 
-      box-shadow: 0 4px 20px rgba(37,211,102,.4);
-      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 4px 12px rgba(37,211,102,.35);
+      transition: transform .2s;
       border: none;
     }
-    .float-wa:hover,
-    .float-wa:focus { 
+    .float-wa:hover { 
       transform: scale(1.05); 
-      box-shadow: 0 8px 30px rgba(37,211,102,.5);
-      outline: none;
     }
     .float-wa i { 
-      font-size: 28px; 
+      font-size: 24px; 
     }
     .float-wa-text { 
       line-height: 1.2; 
+      font-size: 12px;
     }
     .float-wa-text small { 
-      font-size: 11px; 
-      opacity: .85; 
+      font-size: 10px; 
+      opacity: .8; 
       display: block; 
     }
     .float-wa-text strong { 
-      font-size: 14px; 
+      font-size: 12px; 
       font-weight: 700; 
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .paket-grid { 
-        grid-template-columns: 1fr; 
-        max-width: 420px; 
-      }
-      .about-inner, 
-      .myxl-inner, 
-      .hubungi-inner { 
-        grid-template-columns: 1fr; 
-      }
-      .hubungi-img { 
-        display: none; 
-      }
-      nav { 
-        display: none; 
-      }
-      .contact-grid { 
-        grid-template-columns: 1fr; 
-      }
-      .slide img { 
-        height: 220px; 
-      }
-      .section-title {
-        font-size: 22px;
-      }
-      .paket-card-header {
-        min-height: 100px;
-      }
-      .myxl-section {
-        padding: 48px 24px;
-      }
-      .about-section,
-      .bantuan-section,
-      .hubungi-section {
-        padding: 48px 24px;
-      }
-      .fitur-pills-inner {
-        gap: 20px;
-      }
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .header-inner {
-        padding: 12px 16px;
+        padding: 10px 16px;
       }
       .logo img { 
         height: 28px; 
@@ -857,115 +773,122 @@
         padding: 8px 16px;
         font-size: 12px;
       }
-      .slider-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 14px;
+      nav {
+        display: none;
+      }
+      .paket-grid { 
+        grid-template-columns: 1fr; 
+      }
+      .about-inner, 
+      .myxl-inner { 
+        grid-template-columns: 1fr; 
+        gap: 30px;
+      }
+      .hubungi-inner { 
+        grid-template-columns: 1fr;
+      }
+      .hubungi-img { 
+        display: none; 
+      }
+      .contact-grid { 
+        grid-template-columns: 1fr; 
       }
       .slide img { 
-        height: 180px; 
+        height: 240px; 
+      }
+      .section-title {
+        font-size: 20px;
+      }
+      .quick-actions-inner {
+        flex-wrap: wrap;
       }
       .qa-item {
-        padding: 14px 16px;
+        flex: auto;
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-inner {
+        padding: 8px 12px;
+      }
+      .logo img { 
+        height: 24px; 
+      }
+      .paket-section {
+        padding: 32px 16px;
+      }
+      .slide img { 
+        height: 160px; 
+      }
+      .slider-btn {
+        width: 28px;
+        height: 28px;
         font-size: 12px;
       }
       .section-title {
         font-size: 18px;
-        margin-bottom: 8px;
       }
       .section-sub {
         font-size: 12px;
-        margin-bottom: 24px;
       }
-      .paket-section {
+      .quick-actions {
+        padding: 0 12px;
+      }
+      .quick-actions-inner {
+        max-width: 100%;
+      }
+      .qa-item {
+        font-size: 11px;
+        padding: 10px 8px;
+        gap: 6px;
+      }
+      .qa-item img {
+        width: 16px;
+        height: 16px;
+      }
+      .about-section,
+      .myxl-section,
+      .bantuan-section,
+      .hubungi-section {
         padding: 40px 16px;
-      }
-      .paket-grid {
-        gap: 16px;
-      }
-      .paket-card-header {
-        padding: 16px 16px 0;
-      }
-      .paket-body {
-        padding: 12px 16px 16px;
-      }
-      .paket-title {
-        font-size: 16px;
       }
       .about-inner,
       .myxl-inner,
       .hubungi-inner {
-        gap: 30px;
+        gap: 24px;
       }
       .about-text h2,
       .myxl-text h2,
       .hubungi-text h2 {
-        font-size: 20px;
-        margin-bottom: 12px;
+        font-size: 18px;
       }
-      .about-text p,
-      .myxl-text p,
-      .hubungi-text p {
-        font-size: 13px;
+      .paket-title {
+        font-size: 14px;
+      }
+      .fitur-pills-inner {
+        gap: 12px;
       }
       .pill-item {
         font-size: 11px;
       }
-      .pill-item img,
-      .fitur-item img {
-        width: 20px;
-        height: 20px;
-      }
-      .faq-q {
-        font-size: 12px;
-      }
-      .faq-a {
-        font-size: 12px;
-      }
-      .float-wa {
-        bottom: 16px;
-        right: 16px;
-        padding: 12px 16px;
-      }
-      .float-wa i {
-        font-size: 24px;
-      }
-      .float-wa-text small {
-        font-size: 9px;
-      }
-      .float-wa-text strong {
-        font-size: 12px;
-      }
       .footer-inner {
-        flex-direction: column;
-      }
-      .footer-links {
         flex-direction: column;
         gap: 12px;
       }
-      .footer-socials {
-        order: -1;
+      .footer-links {
+        flex-direction: column;
+        gap: 8px;
       }
-    }
-
-    /* ── ACCESSIBILITY ── */
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+      .float-wa {
+        bottom: 12px;
+        right: 12px;
+        padding: 10px 14px;
+        font-size: 11px;
       }
-    }
-
-    /* ── FOCUS VISIBLE ── */
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible {
-      outline: 2px solid var(--green);
-      outline-offset: 2px;
+      .float-wa i {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -975,186 +898,166 @@
 <header role="banner">
   <div class="header-inner">
     <div class="logo">
-      <a href="https://satu.xl.co.id/" title="Kembali ke Beranda XL SATU">
-        <img src="https://satu.xl.co.id/_next/image?url=https%3A%2F%2Fstatic-xlsatu.xl.co.id%2Fimages%2Fpost%2F46bf5fe2-0960-45be-958b-3a7cc6fb12a3.png&w=256&q=75" alt="XL SATU Logo" loading="lazy">
+      <a href="#" title="XL SATU">
+        <img src="https://satu.xl.co.id/_next/image?url=https%3A%2F%2Fstatic-xlsatu.xl.co.id%2Fimages%2Fpost%2F46bf5fe2-0960-45be-958b-3a7cc6fb12a3.png&w=256&q=75" alt="XL SATU" loading="lazy">
       </a>
     </div>
-    <nav role="navigation" aria-label="Navigasi Utama">
+    <nav role="navigation">
       <a href="#paket">Paket</a>
-      <a href="https://satu.xl.co.id/promo" target="_blank" rel="noopener noreferrer">Promo</a>
       <a href="#bantuan">Bantuan</a>
-      <a href="https://satu.xl.co.id/bayar-tagihan" target="_blank" rel="noopener noreferrer">Bayar Tagihan</a>
+      <a href="#hubungi">Hubungi Kami</a>
     </nav>
-    <a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20mau%20berlangganan%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="btn-wa-header" title="Hubungi via WhatsApp">
-      <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat WA
+    <a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="btn-wa-header">
+      <i class="fab fa-whatsapp"></i> Chat WA
     </a>
   </div>
 </header>
 
 <!-- HERO SLIDER -->
-<div class="slider" id="slider" role="region" aria-label="Slider Promosi XL SATU">
+<div class="slider" id="slider">
   <div class="slides" id="slides">
-    <div class="slide" onclick="window.open('https://wa.me/628599370107?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU','_blank')" role="button" tabindex="0" aria-label="Slide 1 - Hubungi Sales">
-      <img src="https://static-xlsatu.xl.co.id/images/post/7180eb84-2dac-4a9d-9ed2-8619178ef982.jpg" alt="First Media Jadi XL SATU - Promo Terbaru" loading="lazy" onerror="this.src='https://static-xlsatu.xl.co.id/images/post/893404e2-3914-4039-a778-a687260ef195.jpg'">
+    <div class="slide" onclick="window.open('https://wa.me/628599370107','_blank')">
+      <img src="https://static-xlsatu.xl.co.id/images/post/7180eb84-2dac-4a9d-9ed2-8619178ef982.jpg" alt="Promo XL SATU" loading="lazy">
     </div>
-    <div class="slide" onclick="window.open('https://satu.xl.co.id/paket','_blank')" role="button" tabindex="0" aria-label="Slide 2 - Cek Paket">
-      <img src="https://static-xlsatu.xl.co.id/images/post/1f2d5035-7ddc-4c5f-bfed-8ee08ddeadb1.jpg" alt="Paket XL SATU" loading="lazy" onerror="this.src='https://static-xlsatu.xl.co.id/images/post/893404e2-3914-4039-a778-a687260ef195.jpg'">
+    <div class="slide" onclick="window.open('https://satu.xl.co.id/paket','_blank')">
+      <img src="https://static-xlsatu.xl.co.id/images/post/1f2d5035-7ddc-4c5f-bfed-8ee08ddeadb1.jpg" alt="Paket Internet XL SATU" loading="lazy">
     </div>
-    <div class="slide" onclick="window.open('https://satu.xl.co.id/bayar-tagihan','_blank')" role="button" tabindex="0" aria-label="Slide 3 - Bayar Tagihan">
-      <img src="https://static-xlsatu.xl.co.id/images/post/4275fd50-d749-4920-965c-21b1222efade.jpg" alt="Bayar Tagihan XL SATU" loading="lazy" onerror="this.src='https://static-xlsatu.xl.co.id/images/post/893404e2-3914-4039-a778-a687260ef195.jpg'">
+    <div class="slide" onclick="window.open('https://satu.xl.co.id/bayar-tagihan','_blank')">
+      <img src="https://static-xlsatu.xl.co.id/images/post/4275fd50-d749-4920-965c-21b1222efade.jpg" alt="Bayar Tagihan" loading="lazy">
     </div>
-    <div class="slide" onclick="window.open('https://satu.xl.co.id/bayar-tagihan','_blank')" role="button" tabindex="0" aria-label="Slide 4 - Bayar via myXL">
-      <img src="https://static-xlsatu.xl.co.id/images/post/e77a7435-d61b-4044-82b6-8d42a14ea2af.jpg" alt="Bayar via myXL App" loading="lazy" onerror="this.src='https://static-xlsatu.xl.co.id/images/post/893404e2-3914-4039-a778-a687260ef195.jpg'">
-    </div>
-    <div class="slide" role="button" tabindex="0" aria-label="Slide 5 - Promo XL SATU">
-      <img src="https://static-xlsatu.xl.co.id/images/post/5e3f9b9e-06f5-421c-ac6e-4185affa907d.png" alt="Promo XL SATU" loading="lazy" onerror="this.src='https://static-xlsatu.xl.co.id/images/post/893404e2-3914-4039-a778-a687260ef195.jpg'">
+    <div class="slide" onclick="window.open('https://satu.xl.co.id/bayar-tagihan','_blank')">
+      <img src="https://static-xlsatu.xl.co.id/images/post/e77a7435-d61b-4044-82b6-8d42a14ea2af.jpg" alt="myXL App" loading="lazy">
     </div>
   </div>
-  <button class="slider-btn prev" onclick="moveSlide(-1)" aria-label="Slide Sebelumnya">&#8249;</button>
-  <button class="slider-btn next" onclick="moveSlide(1)" aria-label="Slide Berikutnya">&#8250;</button>
-  <div class="slider-dots" id="dots" role="tablist" aria-label="Indikator Slide"></div>
+  <button class="slider-btn prev" onclick="moveSlide(-1)" aria-label="Slide sebelumnya">&#8249;</button>
+  <button class="slider-btn next" onclick="moveSlide(1)" aria-label="Slide berikutnya">&#8250;</button>
+  <div class="slider-dots" id="dots"></div>
 </div>
 
 <!-- QUICK ACTIONS -->
-<div class="quick-actions" role="navigation" aria-label="Aksi Cepat">
+<div class="quick-actions">
   <div class="quick-actions-inner">
-    <a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20mau%20daftar%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="qa-item" title="Daftar Sekarang">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-calendar-schedule.a8cdffaa.svg" alt="" aria-hidden="true" loading="lazy">
+    <a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20mau%20daftar%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="qa-item">
+      <img src="https://satu.xl.co.id/_next/static/media/ic-calendar-schedule.a8cdffaa.svg" alt="" loading="lazy">
       Daftar Sekarang
     </a>
-    <a href="#paket" class="qa-item" title="Cek Paket Internet">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-network.e404c112.svg" alt="" aria-hidden="true" loading="lazy">
-      Cek Paket Internet
+    <a href="#paket" class="qa-item">
+      <img src="https://satu.xl.co.id/_next/static/media/ic-network.e404c112.svg" alt="" loading="lazy">
+      Cek Paket
     </a>
-    <a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20mau%20lacak%20pesanan%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="qa-item" title="Lacak Pesanan">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-track.1db4c39b.svg" alt="" aria-hidden="true" loading="lazy">
-      Lacak Pesanan
+    <a href="https://wa.me/628599370107" target="_blank" rel="noopener noreferrer" class="qa-item">
+      <img src="https://satu.xl.co.id/_next/static/media/ic-info-card-prabayar.6e2c8c2a.svg" alt="" loading="lazy">
+      Hubungi Sales
     </a>
   </div>
 </div>
 
 <!-- FITUR PILLS -->
-<div class="fitur-pills" role="region" aria-label="Fitur Utama">
+<div class="fitur-pills">
   <div class="fitur-pills-inner">
     <div class="pill-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-fiber-optic.69eb272a.svg" alt="" aria-hidden="true" loading="lazy">
+      <img src="https://satu.xl.co.id/_next/static/media/ic-fiber-optic.69eb272a.svg" alt="" loading="lazy">
       Fiber Optic
     </div>
     <div class="pill-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-internet.cd2ced90.svg" alt="" aria-hidden="true" loading="lazy">
+      <img src="https://satu.xl.co.id/_next/static/media/ic-internet.cd2ced90.svg" alt="" loading="lazy">
       WiFi Unlimited
     </div>
     <div class="pill-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-info-card-prabayar.6e2c8c2a.svg" alt="" aria-hidden="true" loading="lazy">
-      Kuota HP Sekeluarga
-    </div>
-    <div class="pill-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-no-transaction.394e8f33.svg" alt="" aria-hidden="true" loading="lazy">
+      <img src="https://satu.xl.co.id/_next/static/media/ic-no-transaction.394e8f33.svg" alt="" loading="lazy">
       SATU Tagihan
     </div>
     <div class="pill-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-xl-satu.5ac939f3.svg" alt="" aria-hidden="true" loading="lazy">
+      <img src="https://satu.xl.co.id/_next/static/media/ic-xl-satu.5ac939f3.svg" alt="" loading="lazy">
       SATU Aplikasi
     </div>
   </div>
 </div>
 
 <!-- PAKET -->
-<section class="paket-section" id="paket" aria-labelledby="paket-title">
-  <h2 class="section-title" id="paket-title">Pilihan paket sesuai kebutuhan internet rumah Anda</h2>
-  <p class="section-sub">Harga Promo • Gratis Biaya Instalasi</p>
+<section class="paket-section" id="paket">
+  <h2 class="section-title">Pilihan paket sesuai kebutuhan Anda</h2>
+  <p class="section-sub">Gratis Biaya Instalasi</p>
 
   <div class="paket-grid">
 
     <!-- 250 Mbps -->
     <div class="paket-card">
       <div class="paket-card-header value">
-        <div class="paket-title">250 Mbps Internet 1 Bulan</div>
-        <div class="paket-subtitle">Kecepatan internet dengan Speed Booster</div>
+        <div class="paket-title">250 Mbps</div>
+        <div class="paket-subtitle">Kecepatan optimal untuk keluarga</div>
       </div>
-      <div style="padding: 16px 24px 0;">
+      <div style="padding: 12px 20px 0;">
         <div class="speed-label"><span>100mbps</span><span>250mbps</span></div>
-        <div class="speed-bar-bg" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" aria-label="Kecepatan 250 Mbps">
+        <div class="speed-bar-bg">
           <div class="speed-bar-fill" style="width:62%; background:linear-gradient(90deg,#0d9e7a,#05a986);"></div>
-          <div class="speed-bar-dot" style="left:calc(62% - 8px); border-color:#05a986;"></div>
+          <div class="speed-bar-dot" style="left:calc(62% - 7px); border-color:#05a986;"></div>
         </div>
         <div class="speed-note">Ideal untuk kamu</div>
       </div>
       <div class="paket-body">
         <div class="ideal-tags">
           <span class="tag">Browsing</span>
-          <span class="tag">Sosial Media</span>
-          <span class="tag">Streaming 4K</span>
-          <span class="tag">Video Conference HD</span>
-          <span class="tag">Game Online</span>
-          <span class="tag">Upload Konten HD</span>
+          <span class="tag">Streaming HD</span>
+          <span class="tag">Video Call</span>
+          <span class="tag">Gaming</span>
         </div>
         <div class="fitur-list">
           <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/ac9c1ffe-2357-4b6a-ae1f-376058901815.png" alt="Ikon Perangkat" loading="lazy">
-            Hingga 10 Perangkat
+            <img src="https://static-xlsatu.xl.co.id/images/post/ac9c1ffe-2357-4b6a-ae1f-376058901815.png" alt="">
+            10 Perangkat
           </div>
           <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/f9963b35-a038-47eb-9b06-73b62b6e3100.png" alt="Ikon Instalasi" loading="lazy">
-            Gratis Biaya Instalasi
-          </div>
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/ce7d46a1-205c-48e3-a5dd-851478518cf9.png" alt="Ikon Promo" loading="lazy">
-            Promo Terbatas
+            <img src="https://static-xlsatu.xl.co.id/images/post/f9963b35-a038-47eb-9b06-73b62b6e3100.png" alt="">
+            Gratis Instalasi
           </div>
         </div>
         <div class="price-box">
-          <div class="price-before">Mulai dari Rp289.000/bulan</div>
-          <div class="price-main">Rp229.000<span>/bulan*</span></div>
-          <div class="price-ppn">Harga setelah PPN Rp254.190</div>
-          <a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20minat%20paket%20XL%20SATU%20250%20Mbps%20Rp229.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" title="Pilih Paket 250 Mbps">Saya Pilih Ini</a>
+          <div class="price-before">Rp289.000</div>
+          <div class="price-main">Rp229.000<span>/bln</span></div>
+          <div class="price-ppn">Termasuk PPN</div>
+          <a href="https://wa.me/628599370107?text=Saya%20minat%20paket%20250%20Mbps" target="_blank" rel="noopener noreferrer" class="btn-pilih">Pilih Paket</a>
         </div>
       </div>
     </div>
 
     <!-- 350 Mbps -->
     <div class="paket-card">
-      <div class="badge-laris" aria-label="Paket paling laris">Paling Laris</div>
+      <div class="badge-laris">TERLARIS</div>
       <div class="paket-card-header smart">
-        <div class="paket-title">350 Mbps Internet 1 Bulan</div>
-        <div class="paket-subtitle">Kecepatan internet dengan Speed Booster</div>
+        <div class="paket-title">350 Mbps</div>
+        <div class="paket-subtitle">Kecepatan tinggi untuk semua</div>
       </div>
-      <div style="padding: 16px 24px 0;">
+      <div style="padding: 12px 20px 0;">
         <div class="speed-label"><span>150mbps</span><span>350mbps</span></div>
-        <div class="speed-bar-bg" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Kecepatan 350 Mbps">
+        <div class="speed-bar-bg">
           <div class="speed-bar-fill" style="width:75%; background:linear-gradient(90deg,#1a8ac0,#2ba8e0);"></div>
-          <div class="speed-bar-dot" style="left:calc(75% - 8px); border-color:#1a8ac0;"></div>
+          <div class="speed-bar-dot" style="left:calc(75% - 7px); border-color:#1a8ac0;"></div>
         </div>
         <div class="speed-note">Ideal untuk kamu</div>
       </div>
       <div class="paket-body">
         <div class="ideal-tags">
-          <span class="tag">Browsing</span>
-          <span class="tag">Sosial Media</span>
           <span class="tag">Streaming 4K</span>
-          <span class="tag">Video Conference 4K</span>
-          <span class="tag">Game Online</span>
-          <span class="tag">Upload Konten HD</span>
+          <span class="tag">Video Call HD</span>
+          <span class="tag">Gaming Online</span>
+          <span class="tag">Upload HD</span>
         </div>
         <div class="fitur-list">
           <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/52c191fd-6e22-440e-bf1f-be0c212153a0.png" alt="Ikon Perangkat" loading="lazy">
-            Hingga 12 Perangkat
+            <img src="https://static-xlsatu.xl.co.id/images/post/52c191fd-6e22-440e-bf1f-be0c212153a0.png" alt="">
+            12 Perangkat
           </div>
           <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/e7c772b8-1d02-42f6-8e1f-295c4e2e356f.png" alt="Ikon Instalasi" loading="lazy">
-            Gratis Biaya Instalasi
-          </div>
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/b1c4af7e-449e-41ac-83c4-b786fd2a4a34.png" alt="Ikon Promo" loading="lazy">
-            Promo Terbatas
+            <img src="https://static-xlsatu.xl.co.id/images/post/e7c772b8-1d02-42f6-8e1f-295c4e2e356f.png" alt="">
+            Gratis Instalasi
           </div>
         </div>
         <div class="price-box">
-          <div class="price-before">Mulai dari Rp359.000/bulan</div>
-          <div class="price-main">Rp279.000<span>/bulan*</span></div>
-          <div class="price-ppn">Harga setelah PPN Rp309.690</div>
-          <a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20minat%20paket%20XL%20SATU%20350%20Mbps%20Rp279.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" title="Pilih Paket 350 Mbps">Saya Pilih Ini</a>
+          <div class="price-before">Rp359.000</div>
+          <div class="price-main">Rp279.000<span>/bln</span></div>
+          <div class="price-ppn">Termasuk PPN</div>
+          <a href="https://wa.me/628599370107?text=Saya%20minat%20paket%20350%20Mbps" target="_blank" rel="noopener noreferrer" class="btn-pilih">Pilih Paket</a>
         </div>
       </div>
     </div>
@@ -1162,45 +1065,39 @@
     <!-- 400 Mbps -->
     <div class="paket-card">
       <div class="paket-card-header family">
-        <div class="paket-title">400 Mbps Internet 1 Bulan</div>
-        <div class="paket-subtitle">Kecepatan internet dengan Speed Booster</div>
+        <div class="paket-title">400 Mbps</div>
+        <div class="paket-subtitle">Kecepatan super untuk profesional</div>
       </div>
-      <div style="padding: 16px 24px 0;">
+      <div style="padding: 12px 20px 0;">
         <div class="speed-label"><span>300mbps</span><span>400mbps</span></div>
-        <div class="speed-bar-bg" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Kecepatan 400 Mbps">
+        <div class="speed-bar-bg">
           <div class="speed-bar-fill" style="width:88%; background:linear-gradient(90deg,#9b4fd4,#c07ef0);"></div>
-          <div class="speed-bar-dot" style="left:calc(88% - 8px); border-color:#9b4fd4;"></div>
+          <div class="speed-bar-dot" style="left:calc(88% - 7px); border-color:#9b4fd4;"></div>
         </div>
         <div class="speed-note">Ideal untuk kamu</div>
       </div>
       <div class="paket-body">
         <div class="ideal-tags">
-          <span class="tag">Browsing</span>
-          <span class="tag">Sosial Media</span>
-          <span class="tag">Streaming 4K</span>
-          <span class="tag">Video Conference 4K</span>
-          <span class="tag">Game Online</span>
-          <span class="tag">Upload Konten 4K</span>
+          <span class="tag">Streaming 4K+</span>
+          <span class="tag">Video Call 4K</span>
+          <span class="tag">Gaming Pro</span>
+          <span class="tag">Upload 4K</span>
         </div>
         <div class="fitur-list">
           <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/65c6fd67-7b38-405a-9798-e1f0424124a6.png" alt="Ikon Perangkat" loading="lazy">
-            Hingga 14 Perangkat
+            <img src="https://static-xlsatu.xl.co.id/images/post/65c6fd67-7b38-405a-9798-e1f0424124a6.png" alt="">
+            14 Perangkat
           </div>
           <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/4409f8f4-7f05-4906-a310-e989ac1924e1.png" alt="Ikon Instalasi" loading="lazy">
-            Gratis Biaya Instalasi
-          </div>
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/87fd4549-aaf6-465e-af4f-5704c9269338.png" alt="Ikon Promo" loading="lazy">
-            Promo Terbatas
+            <img src="https://static-xlsatu.xl.co.id/images/post/4409f8f4-7f05-4906-a310-e989ac1924e1.png" alt="">
+            Gratis Instalasi
           </div>
         </div>
         <div class="price-box">
-          <div class="price-before">Mulai dari Rp389.000/bulan</div>
-          <div class="price-main">Rp300.000<span>/bulan*</span></div>
-          <div class="price-ppn">Harga setelah PPN Rp333.000</div>
-          <a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20minat%20paket%20XL%20SATU%20400%20Mbps%20Rp300.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" title="Pilih Paket 400 Mbps">Saya Pilih Ini</a>
+          <div class="price-before">Rp389.000</div>
+          <div class="price-main">Rp300.000<span>/bln</span></div>
+          <div class="price-ppn">Termasuk PPN</div>
+          <a href="https://wa.me/628599370107?text=Saya%20minat%20paket%20400%20Mbps" target="_blank" rel="noopener noreferrer" class="btn-pilih">Pilih Paket</a>
         </div>
       </div>
     </div>
@@ -1208,34 +1105,34 @@
 </section>
 
 <!-- ABOUT SECTION -->
-<section class="about-section" aria-labelledby="about-title">
+<section class="about-section">
   <div class="about-inner">
     <div class="about-text">
-      <h2 id="about-title">First Media Jadi XL SATU</h2>
-      <p>Nikmati internet rumah tambah cepat dengan jaringan tepercaya XLSMART yang membuat setiap momen di rumah lebih nyaman bersama koneksi dan hiburan tanpa batas.</p>
+      <h2>First Media Jadi XL SATU</h2>
+      <p>Nikmati internet rumah yang lebih cepat dan stabil dengan jaringan fiber optik terpercaya dari XLSMART. Kami berkomitmen memberikan layanan terbaik untuk mendukung aktivitas digital keluarga Anda setiap hari.</p>
     </div>
-    <div class="about-video" onclick="window.open('https://wa.me/628599370107','_blank')" role="button" tabindex="0" aria-label="Video XL SATU - Klik untuk hubungi sales">
-      <img src="https://static-xlsatu.xl.co.id/images/post/7b29f408-8f33-46c4-9d95-80615ea6c2c2.jpeg" alt="XL SATU Overview - Video Promosi" loading="lazy" onerror="this.src='https://satu.xl.co.id/_next/image?url=https%3A%2F%2Fstatic-xlsatu.xl.co.id%2Fimages%2Fpost%2F7b29f408-8f33-46c4-9d95-80615ea6c2c2.jpeg&w=1200&q=75'">
-      <div class="play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+    <div class="about-video" onclick="window.open('https://wa.me/628599370107','_blank')">
+      <img src="https://static-xlsatu.xl.co.id/images/post/7b29f408-8f33-46c4-9d95-80615ea6c2c2.jpeg" alt="Video XL SATU" loading="lazy">
+      <div class="play-btn"><i class="fas fa-play"></i></div>
     </div>
   </div>
 </section>
 
 <!-- MYXL SECTION -->
-<section class="myxl-section" aria-labelledby="myxl-title">
+<section class="myxl-section">
   <div class="myxl-inner">
     <div class="myxl-img">
-      <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-my-xl.7768d25a.png&w=1080&q=75" alt="myXL App Interface" loading="lazy">
+      <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-my-xl.7768d25a.png&w=1080&q=75" alt="myXL App" loading="lazy">
     </div>
     <div class="myxl-text">
-      <h2 id="myxl-title">Atur Semua Layanan Kamu Cuma Butuh myXL</h2>
-      <p>Dan nikmati berbagai promo eksklusif, poin myXL, serta fitur pendukung XL SATU lainnya</p>
+      <h2>Kelola Semua dengan myXL</h2>
+      <p>Kelola paket, lihat kuota, dan nikmati promo eksklusif hanya dalam satu aplikasi. Mudah, cepat, dan terpercaya untuk semua kebutuhan Anda.</p>
       <div class="store-btns">
-        <a href="https://apps.apple.com/id/app/myxl-cek-kuota-beli-paket-xl/id683141076" target="_blank" rel="noopener noreferrer" class="store-btn" title="Download di App Store">
-          <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-download-app-store.be42efe0.png&w=384&q=75" alt="Download myXL di App Store" loading="lazy">
+        <a href="https://apps.apple.com/id/app/myxl/id683141076" target="_blank" rel="noopener noreferrer" class="store-btn">
+          <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-download-app-store.be42efe0.png&w=384&q=75" alt="App Store" loading="lazy">
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.apps.MyXL" target="_blank" rel="noopener noreferrer" class="store-btn" title="Download di Google Play">
-          <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-download-google-play.4a1b5a55.png&w=384&q=75" alt="Download myXL di Google Play" loading="lazy">
+        <a href="https://play.google.com/store/apps/details?id=com.apps.MyXL" target="_blank" rel="noopener noreferrer" class="store-btn">
+          <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-download-google-play.4a1b5a55.png&w=384&q=75" alt="Google Play" loading="lazy">
         </a>
       </div>
     </div>
@@ -1243,159 +1140,132 @@
 </section>
 
 <!-- BANTUAN -->
-<section class="bantuan-section" id="bantuan" aria-labelledby="bantuan-title">
+<section class="bantuan-section" id="bantuan">
   <div class="bantuan-inner">
-    <h2 class="section-title" id="bantuan-title">Bantuan</h2>
+    <h2 class="section-title">Bantuan</h2>
     <p class="section-sub">Pertanyaan yang sering ditanyakan</p>
 
-    <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">
         <span>Apa itu XL SATU?</span>
-        <i class="fas fa-plus icon" aria-hidden="true"></i>
+        <i class="fas fa-plus icon"></i>
       </div>
-      <div class="faq-a" role="region">XL SATU adalah layanan internet rumah unlimited terbaik, hasil integrasi XL Home dan First Media. Menggunakan jaringan fiber optik XLSMART yang cepat dan stabil untuk seluruh keluarga.</div>
+      <div class="faq-a">XL SATU adalah layanan internet rumah unlimited terbaik dari integrasi XL Home dan First Media. Menggunakan jaringan fiber optik XLSMART yang cepat, stabil, dan aman untuk seluruh keluarga Indonesia.</div>
     </div>
 
-    <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">
-        <span>Apakah merger antara XL dan Smartfren akan berdampak pada pelanggan atau layanan XL SATU?</span>
-        <i class="fas fa-plus icon" aria-hidden="true"></i>
+        <span>Siapa saja yang bisa berlangganan?</span>
+        <i class="fas fa-plus icon"></i>
       </div>
-      <div class="faq-a" role="region">Merger XL dan Smartfren tidak berdampak negatif pada layanan XL SATU. Justru dengan bergabungnya kedua jaringan, kualitas dan jangkauan layanan akan semakin meningkat untuk pelanggan.</div>
+      <div class="faq-a">Siapa pun yang berada di area jangkauan XL SATU dapat berlangganan. Hubungi sales kami untuk mengecek ketersediaan di area tempat tinggal Anda.</div>
     </div>
 
-    <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">
-        <span>Siapa saja yang dapat berlangganan XL SATU?</span>
-        <i class="fas fa-plus icon" aria-hidden="true"></i>
+        <span>Berapa lama proses pemasangan?</span>
+        <i class="fas fa-plus icon"></i>
       </div>
-      <div class="faq-a" role="region">Siapa pun yang berada di area layanan XL SATU dapat berlangganan. Cukup hubungi sales kami untuk mengecek ketersediaan di area Anda.</div>
+      <div class="faq-a">Proses pemasangan biasanya memakan waktu 1-2 hari kerja setelah Anda melakukan pemesanan. Tim teknisi kami akan menghubungi Anda untuk menentukan jadwal pemasangan yang sesuai.</div>
     </div>
 
-    <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">
-        <span>Apakah saya harus punya nomor XL prabayar untuk menikmati Kuota HP Sekeluarga?</span>
-        <i class="fas fa-plus icon" aria-hidden="true"></i>
+        <span>Apa faktor yang mempengaruhi kecepatan internet?</span>
+        <i class="fas fa-plus icon"></i>
       </div>
-      <div class="faq-a" role="region">Untuk menikmati fitur Kuota HP Sekeluarga, Anda memerlukan nomor XL prabayar atau XL Prioritas. Namun untuk layanan internet rumahnya sendiri, tidak diperlukan nomor XL.</div>
+      <div class="faq-a">Beberapa faktor seperti jumlah perangkat yang terhubung, jarak dari router, interferensi sinyal, dan kondisi jaringan saat jam sibuk dapat mempengaruhi kecepatan internet Anda.</div>
     </div>
 
-    <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">
-        <span>Apa saja yang dapat mempengaruhi kecepatan internet XL SATU?</span>
-        <i class="fas fa-plus icon" aria-hidden="true"></i>
+        <span>Bagaimana cara membayar tagihan?</span>
+        <i class="fas fa-plus icon"></i>
       </div>
-      <div class="faq-a" role="region">Faktor yang mempengaruhi kecepatan antara lain: jumlah perangkat yang terhubung, jarak dari router, interferensi sinyal, dan kondisi jaringan saat jam sibuk.</div>
+      <div class="faq-a">Anda dapat membayar melalui berbagai metode: transfer bank, e-wallet, cicilan tanpa bunga, atau melalui aplikasi myXL. Lebih mudah dan lebih fleksibel untuk Anda.</div>
     </div>
 
-    <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
-      <div class="faq-q">
-        <span>Apa arti dari First Media Jadi XL SATU?</span>
-        <i class="fas fa-plus icon" aria-hidden="true"></i>
-      </div>
-      <div class="faq-a" role="region">First Media resmi bergabung dengan XL Home menjadi satu layanan bernama XL SATU. Pelanggan lama First Media akan secara otomatis beralih ke layanan XL SATU dengan kualitas yang lebih baik.</div>
-    </div>
-
-    <div style="text-align:center; margin-top: 24px;">
-      <a href="https://satu.xl.co.id/bantuan" target="_blank" rel="noopener noreferrer" class="more-btn" title="Lihat pertanyaan lainnya">
-        Lihat Pertanyaan Lainnya <i class="fas fa-arrow-right" aria-hidden="true"></i>
+    <div style="text-align:center; margin-top: 16px;">
+      <a href="https://satu.xl.co.id/bantuan" target="_blank" rel="noopener noreferrer" class="more-btn">
+        Lihat Semua FAQ <i class="fas fa-arrow-right"></i>
       </a>
     </div>
   </div>
 </section>
 
 <!-- HUBUNGI KAMI -->
-<section class="hubungi-section" aria-labelledby="hubungi-title">
+<section class="hubungi-section" id="hubungi">
   <div class="hubungi-inner">
     <div class="hubungi-text">
-      <h2 id="hubungi-title">Hubungi Kami</h2>
-      <p>Kami siap bantu kamu untuk semua informasi tentang XL SATU</p>
+      <h2>Hubungi Kami</h2>
+      <p>Tim sales kami siap membantu Anda dengan informasi lengkap tentang XL SATU</p>
       <div class="contact-grid">
         <div class="contact-box">
-          <h4>Sales Center</h4>
+          <h4>📞 Sales</h4>
           <div class="contact-item">
-            <span class="contact-label">Pengguna XL</span>
-            <a href="tel:+628200" class="contact-num" title="Hubungi Sales Center - Pengguna XL">8200</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Pengguna Non-XL</span>
-            <a href="tel:+628599370107" class="contact-num" title="Hubungi Sales Center - Pengguna Non-XL">0859-3937-0107</a>
+            <span class="contact-label">WhatsApp</span>
+            <a href="https://wa.me/628599370107" target="_blank" rel="noopener noreferrer" class="contact-num">0859-3937-0107</a>
           </div>
         </div>
         <div class="contact-box">
-          <h4>Customer Service</h4>
+          <h4>⚡ Customer Service</h4>
           <div class="contact-item">
-            <span class="contact-label">Pengguna XL</span>
-            <a href="tel:+628200" class="contact-num" title="Hubungi Customer Service - Pengguna XL">820</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">WhatsApp Sales</span>
-            <a href="https://wa.me/628599370107" target="_blank" rel="noopener noreferrer" class="contact-num" title="Chat WhatsApp Sales">0859-3937-0107</a>
+            <span class="contact-label">Hubungi</span>
+            <a href="tel:+628200" class="contact-num">8200</a>
           </div>
         </div>
       </div>
     </div>
     <div class="hubungi-img">
-      <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-hubungi-kami.1752d25a.png&w=3840&q=75" alt="Ilustrasi Tim Support XL SATU" loading="lazy">
+      <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-hubungi-kami.1752d25a.png&w=3840&q=75" alt="Support Team" loading="lazy">
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer role="contentinfo">
+<footer>
   <div class="footer-inner">
-    <div>
+    <div class="footer-left">
       <img src="https://satu.xl.co.id/_next/image?url=https%3A%2F%2Fstatic-xlsatu.xl.co.id%2Fimages%2Fpost%2F46bf5fe2-0960-45be-958b-3a7cc6fb12a3.png&w=256&q=75" alt="XL SATU" class="footer-logo" loading="lazy">
-      <div class="footer-copy">Copyright © 2012-2026 XL SATU. All rights reserved.</div>
+      <div class="footer-copy">© 2024 XL SATU. All rights reserved.</div>
     </div>
     <div class="footer-links">
-      <a href="https://satu.xl.co.id/syarat-ketentuan" target="_blank" rel="noopener noreferrer" title="Baca Syarat & Ketentuan">Syarat & Ketentuan</a>
-      <a href="https://www.xlsmart.co.id/id/pemberitahuan-privasi" target="_blank" rel="noopener noreferrer" title="Baca Kebijakan Privasi">Kebijakan & Privasi</a>
+      <a href="https://satu.xl.co.id/syarat-ketentuan" target="_blank" rel="noopener noreferrer">Syarat & Ketentuan</a>
+      <a href="https://www.xlsmart.co.id/id/pemberitahuan-privasi" target="_blank" rel="noopener noreferrer">Kebijakan Privasi</a>
     </div>
-    <div class="footer-socials" aria-label="Media Sosial">
-      <a href="https://www.facebook.com/xlsatu" target="_blank" rel="noopener noreferrer" title="Kunjungi Facebook XL SATU"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
-      <a href="https://www.instagram.com/xlsatu" target="_blank" rel="noopener noreferrer" title="Kunjungi Instagram XL SATU"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
-      <a href="https://www.twitter.com/xlsatu_" target="_blank" rel="noopener noreferrer" title="Kunjungi Twitter XL SATU"><i class="fab fa-x-twitter" aria-hidden="true"></i><span class="sr-only">X (Twitter)</span></a>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/xlsatu" target="_blank" rel="noopener noreferrer" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/xlsatu" target="_blank" rel="noopener noreferrer" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.twitter.com/xlsatu_" target="_blank" rel="noopener noreferrer" title="Twitter">
+        <i class="fab fa-x-twitter"></i>
+      </a>
     </div>
   </div>
 </footer>
 
 <!-- FLOATING WA -->
-<a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="float-wa" title="Chat WhatsApp Sales Solo Raya">
-  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+<a href="https://wa.me/628599370107?text=Halo%20kak,%20saya%20ingin%20info%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="float-wa" title="Chat WhatsApp">
+  <i class="fab fa-whatsapp"></i>
   <div class="float-wa-text">
     <small>Sales Solo Raya</small>
     <strong>0859-3937-0107</strong>
   </div>
 </a>
 
-<!-- SCREEN READER ONLY CONTENT -->
-<style>
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-</style>
-
 <script>
-  // SLIDER FUNCTIONALITY
+  // SLIDER
   let cur = 0;
-  const total = 5;
+  const total = 4;
   const slidesEl = document.getElementById('slides');
   const dotsEl = document.getElementById('dots');
 
-  // Initialize dots
   for (let i = 0; i < total; i++) {
     const d = document.createElement('button');
     d.className = 'dot' + (i === 0 ? ' active' : '');
-    d.setAttribute('aria-label', `Go to slide ${i + 1}`);
     d.onclick = () => goTo(i);
     dotsEl.appendChild(d);
   }
@@ -1406,59 +1276,13 @@
     document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
   }
 
-  function moveSlide(dir) { 
-    goTo(cur + dir); 
-  }
+  function moveSlide(dir) { goTo(cur + dir); }
+  setInterval(() => moveSlide(1), 5000);
 
-  // Auto slide every 4 seconds
-  setInterval(() => moveSlide(1), 4000);
-
-  // FAQ TOGGLE FUNCTIONALITY
+  // FAQ
   function toggleFaq(el) {
     el.classList.toggle('open');
-    const isOpen = el.classList.contains('open');
-    el.setAttribute('aria-expanded', isOpen);
   }
-
-  // Keyboard support for FAQ
-  document.querySelectorAll('.faq-item').forEach(item => {
-    item.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleFaq(item);
-      }
-    });
-  });
-
-  // Keyboard support for slides
-  document.querySelectorAll('.slide').forEach(slide => {
-    slide.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        slide.click();
-      }
-    });
-  });
-
-  // Keyboard support for video
-  document.querySelector('.about-video')?.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      document.querySelector('.about-video').click();
-    }
-  });
-
-  // Smooth scroll support
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Log for development
-  console.log('XL SATU Landing Page Loaded Successfully');
 </script>
 </body>
 </html>
