@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="XL SATU - Internet rumah fiber optic unlimited dengan kecepatan hingga 400 Mbps. First Media Jadi XL SATU menawarkan paket internet terbaik untuk keluarga Indonesia.">
+  <meta name="description" content="XL SATU - Internet rumah fiber optic unlimited dengan kecepatan hingga 1 Gbps. Pilihan paket mulai dari 20 Mbps hingga 1 Gbps untuk keluarga Indonesia. Gratis biaya instalasi!">
   <meta name="keywords" content="internet rumah, wifi unlimited, fiber optic, xl satu, first media">
   <meta name="author" content="XL SATU">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#05a986">
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="First Media Jadi XL SATU | Internet Rumah Terbaik untuk Keluarga">
-  <meta property="og:description" content="Internet rumah fiber optic unlimited dengan kecepatan hingga 400 Mbps. Gratis biaya instalasi!">
+  <meta property="og:title" content="XL SATU | Internet Rumah Fiber Optic hingga 1 Gbps">
+  <meta property="og:description" content="Internet rumah fiber optic unlimited dengan kecepatan hingga 1 Gbps. Pilihan paket mulai Rp 205.350/bulan. Gratis biaya instalasi!">
   <meta property="og:image" content="https://static-xlsatu.xl.co.id/images/post/7180eb84-2dac-4a9d-9ed2-8619178ef982.jpg">
   
   <link rel="canonical" href="https://satu.xl.co.id/">
@@ -659,6 +659,19 @@
       color: var(--white);
       text-decoration: none;
     }
+    .btn-daftar {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white) !important;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 4px;
+      transition: background .2s;
+    }
+    .btn-daftar:hover { background: var(--green-dark); }
     .hubungi-img img { 
       width: 220px;
       height: auto;
@@ -958,7 +971,7 @@
 <!-- PAKET -->
 <section class="paket-section" id="paket">
   <h2 class="section-title">Pilihan paket sesuai kebutuhan Anda</h2>
-  <p class="section-sub">Gratis Biaya Instalasi · Harga sudah termasuk PPN 11%</p>
+  <p class="section-sub">Gratis Biaya Instalasi · Harga sudah termasuk PPN 11% · Syarat &amp; ketentuan berlaku</p>
 
   <div class="paket-grid">
 
@@ -1074,6 +1087,8 @@
       </div>
     </div>
 
+    <!-- TOGGLE MORE PAKET -->
+    <div id="paket-extra" style="display:contents;">
     <!-- FAMILY 100 Mbps - BEST SELLER -->
     <div class="paket-card">
       <div class="badge-laris">Best Seller</div>
@@ -1297,6 +1312,12 @@
       </div>
     </div>
 
+  </div><!-- end paket-extra -->
+
+  <div id="toggle-wrap" style="text-align:center; margin-top: 28px;">
+    <button onclick="togglePaket()" id="toggle-btn" style="background:var(--white); border:1.5px solid var(--green); color:var(--green); font-size:14px; font-weight:700; padding:12px 28px; border-radius:999px; cursor:pointer; transition:background .2s; display:none;" onmouseover="this.style.background='var(--green-light)'" onmouseout="this.style.background='var(--white)'">
+      Lihat Semua Paket <i class="fas fa-chevron-down" id="toggle-icon" style="margin-left:6px;"></i>
+    </button>
   </div>
 </section>
 
@@ -1399,10 +1420,10 @@
         <div class="contact-box">
           <h4>Sales Center</h4>
           <div class="contact-item">
-            <a href="https://wa.me/6285939370107?text=Halo%20kak,%20saya%20mau%20Daftar%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="contact-num">Daftar Sekarang!</a>
+            <a href="https://wa.me/6285939370107" target="_blank" rel="noopener noreferrer" class="contact-num">0859-3937-0107</a>
           </div>
           <div class="contact-item">
-            <a href="https://wa.me/6285939370107" target="_blank" rel="noopener noreferrer" class="contact-num">0859-3937-0107</a>
+            <a href="https://wa.me/6285939370107?text=Halo%20kak,%20saya%20mau%20Daftar%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="contact-num btn-daftar">Daftar Sekarang!</a>
           </div>
         </div>
         <div class="contact-box">
@@ -1454,12 +1475,42 @@
 <a href="https://wa.me/6285939370107?text=Info%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="float-wa">
   <i class="fab fa-whatsapp"></i>
   <div class="float-wa-text">
-    <small>Sales Solo Raya</small>
+    <small>Hubungi Sales</small>
     <strong>0859-3937-0107</strong>
   </div>
 </a>
 
 <script>
+  // Mobile paket toggle
+  function initPaketToggle() {
+    const isMobile = window.innerWidth <= 768;
+    const extra = document.getElementById('paket-extra');
+    const btn = document.getElementById('toggle-btn');
+    if (!extra || !btn) return;
+    if (isMobile) {
+      extra.style.display = 'none';
+      btn.style.display = 'inline-flex';
+      btn.style.alignItems = 'center';
+    } else {
+      extra.style.display = 'contents';
+      btn.style.display = 'none';
+    }
+  }
+  function togglePaket() {
+    const extra = document.getElementById('paket-extra');
+    const icon = document.getElementById('toggle-icon');
+    const btn = document.getElementById('toggle-btn');
+    if (extra.style.display === 'none') {
+      extra.style.display = 'contents';
+      btn.innerHTML = 'Sembunyikan Paket <i class="fas fa-chevron-up" id="toggle-icon" style="margin-left:6px;"></i>';
+    } else {
+      extra.style.display = 'none';
+      btn.innerHTML = 'Lihat Semua Paket <i class="fas fa-chevron-down" id="toggle-icon" style="margin-left:6px;"></i>';
+    }
+  }
+  window.addEventListener('resize', initPaketToggle);
+  window.addEventListener('DOMContentLoaded', initPaketToggle);
+
   let cur = 0;
   const total = 4;
   const slidesEl = document.getElementById('slides');
