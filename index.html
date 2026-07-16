@@ -417,6 +417,155 @@
       border-radius: 999px; 
     }
 
+    /* ── WIRELESS SECTION ── */
+    .wireless-section {
+      background: var(--white);
+      padding: 56px 24px;
+      border-top: 1px solid var(--border);
+    }
+    .wireless-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .wireless-region-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1a6fb0;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .wireless-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+      margin: 22px 0 32px;
+    }
+    .wireless-promo-banner {
+      max-width: 420px;
+      margin: 0 auto 36px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    }
+    .wireless-promo-top {
+      background: var(--green);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      padding: 10px;
+      letter-spacing: .3px;
+    }
+    .wireless-promo-bottom {
+      background: #0d2b52;
+      color: var(--white);
+      text-align: center;
+      padding: 16px;
+    }
+    .wireless-promo-bottom .big {
+      color: #ffd400;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .wireless-promo-bottom .small {
+      font-size: 13px;
+      font-weight: 600;
+      opacity: .9;
+    }
+    .wireless-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+    .wireless-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow .2s, border-color .2s;
+    }
+    .wireless-card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,.10);
+      border-color: var(--green);
+    }
+    .wireless-card .gauge {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 10px;
+    }
+    .wireless-card .speed-num {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .wireless-card .speed-num span {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .wireless-card .harga-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 4px;
+    }
+    .wireless-card .harga-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--green-dark);
+      margin-bottom: 4px;
+    }
+    .wireless-card .harga-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .wireless-perks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .wireless-perks .perk-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .wireless-perks .perk-item i {
+      color: var(--green);
+      font-size: 16px;
+    }
+    @media (max-width: 480px) {
+      .wireless-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+      }
+      .wireless-pills {
+        gap: 16px;
+      }
+    }
+
     /* ── ABOUT SECTION ── */
     .about-section { 
       padding: 64px 24px; 
@@ -897,7 +1046,8 @@
       </a>
     </div>
     <nav role="navigation">
-      <a href="#paket">Paket</a>
+      <a href="#paket">Paket Fiber</a>
+      <a href="#wireless">Wireless</a>
       <a href="#bantuan">Bantuan</a>
       <a href="#hubungi">Hubungi Kami</a>
     </nav>
@@ -1216,6 +1366,68 @@
     <button onclick="togglePaket()" id="toggle-btn" style="background:var(--white); border:1.5px solid var(--green); color:var(--green); font-size:14px; font-weight:700; padding:12px 28px; border-radius:999px; cursor:pointer; transition:background .2s; display:none;" onmouseover="this.style.background='var(--green-light)'" onmouseout="this.style.background='var(--white)'">
       Lihat Semua Paket <i class="fas fa-chevron-down" id="toggle-icon" style="margin-left:6px;"></i>
     </button>
+  </div>
+</section>
+
+<!-- WIRELESS SECTION (Non-FTTH) -->
+<section class="wireless-section" id="wireless">
+  <div class="wireless-inner">
+    <div style="text-align:center;">
+      <span class="wireless-region-badge"><i class="fas fa-location-dot"></i> Khusus Area Soloraya</span>
+      <h2 class="section-title">WiFi Rumah Tanpa Kabel</h2>
+      <p class="section-sub" style="margin-bottom: 0;">Internet cepat, stabil, tanpa ribet — solusi wireless untuk area yang belum terjangkau kabel fiber.</p>
+    </div>
+
+    <div class="wireless-pills">
+      <div class="pill-item">
+        <i class="fas fa-wifi" style="color:var(--green); font-size:20px;"></i>
+        Sinyal Stabil Di Setiap Ruangan
+      </div>
+      <div class="pill-item">
+        <i class="fas fa-gauge-high" style="color:var(--green); font-size:20px;"></i>
+        Internet Cepat Tanpa Batas Kuota
+      </div>
+      <div class="pill-item">
+        <i class="fas fa-plug-circle-check" style="color:var(--green); font-size:20px;"></i>
+        Praktis, Tanpa Kabel Tanpa Repot
+      </div>
+    </div>
+
+    <div class="wireless-promo-banner">
+      <div class="wireless-promo-top">LEBIH PRAKTIS</div>
+      <div class="wireless-promo-bottom">
+        <div class="small">Langsung Bayar</div>
+        <div class="big">3 BULAN</div>
+        <div class="small">+ Gratis 1 Bulan</div>
+      </div>
+    </div>
+
+    <div class="wireless-grid">
+      <!-- 50 Mbps -->
+      <div class="wireless-card">
+        <i class="fas fa-gauge-high gauge" style="color:var(--green); font-size:40px;"></i>
+        <div class="speed-num">50 <span>MBPS</span></div>
+        <div class="harga-label">Harga</div>
+        <div class="harga-value">Rp 721.500</div>
+        <div class="harga-note">Bayar 3 bulan · Gratis 1 bulan</div>
+        <a href="https://wa.me/6285939370107?text=Saya%20minat%20XL%20Satu%20Wireless%2050%20Mbps%20Rp721.500%20(3%20bulan)" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;">Saya Pilih Ini</a>
+      </div>
+      <!-- 100 Mbps -->
+      <div class="wireless-card">
+        <i class="fas fa-gauge-high gauge" style="color:var(--green); font-size:40px;"></i>
+        <div class="speed-num">100 <span>MBPS</span></div>
+        <div class="harga-label">Harga</div>
+        <div class="harga-value">Rp 876.900</div>
+        <div class="harga-note">Bayar 3 bulan · Gratis 1 bulan</div>
+        <a href="https://wa.me/6285939370107?text=Saya%20minat%20XL%20Satu%20Wireless%20100%20Mbps%20Rp876.900%20(3%20bulan)" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;">Saya Pilih Ini</a>
+      </div>
+    </div>
+
+    <div class="wireless-perks">
+      <div class="perk-item"><i class="fas fa-circle-check"></i> Harga Sudah Termasuk PPN</div>
+      <div class="perk-item"><i class="fas fa-gear"></i> Bebas Biaya Instalasi</div>
+      <div class="perk-item"><i class="fas fa-circle-play"></i> Free Vidio Lite &amp; Catchplay (3 Bulan)</div>
+    </div>
   </div>
 </section>
 
