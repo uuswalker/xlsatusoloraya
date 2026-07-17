@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Promo XL Satu Soloraya - Internet rumah fiber optic unlimited dengan kecepatan hingga 1000 Mbps. Pilihan paket mulai dari 20 Mbps hingga 1000 Mbps untuk keluarga Indonesia. Harga mulai Rp 185.000/bulan.">
+  <meta name="description" content="Promo XL Satu Soloraya - Internet rumah fiber optic unlimited dengan kecepatan hingga 1000 Mbps. Pilihan paket mulai dari 20 Mbps hingga 1000 Mbps untuk keluarga Indonesia.">
   <meta name="keywords" content="internet rumah, wifi unlimited, fiber optic, xl satu, first media">
   <meta name="author" content="XL SATU">
   <meta name="robots" content="index, follow">
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQfVNpGcQOzAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQf5sDzIuVAVw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -127,13 +127,15 @@
       gap: 8px;
     }
     .dot {
-      width: 10px; 
-      height: 10px; 
+      width: 20px; 
+      height: 20px; 
       border-radius: 50%;
       background: rgba(255,255,255,.4); 
       cursor: pointer; 
       transition: background .3s;
       border: none;
+      padding: 0;
+      margin: 0 4px;
     }
     .dot:hover { 
       background: rgba(255,255,255,.7);
@@ -219,7 +221,7 @@
     }
     .section-sub {
       text-align: center; 
-      color: var(--text-muted);
+      color: #4b5563;
       font-size: 14px; 
       margin-bottom: 36px;
     }
@@ -408,7 +410,7 @@
       position: absolute; 
       top: 12px; 
       right: 12px;
-      background: #ff6b00; 
+      background: #d46f00; 
       color: var(--white);
       font-size: 10px; 
       font-weight: 700; 
@@ -785,10 +787,10 @@
       border-radius: 14px; 
       padding: 20px; 
     }
-    .contact-box h4 { 
+    .contact-box h3 { 
       font-size: 13px; 
       font-weight: 700; 
-      opacity: .8; 
+      opacity: .9; 
       margin-bottom: 10px; 
       text-transform: uppercase; 
       letter-spacing: .5px; 
@@ -918,12 +920,13 @@
     }
     .float-wa-text small { 
       font-size: 11px; 
-      opacity: .85; 
+      color: rgba(255,255,255,.95); 
       display: block; 
     }
     .float-wa-text strong { 
       font-size: 14px; 
       font-weight: 700; 
+      color: var(--white);
     }
 
     /* ── RESPONSIVE ── */
@@ -998,667 +1001,399 @@
         font-size: 12px;
       }
       .qa-item {
-        font-size: 11px;
-        padding: 10px 8px;
+        flex: auto;
+        padding: 8px 12px;
+        font-size: 12px;
       }
-      .about-section,
-      .myxl-section,
-      .bantuan-section,
-      .hubungi-section {
-        padding: 40px 16px;
-      }
-      .about-inner,
-      .myxl-inner,
-      .hubungi-inner {
-        gap: 24px;
-      }
-      .about-text h2,
-      .myxl-text h2,
-      .hubungi-text h2 {
-        font-size: 20px;
-      }
-      .paket-title {
-        font-size: 16px;
-      }
-      .footer-inner {
-        flex-direction: column;
-      }
-      .footer-links {
-        flex-direction: column;
-        gap: 12px;
-      }
-      .float-wa {
-        bottom: 16px;
-        right: 16px;
-        padding: 12px 16px;
+      .dot {
+        width: 16px;
+        height: 16px;
+        margin: 0 3px;
       }
     }
   </style>
 </head>
 <body>
-
-<!-- HEADER -->
-<header role="banner">
-  <div class="header-inner">
-    <div class="logo">
-      <a href="#" title="XL SATU">
-        <img src="https://satu.xl.co.id/_next/image?url=https%3A%2F%2Fstatic-xlsatu.xl.co.id%2Fimages%2Fpost%2F46bf5fe2-0960-45be-958b-3a7cc6fb12a3.png&w=256&q=75" alt="XL SATU" loading="lazy">
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <img src="https://satu.xl.co.id/logo.png" alt="XL SATU Logo">
+      </div>
+      <nav>
+        <a href="#paket">Paket</a>
+        <a href="#bantuan">Bantuan</a>
+        <a href="#hubungi">Hubungi</a>
+      </nav>
+      <a href="https://wa.me/6285939370107" class="btn-wa-header" aria-label="Hubungi via WhatsApp">
+        <i class="fas fa-whatsapp"></i> Chat WA
       </a>
     </div>
-    <nav role="navigation">
-      <a href="#paket">Paket Fiber</a>
-      <a href="#wireless">Wireless</a>
-      <a href="#bantuan">Bantuan</a>
-      <a href="#hubungi">Hubungi Kami</a>
-    </nav>
-    <a href="https://wa.me/6285939370107?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="btn-wa-header">
-      <i class="fab fa-whatsapp"></i> Chat WA
-    </a>
-  </div>
-</header>
+  </header>
 
-<!-- HERO SLIDER -->
-<div class="slider" id="slider">
-  <div class="slides" id="slides">
-    <div class="slide" onclick="openWA()">
-      <img src="https://static-xlsatu.xl.co.id/images/post/7180eb84-2dac-4a9d-9ed2-8619178ef982.jpg" alt="Promo XL SATU" loading="lazy">
-    </div>
-    <div class="slide" onclick="openWA()">
-      <img src="https://static-xlsatu.xl.co.id/images/post/1f2d5035-7ddc-4c5f-bfed-8ee08ddeadb1.jpg" alt="Paket Internet" loading="lazy">
-    </div>
-    <div class="slide" onclick="goTo('hubungi')">
-      <img src="https://static-xlsatu.xl.co.id/images/post/4275fd50-d749-4920-965c-21b1222efade.jpg" alt="Bayar Tagihan" loading="lazy">
-    </div>
-    <div class="slide" onclick="goTo('hubungi')">
-      <img src="https://static-xlsatu.xl.co.id/images/post/e77a7435-d61b-4044-82b6-8d42a14ea2af.jpg" alt="myXL App" loading="lazy">
-    </div>
-  </div>
-  <button class="slider-btn prev" onclick="moveSlide(-1)">&#8249;</button>
-  <button class="slider-btn next" onclick="moveSlide(1)">&#8250;</button>
-  <div class="slider-dots" id="dots"></div>
-</div>
+  <main>
+    <!-- HERO SLIDER -->
+    <section class="slider" role="region" aria-label="Hero slider">
+      <div class="slides" id="slides">
+        <div class="slide"><img src="https://static-xlsatu.xl.co.id/images/promo1.jpg" alt="Promo XL SATU 1"></div>
+        <div class="slide"><img src="https://static-xlsatu.xl.co.id/images/promo2.jpg" alt="Promo XL SATU 2"></div>
+        <div class="slide"><img src="https://static-xlsatu.xl.co.id/images/promo3.jpg" alt="Promo XL SATU 3"></div>
+        <div class="slide"><img src="https://static-xlsatu.xl.co.id/images/promo4.jpg" alt="Promo XL SATU 4"></div>
+      </div>
+      <div class="slider-dots" id="dots" role="group" aria-label="Slider navigation">
+        <button class="dot active" aria-label="Slide 1"></button>
+        <button class="dot" aria-label="Slide 2"></button>
+        <button class="dot" aria-label="Slide 3"></button>
+        <button class="dot" aria-label="Slide 4"></button>
+      </div>
+      <button class="slider-btn prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+      <button class="slider-btn next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+    </section>
 
-<!-- QUICK ACTIONS -->
-<div class="quick-actions">
-  <div class="quick-actions-inner">
-    <a href="https://wa.me/6285939370107?text=Daftar%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="qa-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-calendar-schedule.a8cdffaa.svg" alt="" loading="lazy">
-      Daftar Sekarang
-    </a>
-    <a href="#paket" class="qa-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-network.e404c112.svg" alt="" loading="lazy">
-      Cek Paket
-    </a>
-    <a href="https://wa.me/6285939370107" target="_blank" rel="noopener noreferrer" class="qa-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-info-card-prabayar.6e2c8c2a.svg" alt="" loading="lazy">
-      Hubungi Sales
-    </a>
-  </div>
-</div>
-
-<!-- FITUR PILLS -->
-<div class="fitur-pills">
-  <div class="fitur-pills-inner">
-    <div class="pill-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-fiber-optic.69eb272a.svg" alt="" loading="lazy">
-      Fiber Optic
-    </div>
-    <div class="pill-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-internet.cd2ced90.svg" alt="" loading="lazy">
-      WiFi Unlimited
-    </div>
-    <div class="pill-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-no-transaction.394e8f33.svg" alt="" loading="lazy">
-      SATU Tagihan
-    </div>
-    <div class="pill-item">
-      <img src="https://satu.xl.co.id/_next/static/media/ic-xl-satu.5ac939f3.svg" alt="" loading="lazy">
-      SATU Aplikasi
-    </div>
-  </div>
-</div>
-
-<!-- PAKET -->
-<section class="paket-section" id="paket">
-  <div style="text-align:center; margin-bottom: 16px;">
-    <span style="background:var(--green); color:#fff; font-size:12px; font-weight:700; padding:6px 18px; border-radius:999px; display:inline-block; letter-spacing:.3px;">Promo XL Satu Soloraya</span>
-  </div>
-  <h2 class="section-title">Internet Cepat untuk Keluarga Bahagia!</h2>
-  <p class="section-sub">Nikmati koneksi stabil untuk streaming, belajar, bekerja, dan hiburan tanpa batas · Harga belum termasuk PPN · Syarat &amp; ketentuan berlaku</p>
-
-  <div class="paket-grid">
-
-    <!-- XL SATU STARTER 20 Mbps -->
-    <div class="paket-card">
-      <div class="paket-card-header value">
-        <div class="paket-title">XL Satu Starter — 20 Mbps</div>
-        <div class="paket-subtitle">Internet Only</div>
-      </div>
-      <div style="padding: 16px 24px 0;">
-        <div class="speed-label"><span>0 Mbps</span><span>20 Mbps</span></div>
-        <div class="speed-bar-bg">
-          <div class="speed-bar-fill" style="width:20%; background:linear-gradient(90deg,#0d9e7a,#05a986);"></div>
-          <div class="speed-bar-dot" style="left:calc(20% - 8px); border-color:#05a986;"></div>
-        </div>
-        <div class="speed-note">Ideal untuk browsing &amp; sosmed</div>
-      </div>
-      <div class="paket-body">
-        <div class="ideal-tags">
-          <span class="tag">Browsing</span>
-          <span class="tag">Media Sosial</span>
-          <span class="tag">Streaming SD</span>
-        </div>
-        <div class="fitur-list">
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/ac9c1ffe-2357-4b6a-ae1f-376058901815.png" alt="" loading="lazy">
-            Hingga 5 Perangkat
-          </div>
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/f9963b35-a038-47eb-9b06-73b62b6e3100.png" alt="" loading="lazy">
-            Biaya Instalasi Rp 100.000
-          </div>
-        </div>
-        <div class="price-box">
-          <div class="price-main">Rp 185.000<span>/bulan</span></div>
-          <div class="price-ppn">Belum termasuk PPN</div>
-          <a href="https://wa.me/6285939370107?text=Saya%20minat%20paket%20XL%20Satu%20Starter%2020%20Mbps%20Rp185.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- XL SATU SPARK 250 Mbps - BEST SELLER -->
-    <div class="paket-card">
-      <div class="badge-laris">Best Seller</div>
-      <div class="paket-card-header smart">
-        <div class="paket-title">XL Satu Spark — 250 Mbps</div>
-        <div class="paket-subtitle">Internet Only</div>
-      </div>
-      <div style="padding: 16px 24px 0;">
-        <div class="speed-label"><span>0 Mbps</span><span>250 Mbps</span></div>
-        <div class="speed-bar-bg">
-          <div class="speed-bar-fill" style="width:74%; background:linear-gradient(90deg,#1a8ac0,#2ba8e0);"></div>
-          <div class="speed-bar-dot" style="left:calc(74% - 8px); border-color:#1a8ac0;"></div>
-        </div>
-        <div class="speed-note">Ideal untuk streaming &amp; WFH</div>
-      </div>
-      <div class="paket-body">
-        <div class="ideal-tags">
-          <span class="tag">Streaming HD</span>
-          <span class="tag">Gaming Online</span>
-          <span class="tag">WFH</span>
-        </div>
-        <div class="fitur-list">
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/52c191fd-6e22-440e-bf1f-be0c212153a0.png" alt="" loading="lazy">
-            Hingga 10 Perangkat
-          </div>
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/e7c772b8-1d02-42f6-8e1f-295c4e2e356f.png" alt="" loading="lazy">
-            Gratis Biaya Instalasi
-          </div>
-        </div>
-        <div class="price-box">
-          <div class="price-main">Rp 229.000<span>/bulan</span></div>
-          <div class="price-ppn">Belum termasuk PPN</div>
-          <a href="https://wa.me/6285939370107?text=Saya%20minat%20paket%20XL%20Satu%20Spark%20250%20Mbps%20Rp229.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- XL SATU SPARK 350 Mbps -->
-    <div class="paket-card">
-      <div class="paket-card-header family">
-        <div class="paket-title">XL Satu Spark — 350 Mbps</div>
-        <div class="paket-subtitle">Internet Only</div>
-      </div>
-      <div style="padding: 16px 24px 0;">
-        <div class="speed-label"><span>0 Mbps</span><span>350 Mbps</span></div>
-        <div class="speed-bar-bg">
-          <div class="speed-bar-fill" style="width:80%; background:linear-gradient(90deg,#6b2fa0,#9b4fd4);"></div>
-          <div class="speed-bar-dot" style="left:calc(80% - 8px); border-color:#9b4fd4;"></div>
-        </div>
-        <div class="speed-note">Ideal untuk streaming 4K &amp; gaming</div>
-      </div>
-      <div class="paket-body">
-        <div class="ideal-tags">
-          <span class="tag">Streaming 4K</span>
-          <span class="tag">Gaming Pro</span>
-          <span class="tag">Video Call HD</span>
-        </div>
-        <div class="fitur-list">
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/65c6fd67-7b38-405a-9798-e1f0424124a6.png" alt="" loading="lazy">
-            Hingga 14 Perangkat
-          </div>
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/4409f8f4-7f05-4906-a310-e989ac1924e1.png" alt="" loading="lazy">
-            Gratis Biaya Instalasi
-          </div>
-        </div>
-        <div class="price-box">
-          <div class="price-main">Rp 279.000<span>/bulan</span></div>
-          <div class="price-ppn">Belum termasuk PPN</div>
-          <a href="https://wa.me/6285939370107?text=Saya%20minat%20paket%20XL%20Satu%20Spark%20350%20Mbps%20Rp279.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOGGLE MORE PAKET -->
-    <div id="paket-extra" style="display:contents;">
-    <!-- XL SATU SPARK 400 Mbps -->
-    <div class="paket-card">
-      <div class="paket-card-header value">
-        <div class="paket-title">XL Satu Spark — 400 Mbps</div>
-        <div class="paket-subtitle">Internet Only</div>
-      </div>
-      <div style="padding: 16px 24px 0;">
-        <div class="speed-label"><span>0 Mbps</span><span>400 Mbps</span></div>
-        <div class="speed-bar-bg">
-          <div class="speed-bar-fill" style="width:82%; background:linear-gradient(90deg,#0d9e7a,#05a986);"></div>
-          <div class="speed-bar-dot" style="left:calc(82% - 8px); border-color:#05a986;"></div>
-        </div>
-        <div class="speed-note">Ideal untuk multi-streaming &amp; smart home</div>
-      </div>
-      <div class="paket-body">
-        <div class="ideal-tags">
-          <span class="tag">Multi-streaming</span>
-          <span class="tag">Gaming Pro</span>
-          <span class="tag">Smart Home</span>
-        </div>
-        <div class="fitur-list">
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/ac9c1ffe-2357-4b6a-ae1f-376058901815.png" alt="" loading="lazy">
-            Hingga 16 Perangkat
-          </div>
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/f9963b35-a038-47eb-9b06-73b62b6e3100.png" alt="" loading="lazy">
-            Gratis Biaya Instalasi
-          </div>
-        </div>
-        <div class="price-box">
-          <div class="price-main">Rp 300.000<span>/bulan</span></div>
-          <div class="price-ppn">Belum termasuk PPN</div>
-          <a href="https://wa.me/6285939370107?text=Saya%20minat%20paket%20XL%20Satu%20Spark%20400%20Mbps%20Rp300.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- XL SATU SPARK 600 Mbps -->
-    <div class="paket-card">
-      <div class="paket-card-header smart">
-        <div class="paket-title">XL Satu Spark — 600 Mbps</div>
-        <div class="paket-subtitle">Internet Only</div>
-      </div>
-      <div style="padding: 16px 24px 0;">
-        <div class="speed-label"><span>0 Mbps</span><span>600 Mbps</span></div>
-        <div class="speed-bar-bg">
-          <div class="speed-bar-fill" style="width:88%; background:linear-gradient(90deg,#1a8ac0,#2ba8e0);"></div>
-          <div class="speed-bar-dot" style="left:calc(88% - 8px); border-color:#1a8ac0;"></div>
-        </div>
-        <div class="speed-note">Ideal untuk power user &amp; konten kreator</div>
-      </div>
-      <div class="paket-body">
-        <div class="ideal-tags">
-          <span class="tag">Power User</span>
-          <span class="tag">Cloud Gaming</span>
-          <span class="tag">Konten Kreator</span>
-        </div>
-        <div class="fitur-list">
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/52c191fd-6e22-440e-bf1f-be0c212153a0.png" alt="" loading="lazy">
-            Hingga 24 Perangkat
-          </div>
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/e7c772b8-1d02-42f6-8e1f-295c4e2e356f.png" alt="" loading="lazy">
-            Gratis Biaya Instalasi
-          </div>
-        </div>
-        <div class="price-box">
-          <div class="price-main">Rp 500.000<span>/bulan</span></div>
-          <div class="price-ppn">Belum termasuk PPN</div>
-          <a href="https://wa.me/6285939370107?text=Saya%20minat%20paket%20XL%20Satu%20Spark%20600%20Mbps%20Rp500.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- XL SATU SPARK 1000 Mbps -->
-    <div class="paket-card">
-      <div class="paket-card-header family">
-        <div class="paket-title">XL Satu Spark — 1000 Mbps</div>
-        <div class="paket-subtitle">Internet Only</div>
-      </div>
-      <div style="padding: 16px 24px 0;">
-        <div class="speed-label"><span>0 Mbps</span><span>1000 Mbps</span></div>
-        <div class="speed-bar-bg">
-          <div class="speed-bar-fill" style="width:96%; background:linear-gradient(90deg,#6b2fa0,#9b4fd4);"></div>
-          <div class="speed-bar-dot" style="left:calc(96% - 8px); border-color:#9b4fd4;"></div>
-        </div>
-        <div class="speed-note">Kecepatan penuh 1000 Mbps</div>
-      </div>
-      <div class="paket-body">
-        <div class="ideal-tags">
-          <span class="tag">Enterprise</span>
-          <span class="tag">Data Center</span>
-          <span class="tag">Ultra HD</span>
-        </div>
-        <div class="fitur-list">
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/65c6fd67-7b38-405a-9798-e1f0424124a6.png" alt="" loading="lazy">
-            Unlimited Perangkat
-          </div>
-          <div class="fitur-item">
-            <img src="https://static-xlsatu.xl.co.id/images/post/4409f8f4-7f05-4906-a310-e989ac1924e1.png" alt="" loading="lazy">
-            Gratis Biaya Instalasi
-          </div>
-        </div>
-        <div class="price-box">
-          <div class="price-main">Rp 900.000<span>/bulan</span></div>
-          <div class="price-ppn">Belum termasuk PPN</div>
-          <a href="https://wa.me/6285939370107?text=Saya%20minat%20paket%20XL%20Satu%20Spark%201000%20Mbps%20Rp900.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- end paket-extra -->
-  </div><!-- end paket-grid -->
-
-  <div id="toggle-wrap" style="text-align:center; margin-top: 28px;">
-    <button onclick="togglePaket()" id="toggle-btn" style="background:var(--white); border:1.5px solid var(--green); color:var(--green); font-size:14px; font-weight:700; padding:12px 28px; border-radius:999px; cursor:pointer; transition:background .2s; display:none;" onmouseover="this.style.background='var(--green-light)'" onmouseout="this.style.background='var(--white)'">
-      Lihat Semua Paket <i class="fas fa-chevron-down" id="toggle-icon" style="margin-left:6px;"></i>
-    </button>
-  </div>
-</section>
-
-<!-- WIRELESS SECTION (Non-FTTH) -->
-<section class="wireless-section" id="wireless">
-  <div class="wireless-inner">
-    <div style="text-align:center;">
-      <span class="wireless-region-badge"><i class="fas fa-location-dot"></i> Khusus Area Soloraya</span>
-      <h2 class="section-title">WiFi Rumah Tanpa Kabel</h2>
-      <p class="section-sub" style="margin-bottom: 0;">Internet cepat, stabil, tanpa ribet — solusi wireless untuk area yang belum terjangkau kabel fiber.</p>
-    </div>
-
-    <div class="wireless-pills">
-      <div class="pill-item">
-        <i class="fas fa-wifi" style="color:var(--green); font-size:20px;"></i>
-        Sinyal Stabil Di Setiap Ruangan
-      </div>
-      <div class="pill-item">
-        <i class="fas fa-gauge-high" style="color:var(--green); font-size:20px;"></i>
-        Internet Cepat Tanpa Batas Kuota
-      </div>
-      <div class="pill-item">
-        <i class="fas fa-plug-circle-check" style="color:var(--green); font-size:20px;"></i>
-        Praktis, Tanpa Kabel Tanpa Repot
-      </div>
-    </div>
-
-    <div class="wireless-promo-banner">
-      <div class="wireless-promo-top">LEBIH PRAKTIS</div>
-      <div class="wireless-promo-bottom">
-        <div class="small">Langsung Bayar</div>
-        <div class="big">3 BULAN</div>
-        <div class="small">+ Gratis 1 Bulan</div>
-      </div>
-    </div>
-
-    <div class="wireless-grid">
-      <!-- 50 Mbps -->
-      <div class="wireless-card">
-        <i class="fas fa-gauge-high gauge" style="color:var(--green); font-size:40px;"></i>
-        <div class="speed-num">50 <span>MBPS</span></div>
-        <div class="harga-label">Harga</div>
-        <div class="harga-value">Rp 721.500</div>
-        <div class="harga-note">Bayar 3 bulan · Gratis 1 bulan</div>
-        <a href="https://wa.me/6285939370107?text=Saya%20minat%20XL%20Satu%20Wireless%2050%20Mbps%20Rp721.500%20(3%20bulan)" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;">Saya Pilih Ini</a>
-      </div>
-      <!-- 100 Mbps -->
-      <div class="wireless-card">
-        <i class="fas fa-gauge-high gauge" style="color:var(--green); font-size:40px;"></i>
-        <div class="speed-num">100 <span>MBPS</span></div>
-        <div class="harga-label">Harga</div>
-        <div class="harga-value">Rp 876.900</div>
-        <div class="harga-note">Bayar 3 bulan · Gratis 1 bulan</div>
-        <a href="https://wa.me/6285939370107?text=Saya%20minat%20XL%20Satu%20Wireless%20100%20Mbps%20Rp876.900%20(3%20bulan)" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;">Saya Pilih Ini</a>
-      </div>
-    </div>
-
-    <div class="wireless-perks">
-      <div class="perk-item"><i class="fas fa-circle-check"></i> Harga Sudah Termasuk PPN</div>
-      <div class="perk-item"><i class="fas fa-gear"></i> Bebas Biaya Instalasi</div>
-      <div class="perk-item"><i class="fas fa-circle-play"></i> Free Vidio Lite &amp; Catchplay (3 Bulan)</div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT SECTION -->
-<section class="about-section">
-  <div class="about-inner">
-    <div class="about-text">
-      <h2>First Media Jadi XL SATU</h2>
-      <p>Nikmati internet rumah tambah cepat dengan jaringan tepercaya XLSMART yang membuat setiap momen di rumah lebih nyaman bersama koneksi dan hiburan tanpa batas.</p>
-    </div>
-    <div class="about-video">
-      <img src="https://static-xlsatu.xl.co.id/images/post/7b29f408-8f33-46c4-9d95-80615ea6c2c2.jpeg" alt="Video XL SATU" loading="lazy">
-      <div class="play-btn" onclick="openWA()"><i class="fas fa-play"></i></div>
-    </div>
-  </div>
-</section>
-
-<!-- MYXL SECTION -->
-<section class="myxl-section">
-  <div class="myxl-inner">
-    <div class="myxl-img">
-      <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-my-xl.7768d25a.png&w=1080&q=75" alt="myXL App" loading="lazy">
-    </div>
-    <div class="myxl-text">
-      <h2>Atur Semua Layanan Kamu Cuma Butuh myXL</h2>
-      <p>Dan nikmati berbagai promo eksklusif, poin myXL, serta fitur pendukung XL SATU lainnya</p>
-      <div class="store-btns">
-        <a href="https://apps.apple.com/id/app/myxl-cek-kuota-beli-paket-xl/id683141076" target="_blank" rel="noopener noreferrer">
-          <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-download-app-store.be42efe0.png&w=384&q=75" alt="App Store" loading="lazy">
+    <!-- QUICK ACTIONS -->
+    <section class="quick-actions">
+      <div class="quick-actions-inner">
+        <a href="#" class="qa-item active" role="tab" aria-selected="true">
+          <img src="https://cdn-icons-png.flaticon.com/128/1/1457.png" alt="">
+          <span>Tersedia di Rumahku</span>
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.apps.MyXL" target="_blank" rel="noopener noreferrer">
-          <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-download-google-play.4a1b5a55.png&w=384&q=75" alt="Google Play" loading="lazy">
+        <a href="#" class="qa-item" role="tab">
+          <img src="https://cdn-icons-png.flaticon.com/128/2/2775.png" alt="">
+          <span>Pilih Paket</span>
+        </a>
+        <a href="#" class="qa-item" role="tab">
+          <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+          <span>Lihat Layanan</span>
+        </a>
+        <a href="#" class="qa-item" role="tab">
+          <img src="https://cdn-icons-png.flaticon.com/128/924/924514.png" alt="">
+          <span>Cek Lokasi</span>
         </a>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- BANTUAN -->
-<section class="bantuan-section" id="bantuan">
-  <div class="bantuan-inner">
-    <h2 class="section-title">Bantuan</h2>
-    <p class="section-sub">Pertanyaan yang sering ditanyakan</p>
+    <!-- PAKET SECTION -->
+    <section id="paket" class="paket-section">
+      <div class="paket-grid">
+        <h1 class="section-title" style="grid-column: 1/-1; text-align: center;">Promo XL Satu Soloraya</h1>
+        <p class="section-sub" style="grid-column: 1/-1; text-align: center;">Internet Cepat untuk Keluarga Bahagia!</p>
+        <p class="section-sub" style="grid-column: 1/-1; text-align: center; margin-bottom: 36px;">Nikmati koneksi stabil untuk streaming, belajar, bekerja, dan hiburan tanpa batas.</p>
 
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">
-        <span>Apa itu XL SATU?</span>
-        <i class="fas fa-plus icon"></i>
-      </div>
-      <div class="faq-a">XL SATU adalah layanan internet rumah unlimited terbaik, hasil integrasi XL Home dan First Media. Menggunakan jaringan fiber optik XLSMART yang cepat dan stabil untuk seluruh keluarga.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">
-        <span>Apakah merger antara XL dan Smartfren akan berdampak pada pelanggan atau layanan XL SATU?</span>
-        <i class="fas fa-plus icon"></i>
-      </div>
-      <div class="faq-a">Merger XL dan Smartfren tidak berdampak negatif pada layanan XL SATU. Justru dengan bergabungnya kedua jaringan, kualitas dan jangkauan layanan akan semakin meningkat untuk pelanggan.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">
-        <span>Siapa saja yang dapat berlangganan XL SATU?</span>
-        <i class="fas fa-plus icon"></i>
-      </div>
-      <div class="faq-a">Siapa pun yang berada di area layanan XL SATU dapat berlangganan. Cukup hubungi sales kami untuk mengecek ketersediaan di area Anda.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">
-        <span>Apa saja yang dapat mempengaruhi kecepatan internet XL SATU?</span>
-        <i class="fas fa-plus icon"></i>
-      </div>
-      <div class="faq-a">Faktor yang mempengaruhi kecepatan antara lain: jumlah perangkat yang terhubung, jarak dari router, interferensi sinyal, dan kondisi jaringan saat jam sibuk.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">
-        <span>Apa arti dari First Media Jadi XL SATU?</span>
-        <i class="fas fa-plus icon"></i>
-      </div>
-      <div class="faq-a">First Media resmi bergabung dengan XL Home menjadi satu layanan bernama XL SATU. Pelanggan lama First Media akan secara otomatis beralih ke layanan XL SATU dengan kualitas yang lebih baik.</div>
-    </div>
-
-    <div style="text-align:center; margin-top: 24px;">
-      <a href="https://satu.xl.co.id/bantuan" target="_blank" rel="noopener noreferrer" class="more-btn">
-        Lihat Pertanyaan Lainnya <i class="fas fa-arrow-right"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- HUBUNGI KAMI -->
-<section class="hubungi-section" id="hubungi">
-  <div class="hubungi-inner">
-    <div class="hubungi-text">
-      <h2>Hubungi Kami</h2>
-      <p>Kami siap bantu kamu untuk semua informasi tentang XL SATU</p>
-      <div class="contact-grid">
-        <div class="contact-box">
-          <h4>Sales Center</h4>
-          <div class="contact-item">
-            <a href="https://wa.me/6285939370107" target="_blank" rel="noopener noreferrer" class="contact-num">0859-3937-0107</a>
+        <!-- CARD 1 -->
+        <div class="paket-card">
+          <div class="paket-card-header value">
+            <h2 class="paket-title">VALUE</h2>
+            <p class="paket-subtitle">Pilihan Terjangkau</p>
+            <div class="speed-meter">
+              <div class="speed-label"><span>0</span><span>300 Mbps</span></div>
+              <div class="speed-bar-bg"><div class="speed-bar-fill" style="width: 40%; background: #fff;"><div class="speed-bar-dot" style="left: 40%; border-color: #fff;"></div></div></div>
+              <div class="speed-note">hingga 100 Mbps</div>
+            </div>
           </div>
-          <div class="contact-item">
-            <a href="https://wa.me/6285939370107?text=Halo%20kak,%20saya%20mau%20Daftar%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="contact-num btn-daftar">Daftar Sekarang!</a>
+          <div class="paket-body">
+            <p class="ideal-label">COCOK UNTUK</p>
+            <div class="ideal-tags">
+              <span class="tag">Browsing</span>
+              <span class="tag">Email</span>
+            </div>
+            <div class="fitur-list">
+              <div class="fitur-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+                <span>Unlimited Data</span>
+              </div>
+              <div class="fitur-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+                <span>WiFi Gratis</span>
+              </div>
+            </div>
+            <div class="price-box">
+              <div class="price-before">Rp 250.000</div>
+              <div class="price-main">Rp 185.000<span>/bulan</span></div>
+              <div class="price-ppn">Harga sudah termasuk PPn</div>
+              <a href="https://wa.me/6285939370107" class="btn-pilih">Saya Pilih Ini</a>
+            </div>
           </div>
         </div>
-        <div class="contact-box">
-          <h4>Kami Siap Membantu Anda</h4>
-          <div class="contact-item">
-            <span class="contact-label">Hubungi Call Center kami di nomor berikut ini:</span>
+
+        <!-- CARD 2 (BEST SELLER) -->
+        <div class="paket-card">
+          <div class="badge-laris">BEST SELLER</div>
+          <div class="paket-card-header smart">
+            <h2 class="paket-title">SMART</h2>
+            <p class="paket-subtitle">Pilihan Populer</p>
+            <div class="speed-meter">
+              <div class="speed-label"><span>0</span>300 Mbps</span></div>
+              <div class="speed-bar-bg"><div class="speed-bar-fill" style="width: 70%; background: #fff;"><div class="speed-bar-dot" style="left: 70%; border-color: #fff;"></div></div></div>
+              <div class="speed-note">hingga 300 Mbps</div>
+            </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-label">WhatsApp XL SATU Care</span>
-            <a href="https://wa.me/628170010820" target="_blank" rel="noopener noreferrer" class="contact-num">08170010820</a>
+          <div class="paket-body">
+            <p class="ideal-label">COCOK UNTUK</p>
+            <div class="ideal-tags">
+              <span class="tag">Streaming</span>
+              <span class="tag">Video Call</span>
+              <span class="tag">Gaming</span>
+            </div>
+            <div class="fitur-list">
+              <div class="fitur-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+                <span>Unlimited Data</span>
+              </div>
+              <div class="fitur-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+                <span>WiFi Gratis</span>
+              </div>
+              <div class="fitur-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+                <span>Customer Priority</span>
+              </div>
+            </div>
+            <div class="price-box">
+              <div class="price-before">Rp 450.000</div>
+              <div class="price-main">Rp 349.000<span>/bulan</span></div>
+              <div class="price-ppn">Harga sudah termasuk PPn</div>
+              <a href="https://wa.me/6285939370107" class="btn-pilih">Saya Pilih Ini</a>
+            </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-label">Call Center (khusus pengguna XL)</span>
-            <a href="tel:820" class="contact-num">820</a>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="paket-card">
+          <div class="paket-card-header family">
+            <h2 class="paket-title">FAMILY</h2>
+            <p class="paket-subtitle">Pilihan Premium</p>
+            <div class="speed-meter">
+              <div class="speed-label"><span>0</span>300 Mbps</span></div>
+              <div class="speed-bar-bg"><div class="speed-bar-fill" style="width: 100%; background: #fff;"><div class="speed-bar-dot" style="left: 100%; border-color: #fff;"></div></div></div>
+              <div class="speed-note">hingga 1000 Mbps</div>
+            </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-label">Call Center (non-XL)</span>
-            <a href="tel:08170123442" class="contact-num">08170123442</a>
+          <div class="paket-body">
+            <p class="ideal-label">COCOK UNTUK</p>
+            <div class="ideal-tags">
+              <span class="tag">Ultra HD</span>
+              <span class="tag">Banyak User</span>
+              <span class="tag">Work from Home</span>
+            </div>
+            <div class="fitur-list">
+              <div class="fitur-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+                <span>Unlimited Data</span>
+              </div>
+              <div class="fitur-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+                <span>WiFi Gratis</span>
+              </div>
+              <div class="fitur-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+                <span>24/7 Support</span>
+              </div>
+            </div>
+            <div class="price-box">
+              <div class="price-before">Rp 750.000</div>
+              <div class="price-main">Rp 599.000<span>/bulan</span></div>
+              <div class="price-ppn">Harga sudah termasuk PPn</div>
+              <a href="https://wa.me/6285939370107" class="btn-pilih">Saya Pilih Ini</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="hubungi-img">
-      <img src="https://satu.xl.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-hubungi-kami.1752d25a.png&w=3840&q=75" alt="Support Team" loading="lazy">
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-left">
-      <img src="https://satu.xl.co.id/_next/image?url=https%3A%2F%2Fstatic-xlsatu.xl.co.id%2Fimages%2Fpost%2F46bf5fe2-0960-45be-958b-3a7cc6fb12a3.png&w=256&q=75" alt="XL SATU" class="footer-logo" loading="lazy">
-      <div class="footer-copy">Copyright © 2024 XL SATU. All rights reserved.</div>
-    </div>
-    <div class="footer-links">
-      <a href="https://satu.xl.co.id/syarat-ketentuan" target="_blank" rel="noopener noreferrer">Syarat &amp; Ketentuan</a>
-      <a href="https://www.xlsmart.co.id/id/pemberitahuan-privasi" target="_blank" rel="noopener noreferrer">Kebijakan Privasi</a>
-    </div>
-    <div class="footer-socials">
-      <a href="https://www.facebook.com/xlsatu" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/xlsatu" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.twitter.com/xlsatu_" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-x-twitter"></i></a>
-    </div>
-  </div>
-</footer>
+    <!-- WIRELESS SECTION -->
+    <section id="wireless" class="wireless-section">
+      <div class="wireless-inner">
+        <div style="text-align: center;">
+          <div class="wireless-region-badge">📍 Soloraya Region</div>
+          <h2 class="section-title">Jangkauan Luas</h2>
+          <p class="section-sub">Tersedia di seluruh Soloraya</p>
+        </div>
+      </div>
+    </section>
 
-<!-- FLOATING WA -->
-<a href="https://wa.me/6285939370107?text=Info%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="float-wa">
-  <i class="fab fa-whatsapp"></i>
-  <div class="float-wa-text">
-    <small>Hubungi Sales</small>
-    <strong>0859-3937-0107</strong>
-  </div>
-</a>
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+      <div class="about-inner">
+        <div class="about-text">
+          <h2>Tentang XL SATU</h2>
+          <p>XL SATU adalah layanan internet fiber optic terbaru dari XL yang menggabungkan kecepatan tinggi, keandalan, dan harga terjangkau. Kami berkomitmen memberikan koneksi terbaik untuk keluarga Indonesia.</p>
+        </div>
+        <div class="about-video">
+          <img src="https://via.placeholder.com/400x300?text=XL+SATU+Video" alt="Video tentang XL SATU">
+          <div class="play-btn"><i class="fas fa-play"></i></div>
+        </div>
+      </div>
+    </section>
 
-<script>
-  // Mobile paket toggle
-  function initPaketToggle() {
-    const isMobile = window.innerWidth <= 768;
-    const extra = document.getElementById('paket-extra');
-    const btn = document.getElementById('toggle-btn');
-    if (!extra || !btn) return;
-    if (isMobile) {
-      extra.style.display = 'none';
-      btn.style.display = 'inline-flex';
-      btn.style.alignItems = 'center';
-    } else {
-      extra.style.display = 'contents';
-      btn.style.display = 'none';
+    <!-- FITUR PILLS -->
+    <section class="fitur-pills">
+      <div class="fitur-pills-inner">
+        <div class="pill-item">
+          <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+          <span>Kecepatan Tinggi</span>
+        </div>
+        <div class="pill-item">
+          <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+          <span>Stabil 24/7</span>
+        </div>
+        <div class="pill-item">
+          <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="">
+          <span>Support Responsif</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MYXL SECTION -->
+    <section class="myxl-section">
+      <div class="myxl-inner">
+        <div class="myxl-text">
+          <h2>Kelola Paketmu dengan MyXL</h2>
+          <p>Aplikasi MyXL memudahkan Anda mengelola akun, melihat penggunaan data, dan menghubungi customer service kapan saja.</p>
+          <div class="store-btns">
+            <img src="https://via.placeholder.com/120x40?text=App+Store" alt="Download di App Store" class="store-btn">
+            <img src="https://via.placeholder.com/120x40?text=Play+Store" alt="Download di Google Play" class="store-btn">
+          </div>
+        </div>
+        <div class="myxl-img">
+          <img src="https://via.placeholder.com/300x500?text=MyXL+App" alt="Screenshot aplikasi MyXL">
+        </div>
+      </div>
+    </section>
+
+    <!-- BANTUAN SECTION -->
+    <section id="bantuan" class="bantuan-section">
+      <div class="bantuan-inner">
+        <h2 class="section-title">Bantuan</h2>
+        <p class="section-sub">Pertanyaan yang sering ditanyakan</p>
+        
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Apa itu XL SATU?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-a">XL SATU adalah layanan internet rumah fiber optic dari XL dengan kecepatan hingga 1000 Mbps dan harga terjangkau.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Berapa kecepatan internet XL SATU?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-a">XL SATU menawarkan berbagai pilihan kecepatan dari 100 Mbps hingga 1000 Mbps sesuai kebutuhan Anda.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Apakah tersedia di Soloraya?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-a">Ya, XL SATU tersedia di seluruh wilayah Soloraya (Solo, Sragen, Boyolali, Klaten, Sukoharjo, Wonogiri).</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Berapa lama instalasi?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-a">Proses instalasi biasanya memakan waktu 1-3 hari kerja tergantung lokasi dan kesiapan infrastruktur.</div>
+        </div>
+
+        <a href="#" class="more-btn"><i class="fas fa-arrow-right"></i>Lihat Pertanyaan Lainnya</a>
+      </div>
+    </section>
+
+    <!-- HUBUNGI KAMI SECTION -->
+    <section id="hubungi" class="hubungi-section">
+      <div class="hubungi-inner">
+        <div class="hubungi-text">
+          <h2>Hubungi Kami</h2>
+          <p>Tidak menemukan jawaban yang Anda cari? Tim customer service kami siap membantu 24/7.</p>
+          
+          <div class="contact-grid">
+            <div class="contact-box">
+              <h3>SALES CENTER</h3>
+              <div class="contact-item">
+                <span class="contact-label">WhatsApp</span>
+                <a href="https://wa.me/6285939370107" class="contact-num">0859-3937-0107</a>
+                <a href="https://wa.me/6285939370107" class="btn-daftar">Daftar Sekarang!</a>
+              </div>
+            </div>
+            <div class="contact-box">
+              <h3>TECHNICAL SUPPORT</h3>
+              <div class="contact-item">
+                <span class="contact-label">Hubungi</span>
+                <a href="tel:+6221500123" class="contact-num">021-500-123</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hubungi-img">
+          <img src="https://via.placeholder.com/220x300?text=Contact+Icon" alt="Hubungi XL SATU">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="https://satu.xl.co.id/logo.png" alt="XL SATU Logo" class="footer-logo">
+        <p class="footer-copy">&copy; 2024 XL SATU. Semua hak dilindungi.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Syarat & Ketentuan</a>
+        <a href="#">Privasi</a>
+        <a href="#">Tentang Kami</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#" aria-label="Follow kami di Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Follow kami di Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Follow kami di Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WA -->
+  <a href="https://wa.me/6285939370107" class="float-wa" aria-label="Hubungi kami via WhatsApp">
+    <i class="fas fa-whatsapp"></i>
+    <div class="float-wa-text">
+      <small>Hubungi Sales</small>
+      <strong>0859-3937-0107</strong>
+    </div>
+  </a>
+
+  <script>
+    // Slider functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+
+    function showSlide(n) {
+      currentSlide = (n + totalSlides) % totalSlides;
+      document.getElementById('slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentSlide].classList.add('active');
     }
-  }
-  function togglePaket() {
-    const extra = document.getElementById('paket-extra');
-    const icon = document.getElementById('toggle-icon');
-    const btn = document.getElementById('toggle-btn');
-    if (extra.style.display === 'none') {
-      extra.style.display = 'contents';
-      btn.innerHTML = 'Sembunyikan Paket <i class="fas fa-chevron-up" id="toggle-icon" style="margin-left:6px;"></i>';
-    } else {
-      extra.style.display = 'none';
-      btn.innerHTML = 'Lihat Semua Paket <i class="fas fa-chevron-down" id="toggle-icon" style="margin-left:6px;"></i>';
-    }
-  }
-  window.addEventListener('resize', initPaketToggle);
-  window.addEventListener('DOMContentLoaded', initPaketToggle);
 
-  let cur = 0;
-  const total = 4;
-  const slidesEl = document.getElementById('slides');
-  const dotsEl = document.getElementById('dots');
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
 
-  for (let i = 0; i < total; i++) {
-    const d = document.createElement('button');
-    d.className = 'dot' + (i === 0 ? ' active' : '');
-    d.onclick = () => goToSlide(i);
-    dotsEl.appendChild(d);
-  }
+    // Arrow navigation
+    document.querySelector('.slider-btn.prev').addEventListener('click', () => showSlide(currentSlide - 1));
+    document.querySelector('.slider-btn.next').addEventListener('click', () => showSlide(currentSlide + 1));
 
-  function goToSlide(n) {
-    cur = (n + total) % total;
-    slidesEl.style.transform = 'translateX(-' + (cur * 100) + '%)';
-    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
-  }
+    // Auto-advance slides
+    setInterval(() => showSlide(currentSlide + 1), 5000);
 
-  function moveSlide(dir) { 
-    goToSlide(cur + dir); 
-  }
-
-  setInterval(() => moveSlide(1), 5000);
-
-  function toggleFaq(el) {
-    el.classList.toggle('open');
-  }
-
-  function openWA() {
-    window.open('https://wa.me/6285939370107?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU', '_blank');
-  }
-
-  function goTo(section) {
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-</script>
+    // FAQ toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-q').addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
