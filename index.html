@@ -577,6 +577,18 @@
         gap: 16px;
       }
     }
+    @media (max-width: 768px) {
+      #wireless-advance > div:nth-child(2),
+      #wireless-monthly > div:nth-child(2) {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+    @media (max-width: 480px) {
+      #wireless-advance > div:nth-child(2),
+      #wireless-monthly > div:nth-child(2) {
+        grid-template-columns: 1fr !important;
+      }
+    }
 
     /* ── ABOUT SECTION ── */
     .about-section { 
@@ -1598,33 +1610,128 @@
       </div>
     </div>
 
-    <div class="wireless-promo-banner">
-      <div class="wireless-promo-top">LEBIH PRAKTIS</div>
-      <div class="wireless-promo-bottom">
-        <div class="small">Langsung Bayar</div>
-        <div class="big">3 BULAN</div>
-        <div class="small">+ Gratis 1 Bulan</div>
+    <!-- TAB TOGGLE -->
+    <div style="display:flex; justify-content:center; gap:12px; margin:24px 0 32px;">
+      <button onclick="showWirelessTab('advance')" id="tab-advance"
+        style="padding:10px 28px; border-radius:999px; border:2px solid var(--green); background:var(--green); color:#fff; font-size:14px; font-weight:700; cursor:pointer; transition:.2s;">
+        Advance Payment
+      </button>
+      <button onclick="showWirelessTab('monthly')" id="tab-monthly"
+        style="padding:10px 28px; border-radius:999px; border:2px solid var(--green); background:#fff; color:var(--green); font-size:14px; font-weight:700; cursor:pointer; transition:.2s;">
+        Monthly Plan
+      </button>
+    </div>
+
+    <!-- ADVANCE PAYMENT -->
+    <div id="wireless-advance">
+      <div style="max-width:420px; margin:0 auto 24px; background:var(--green-light); border-radius:12px; padding:12px 16px; text-align:center; font-size:13px; font-weight:600; color:var(--green-dark);">
+        <i class="fas fa-gift" style="margin-right:6px;"></i> Semua paket include <strong>Free 3 Bulan Vidio + Catchplay</strong>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:900px; margin:0 auto 32px;">
+
+        <!-- 50 Mbps -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:var(--green);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">Tersedia</span>
+          <i class="fas fa-gauge" style="color:var(--green);font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num">50 <span>Mbps</span></div>
+          <div class="harga-label">Advance Payment</div>
+          <div class="harga-value">Rp 650.000</div>
+          <div class="harga-note">4 bulan · hemat 40%</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Recurring: <strong>Rp 200.000/bln</strong></div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%2050%20Mbps%20Advance%20Rp650.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:8px;">Saya Pilih Ini</a>
+        </div>
+
+        <!-- 100 Mbps 4 bln -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:var(--green);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">Tersedia</span>
+          <i class="fas fa-gauge-high" style="color:var(--green);font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num">100 <span>Mbps</span></div>
+          <div class="harga-label">Advance Payment</div>
+          <div class="harga-value">Rp 790.000</div>
+          <div class="harga-note">4 bulan · hemat 32%</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Recurring: <strong>Rp 219.000/bln</strong></div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%20100%20Mbps%20Advance%20Rp790.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:8px;">Saya Pilih Ini</a>
+        </div>
+
+        <!-- 100 Mbps 3 bln -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:#1a6fb0;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">7 Agt</span>
+          <i class="fas fa-gauge-high" style="color:#1a6fb0;font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num" style="color:var(--text);">100 <span>Mbps</span></div>
+          <div class="harga-label">Advance Payment</div>
+          <div class="harga-value">Rp 650.000</div>
+          <div class="harga-note">3 bulan · hemat 31%</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Recurring: <strong>Rp 219.000/bln</strong></div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%20100%20Mbps%203%20bln%20Rp650.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:8px;background:#1a6fb0;">Saya Pilih Ini</a>
+        </div>
+
+        <!-- 250 Mbps -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:#1a6fb0;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">15 Agt</span>
+          <i class="fas fa-bolt" style="color:#1a6fb0;font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num" style="color:var(--text);">250 <span>Mbps</span></div>
+          <div class="harga-label">Advance Payment</div>
+          <div class="harga-value">Rp 850.000</div>
+          <div class="harga-note">4 bulan · hemat 29%</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Recurring: <strong>Rp 229.000/bln</strong></div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%20250%20Mbps%20Advance%20Rp850.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:8px;background:#1a6fb0;">Saya Pilih Ini</a>
+        </div>
+
+        <!-- 75 Mbps -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:#1a6fb0;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">20 Agt</span>
+          <i class="fas fa-gauge" style="color:#1a6fb0;font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num" style="color:var(--text);">75 <span>Mbps</span></div>
+          <div class="harga-label">Advance Payment</div>
+          <div class="harga-value">Rp 680.000</div>
+          <div class="harga-note">4 bulan · hemat 35%</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Recurring: <strong>Rp 189.000/bln</strong></div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%2075%20Mbps%20Advance%20Rp680.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:8px;background:#1a6fb0;">Saya Pilih Ini</a>
+        </div>
+
       </div>
     </div>
 
-    <div class="wireless-grid">
-      <!-- 50 Mbps -->
-      <div class="wireless-card">
-        <i class="fas fa-gauge-high gauge" style="color:var(--green); font-size:40px;"></i>
-        <div class="speed-num">50 <span>MBPS</span></div>
-        <div class="harga-label">Harga</div>
-        <div class="harga-value">Rp 721.500</div>
-        <div class="harga-note">Bayar 3 bulan · Gratis 1 bulan</div>
-        <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%2050%20Mbps%20Rp721.500%20(3%20bulan)" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;">Saya Pilih Ini</a>
+    <!-- MONTHLY PLAN -->
+    <div id="wireless-monthly" style="display:none;">
+      <div style="max-width:420px; margin:0 auto 24px; background:#fff3e0; border-radius:12px; padding:12px 16px; text-align:center; font-size:13px; font-weight:600; color:#e65100;">
+        <i class="fas fa-calendar-check" style="margin-right:6px;"></i> Bayar bulanan, tanpa advance — <strong>Pilot Agustus 2026</strong>
       </div>
-      <!-- 100 Mbps -->
-      <div class="wireless-card">
-        <i class="fas fa-gauge-high gauge" style="color:var(--green); font-size:40px;"></i>
-        <div class="speed-num">100 <span>MBPS</span></div>
-        <div class="harga-label">Harga</div>
-        <div class="harga-value">Rp 876.900</div>
-        <div class="harga-note">Bayar 3 bulan · Gratis 1 bulan</div>
-        <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%20100%20Mbps%20Rp876.900%20(3%20bulan)" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;">Saya Pilih Ini</a>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:700px; margin:0 auto 32px;">
+
+        <!-- Monthly 100 Mbps -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:var(--green);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">4 Agt</span>
+          <i class="fas fa-gauge-high" style="color:var(--green);font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num">100 <span>Mbps</span></div>
+          <div class="harga-label">Monthly Plan</div>
+          <div class="harga-value">Rp 219.000</div>
+          <div class="harga-note">/bulan</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%20Monthly%20100%20Mbps%20Rp219.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:12px;">Saya Pilih Ini</a>
+        </div>
+
+        <!-- Monthly 250 Mbps -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:#1a6fb0;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">15 Agt</span>
+          <i class="fas fa-bolt" style="color:#1a6fb0;font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num" style="color:var(--text);">250 <span>Mbps</span></div>
+          <div class="harga-label">Monthly Plan</div>
+          <div class="harga-value">Rp 229.000</div>
+          <div class="harga-note">/bulan</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%20Monthly%20250%20Mbps%20Rp229.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:12px;background:#1a6fb0;">Saya Pilih Ini</a>
+        </div>
+
+        <!-- Monthly 75 Mbps -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:#1a6fb0;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">20 Agt</span>
+          <i class="fas fa-gauge" style="color:#1a6fb0;font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num" style="color:var(--text);">75 <span>Mbps</span></div>
+          <div class="harga-label">Monthly Plan</div>
+          <div class="harga-value">Rp 189.000</div>
+          <div class="harga-note">/bulan</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%20Monthly%2075%20Mbps%20Rp189.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:12px;background:#1a6fb0;">Saya Pilih Ini</a>
+        </div>
+
       </div>
     </div>
 
@@ -1635,6 +1742,17 @@
     </div>
   </div>
 </section>
+
+<script>
+function showWirelessTab(tab) {
+  document.getElementById('wireless-advance').style.display = tab === 'advance' ? 'block' : 'none';
+  document.getElementById('wireless-monthly').style.display = tab === 'monthly' ? 'block' : 'none';
+  document.getElementById('tab-advance').style.background = tab === 'advance' ? 'var(--green)' : '#fff';
+  document.getElementById('tab-advance').style.color = tab === 'advance' ? '#fff' : 'var(--green)';
+  document.getElementById('tab-monthly').style.background = tab === 'monthly' ? 'var(--green)' : '#fff';
+  document.getElementById('tab-monthly').style.color = tab === 'monthly' ? '#fff' : 'var(--green)';
+}
+</script>
 
 <!-- ABOUT SECTION -->
 <section class="about-section">
