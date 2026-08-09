@@ -2349,6 +2349,23 @@ function showWirelessTab(tab) {
     }
   }
 
+  function prosesLokasiTanpaKoordinat(alamatText) {
+    currentLat = null;
+    currentLng = null;
+    currentAlamatText = alamatText;
+    currentKota = null;
+    mapDiv.style.display = 'none';
+
+    statusEl.className = 'cl-status';
+    statusEl.textContent = 'Alamat dicatat tanpa titik peta pasti. Sales kami akan konfirmasi lokasi lebih lanjut.';
+
+    setTimeout(function () {
+      lokasiInfoEl.textContent = 'Alamat: ' + alamatText + ' (lokasi belum terverifikasi peta)';
+      stepLokasi.style.display = 'none';
+      stepForm.style.display = 'block';
+    }, 600);
+  }
+
   function prosesLokasi(lat, lng, alamatText) {
     currentLat = lat;
     currentLng = lng;
@@ -2422,15 +2439,33 @@ function showWirelessTab(tab) {
       if (data && data.length > 0) {
         prosesLokasi(parseFloat(data[0].lat), parseFloat(data[0].lon), data[0].display_name);
       } else {
-        statusEl.className = 'cl-status error';
-        statusEl.textContent = 'Alamat tidak ditemukan. Coba kata kunci lain (nama jalan/kecamatan) atau gunakan lokasi otomatis.';
+        tampilkanTombolLanjutTanpaPeta(alamat);
       }
     }).catch(function () {
       btnCariAlamat.disabled = false;
-      statusEl.className = 'cl-status error';
-      statusEl.textContent = 'Gagal mencari alamat. Coba lagi atau gunakan lokasi otomatis.';
-      });
+      tampilkanTombolLanjutTanpaPeta(alamat);
+    });
   });
+
+  function tampilkanTombolLanjutTanpaPeta(alamat) {
+    statusEl.className = 'cl-status error';
+    statusEl.innerHTML = 'Alamat tidak ditemukan di peta. ';
+
+    var btnLanjut = document.createElement('button');
+    btnLanjut.type = 'button';
+    btnLanjut.className = 'cl-btn-secondary';
+    btnLanjut.style.marginTop = '10px';
+    btnLanjut.innerHTML = '<i class="fas fa-arrow-right"></i> Tetap Lanjutkan dengan Alamat Ini';
+    btnLanjut.addEventListener('click', function () {
+      prosesLokasiTanpaKoordinat(alamat);
+    });
+
+    // Hindari duplikat tombol kalau user klik cari berkali-kali
+    var existing = document.getElementById('btn-lanjut-tanpa-peta');
+    if (existing) existing.remove();
+    btnLanjut.id = 'btn-lanjut-tanpa-peta';
+    statusEl.parentNode.insertBefore(btnLanjut, statusEl.nextSibling);
+  }
 
   btnGantiLokasi.addEventListener('click', function () {
     stepForm.style.display = 'none';
