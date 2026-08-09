@@ -2101,7 +2101,10 @@ function showWirelessTab(tab) {
       <div class="cl-divider"><span>atau</span></div>
 
       <label for="cl-alamat-manual" class="cl-label">Masukkan alamat manual</label>
-      <input type="text" id="cl-alamat-manual" class="cl-input" placeholder="Contoh: Jl. Slamet Riyadi No. 10, Solo">
+      <div class="cl-autocomplete-wrap">
+        <input type="text" id="cl-alamat-manual" class="cl-input" placeholder="Contoh: Jl. Slamet Riyadi, Solo" autocomplete="off">
+        <div id="cl-suggestions" class="cl-suggestions" style="display:none;"></div>
+      </div>
       <button type="button" id="btn-cari-alamat" class="cl-btn-secondary">
         <i class="fas fa-search"></i> Cari Alamat
       </button>
@@ -2176,6 +2179,21 @@ function showWirelessTab(tab) {
     font-size: 14px; box-sizing: border-box;
   }
   .cl-input:focus { outline: none; border-color: #05a986; }
+  .cl-autocomplete-wrap { position: relative; }
+  .cl-suggestions {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+    background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px;
+    max-height: 220px; overflow-y: auto; z-index: 10;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  .cl-suggestion-item {
+    padding: 11px 14px; font-size: 13.5px; color: #333; cursor: pointer;
+    border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 8px;
+  }
+  .cl-suggestion-item:last-child { border-bottom: none; }
+  .cl-suggestion-item:hover, .cl-suggestion-item.active { background: #f0f9f7; }
+  .cl-suggestion-item i { color: #05a986; margin-top: 2px; flex-shrink: 0; }
+  .cl-suggestion-empty { padding: 12px 14px; font-size: 13px; color: #999; text-align: center; }
   #cl-map {
     width: 100%; height: 220px; border-radius: 12px; margin-top: 16px; overflow: hidden;
     border: 1.5px solid #e0e0e0;
@@ -2212,6 +2230,7 @@ function showWirelessTab(tab) {
   var btnGantiLokasi = document.getElementById('btn-ganti-lokasi');
   var btnKirim = document.getElementById('btn-kirim-cek-lokasi');
   var inputAlamat = document.getElementById('cl-alamat-manual');
+  var suggestionsEl = document.getElementById('cl-suggestions');
   var statusEl = document.getElementById('cl-status-lokasi');
   var stepLokasi = document.getElementById('cl-step-lokasi');
   var stepForm = document.getElementById('cl-step-form');
@@ -2220,6 +2239,74 @@ function showWirelessTab(tab) {
 
   var map, marker;
   var currentLat = null, currentLng = null, currentKota = null, currentAlamatText = null;
+
+  // Bounding box longgar area Solo Raya (untuk bias hasil pencarian)
+  // format Nominatim viewbox: left,top,right,bottom (lon,lat,lon,lat)
+  var SOLORAYA_VIEWBOX = '110.45,-7.30,111.15,-7.95';
+
+  function cariAlamatNominatim(query, limit) {
+    var url = 'https://nominatim.openstreetmap.org/search?format=json&addressdetails=0' +
+      '&limit=' + (limit || 5) +
+      '&countrycodes=id' +
+      '&viewbox=' + SOLORAYA_VIEWBOX +
+      '&bounded=1' +
+      '&q=' + encodeURIComponent(query);
+    return fetch(url).then(function (res) { return res.json(); }).then(function (data) {
+      if (data && data.length > 0) return data;
+      // Fallback: coba tanpa bounded (kalau alamat di luar area tapi tetap mau dicari)
+      var urlFallback = 'https://nominatim.openstreetmap.org/search?format=json&addressdetails=0' +
+        '&limit=' + (limit || 5) +
+        '&countrycodes=id' +
+        '&q=' + encodeURIComponent(query + ', Jawa Tengah');
+      return fetch(urlFallback).then(function (res) { return res.json(); });
+    });
+  }
+
+  var autocompleteTimer = null;
+  var suggestionAbortController = null;
+
+  function tampilkanSuggestions(list) {
+    suggestionsEl.innerHTML = '';
+    if (!list || list.length === 0) {
+      suggestionsEl.innerHTML = '<div class="cl-suggestion-empty">Tidak ada saran. Coba kata kunci lain atau tekan "Cari Alamat".</div>';
+      suggestionsEl.style.display = 'block';
+      return;
+    }
+    list.forEach(function (item) {
+      var div = document.createElement('div');
+      div.className = 'cl-suggestion-item';
+      div.innerHTML = '<i class="fas fa-map-marker-alt"></i><span>' + item.display_name + '</span>';
+      div.addEventListener('click', function () {
+        inputAlamat.value = item.display_name;
+        suggestionsEl.style.display = 'none';
+        prosesLokasi(parseFloat(item.lat), parseFloat(item.lon), item.display_name);
+      });
+      suggestionsEl.appendChild(div);
+    });
+    suggestionsEl.style.display = 'block';
+  }
+
+  inputAlamat.addEventListener('input', function () {
+    var q = inputAlamat.value.trim();
+    clearTimeout(autocompleteTimer);
+    if (q.length < 3) {
+      suggestionsEl.style.display = 'none';
+      return;
+    }
+    autocompleteTimer = setTimeout(function () {
+      cariAlamatNominatim(q, 5).then(function (data) {
+        tampilkanSuggestions(data);
+      }).catch(function () {
+        suggestionsEl.style.display = 'none';
+      });
+    }, 450);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!suggestionsEl.contains(e.target) && e.target !== inputAlamat) {
+      suggestionsEl.style.display = 'none';
+    }
+  });
 
   function toRad(deg) { return deg * Math.PI / 180; }
   function jarakKm(lat1, lng1, lat2, lng2) {
@@ -2325,26 +2412,23 @@ function showWirelessTab(tab) {
       statusEl.textContent = 'Masukkan alamat terlebih dahulu.';
       return;
     }
+    suggestionsEl.style.display = 'none';
     statusEl.className = 'cl-status';
     statusEl.textContent = 'Mencari alamat...';
     btnCariAlamat.disabled = true;
 
-    fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=id&q=' +
-      encodeURIComponent(alamat + ', Solo Raya, Jawa Tengah'))
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
-        btnCariAlamat.disabled = false;
-        if (data && data.length > 0) {
-          prosesLokasi(parseFloat(data[0].lat), parseFloat(data[0].lon), alamat);
-        } else {
-          statusEl.className = 'cl-status error';
-          statusEl.textContent = 'Alamat tidak ditemukan. Coba tulis lebih spesifik atau gunakan lokasi otomatis.';
-        }
-      })
-      .catch(function () {
-        btnCariAlamat.disabled = false;
+    cariAlamatNominatim(alamat, 1).then(function (data) {
+      btnCariAlamat.disabled = false;
+      if (data && data.length > 0) {
+        prosesLokasi(parseFloat(data[0].lat), parseFloat(data[0].lon), data[0].display_name);
+      } else {
         statusEl.className = 'cl-status error';
-        statusEl.textContent = 'Gagal mencari alamat. Coba lagi atau gunakan lokasi otomatis.';
+        statusEl.textContent = 'Alamat tidak ditemukan. Coba kata kunci lain (nama jalan/kecamatan) atau gunakan lokasi otomatis.';
+      }
+    }).catch(function () {
+      btnCariAlamat.disabled = false;
+      statusEl.className = 'cl-status error';
+      statusEl.textContent = 'Gagal mencari alamat. Coba lagi atau gunakan lokasi otomatis.';
       });
   });
 
