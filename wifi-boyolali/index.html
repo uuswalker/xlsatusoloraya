@@ -1302,6 +1302,7 @@
   ]
 }
 </script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 <body>
 
@@ -1392,9 +1393,9 @@
   <div class="hero-lokal-inner">
     <h1>Pasang <span>WiFi Rumah di Boyolali</span><br>Cepat, Stabil, dan Terjangkau</h1>
     <p>XL SATU hadir untuk keluarga di <strong>Boyolali</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan.</p>
-    <a href="https://wa.me/6287778999141?text=Halo%20kak,%20saya%20mau%20cek%20ketersediaan%20XL%20SATU%20di%20Boyolali" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="display:inline-block; width:auto; padding:14px 32px; border-radius:999px; font-size:15px;">
-      <i class="fab fa-whatsapp" style="margin-right:8px;"></i>Cek Ketersediaan di Area Saya
-    </a>
+    <button type="button" id="btn-buka-cek-lokasi" class="btn-pilih" style="display:inline-block; width:auto; padding:14px 32px; border-radius:999px; font-size:15px; border:none; cursor:pointer;">
+      <i class="fas fa-map-marker-alt" style="margin-right:8px;"></i>Cek Ketersediaan di Area Saya
+    </button>
     <div class="hero-lokal-stats">
       <div class="hero-lokal-stat">
         <span class="num">7</span>
@@ -2203,5 +2204,451 @@ function showWirelessTab(tab) {
       }
     }, true);
   </script>
+<!-- ===== MODAL CEK KETERSEDIAAN LOKASI ===== -->
+<div id="modal-cek-lokasi" class="cl-modal-overlay" style="display:none;">
+  <div class="cl-modal-box">
+    <button type="button" id="btn-tutup-cek-lokasi" class="cl-modal-close" aria-label="Tutup">&times;</button>
+
+    <div id="cl-step-lokasi">
+      <h3 class="cl-title"><i class="fas fa-map-marker-alt"></i> Cek Ketersediaan di Lokasimu</h3>
+      <p class="cl-sub">Bagikan lokasimu supaya sales kami bisa cek jangkauan XL SATU lebih cepat dan akurat.</p>
+
+      <button type="button" id="btn-gunakan-lokasi" class="cl-btn-primary">
+        <i class="fas fa-location-crosshairs"></i> Gunakan Lokasi Saya Sekarang
+      </button>
+
+      <div class="cl-divider"><span>atau</span></div>
+
+      <label for="cl-alamat-manual" class="cl-label">Masukkan alamat manual</label>
+      <div class="cl-autocomplete-wrap">
+        <input type="text" id="cl-alamat-manual" class="cl-input" placeholder="Contoh: Jl. Slamet Riyadi, Solo" autocomplete="off">
+        <div id="cl-suggestions" class="cl-suggestions" style="display:none;"></div>
+      </div>
+      <button type="button" id="btn-cari-alamat" class="cl-btn-secondary">
+        <i class="fas fa-search"></i> Cari Alamat
+      </button>
+
+      <div id="cl-map" style="display:none;"></div>
+      <p id="cl-status-lokasi" class="cl-status"></p>
+    </div>
+
+    <div id="cl-step-form" style="display:none;">
+      <h3 class="cl-title"><i class="fas fa-check-circle" style="color:#05a986;"></i> Lokasi Ditemukan!</h3>
+      <p class="cl-sub" id="cl-lokasi-info"></p>
+
+      <label for="cl-nama" class="cl-label">Nama Lengkap</label>
+      <input type="text" id="cl-nama" class="cl-input" placeholder="Nama kamu" required>
+
+      <label for="cl-wa" class="cl-label">Nomor WhatsApp</label>
+      <input type="tel" id="cl-wa" class="cl-input" placeholder="08xxxxxxxxxx" required>
+
+      <button type="button" id="btn-kirim-cek-lokasi" class="cl-btn-primary">
+        <i class="fab fa-whatsapp"></i> Kirim & Lanjut ke WhatsApp
+      </button>
+      <button type="button" id="btn-ganti-lokasi" class="cl-btn-text">Ganti Lokasi</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cl-modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+    z-index: 9999; display: flex; align-items: center; justify-content: center;
+    padding: 16px;
+  }
+  .cl-modal-box {
+    background: #fff; border-radius: 16px; max-width: 480px; width: 100%;
+    max-height: 90vh; overflow-y: auto; padding: 28px 24px; position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  .cl-modal-close {
+    position: absolute; top: 14px; right: 16px; background: none; border: none;
+    font-size: 28px; line-height: 1; color: #999; cursor: pointer; padding: 4px;
+  }
+  .cl-modal-close:hover { color: #333; }
+  .cl-title { font-size: 19px; font-weight: 700; margin: 0 0 8px 0; color: #1a1a1a; display:flex; align-items:center; gap:8px; }
+  .cl-title i { color: #05a986; }
+  .cl-sub { font-size: 14px; color: #666; margin: 0 0 20px 0; line-height: 1.5; }
+  .cl-btn-primary {
+    width: 100%; background: linear-gradient(135deg, #0d7a5f 0%, #05a986 100%);
+    color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 15px;
+    font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    gap: 8px; transition: opacity 0.2s;
+  }
+  .cl-btn-primary:hover { opacity: 0.9; }
+  .cl-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+  .cl-btn-secondary {
+    width: 100%; background: #f0f9f7; color: #05a986; border: 1.5px solid #05a986;
+    padding: 12px; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px;
+  }
+  .cl-btn-text {
+    width: 100%; background: none; border: none; color: #888; font-size: 13px;
+    text-decoration: underline; cursor: pointer; margin-top: 10px; padding: 6px;
+  }
+  .cl-divider { text-align: center; margin: 18px 0; position: relative; color: #aaa; font-size: 13px; }
+  .cl-divider::before, .cl-divider::after {
+    content: ''; position: absolute; top: 50%; width: 40%; height: 1px; background: #e5e5e5;
+  }
+  .cl-divider::before { left: 0; }
+  .cl-divider::after { right: 0; }
+  .cl-label { display: block; font-size: 13px; font-weight: 600; color: #444; margin: 14px 0 6px 0; }
+  .cl-input {
+    width: 100%; padding: 12px 14px; border: 1.5px solid #e0e0e0; border-radius: 10px;
+    font-size: 14px; box-sizing: border-box;
+  }
+  .cl-input:focus { outline: none; border-color: #05a986; }
+  .cl-autocomplete-wrap { position: relative; }
+  .cl-suggestions {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+    background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px;
+    max-height: 220px; overflow-y: auto; z-index: 10;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  .cl-suggestion-item {
+    padding: 11px 14px; font-size: 13.5px; color: #333; cursor: pointer;
+    border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 8px;
+  }
+  .cl-suggestion-item:last-child { border-bottom: none; }
+  .cl-suggestion-item:hover, .cl-suggestion-item.active { background: #f0f9f7; }
+  .cl-suggestion-item i { color: #05a986; margin-top: 2px; flex-shrink: 0; }
+  .cl-suggestion-empty { padding: 12px 14px; font-size: 13px; color: #999; text-align: center; }
+  #cl-map {
+    width: 100%; height: 220px; border-radius: 12px; margin-top: 16px; overflow: hidden;
+    border: 1.5px solid #e0e0e0;
+  }
+  .cl-status {
+    font-size: 13px; color: #666; margin-top: 12px; text-align: center; min-height: 18px;
+  }
+  .cl-status.error { color: #d33; }
+  .cl-status.success { color: #05a986; font-weight: 600; }
+</style>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function () {
+  // ====== KONFIGURASI ======
+  var GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzLaBgicwAiT80660QwYh0PmGw55HZOJvisYNal4kC6GlqYxoVIb4f-gd05_8ymQt4K/exec";
+  var NOMOR_WA_SALES = "6287778999141";
+
+  var KOTA_SOLORAYA = [
+    { nama: "Solo",         lat: -7.5755, lng: 110.8243, radiusKm: 12 },
+    { nama: "Sukoharjo",    lat: -7.6807, lng: 110.8380, radiusKm: 15 },
+    { nama: "Klaten",       lat: -7.7058, lng: 110.6069, radiusKm: 18 },
+    { nama: "Karanganyar",  lat: -7.6000, lng: 110.9500, radiusKm: 18 },
+    { nama: "Boyolali",     lat: -7.5333, lng: 110.6000, radiusKm: 18 },
+    { nama: "Sragen",       lat: -7.4262, lng: 111.0187, radiusKm: 18 },
+    { nama: "Wonogiri",     lat: -7.8167, lng: 110.9167, radiusKm: 20 }
+  ];
+
+  var modal = document.getElementById('modal-cek-lokasi');
+  var btnBuka = document.getElementById('btn-buka-cek-lokasi');
+  var btnTutup = document.getElementById('btn-tutup-cek-lokasi');
+  var btnGunakanLokasi = document.getElementById('btn-gunakan-lokasi');
+  var btnCariAlamat = document.getElementById('btn-cari-alamat');
+  var btnGantiLokasi = document.getElementById('btn-ganti-lokasi');
+  var btnKirim = document.getElementById('btn-kirim-cek-lokasi');
+  var inputAlamat = document.getElementById('cl-alamat-manual');
+  var suggestionsEl = document.getElementById('cl-suggestions');
+  var statusEl = document.getElementById('cl-status-lokasi');
+  var stepLokasi = document.getElementById('cl-step-lokasi');
+  var stepForm = document.getElementById('cl-step-form');
+  var lokasiInfoEl = document.getElementById('cl-lokasi-info');
+  var mapDiv = document.getElementById('cl-map');
+
+  var map, marker;
+  var currentLat = null, currentLng = null, currentKota = null, currentAlamatText = null;
+
+  // Bounding box longgar area Solo Raya (untuk bias hasil pencarian)
+  // format Nominatim viewbox: left,top,right,bottom (lon,lat,lon,lat)
+  var SOLORAYA_VIEWBOX = '110.45,-7.30,111.15,-7.95';
+
+  function cariAlamatNominatim(query, limit) {
+    var url = 'https://nominatim.openstreetmap.org/search?format=json&addressdetails=0' +
+      '&limit=' + (limit || 5) +
+      '&countrycodes=id' +
+      '&viewbox=' + SOLORAYA_VIEWBOX +
+      '&bounded=1' +
+      '&q=' + encodeURIComponent(query);
+    return fetch(url).then(function (res) { return res.json(); }).then(function (data) {
+      if (data && data.length > 0) return data;
+      // Fallback: coba tanpa bounded (kalau alamat di luar area tapi tetap mau dicari)
+      var urlFallback = 'https://nominatim.openstreetmap.org/search?format=json&addressdetails=0' +
+        '&limit=' + (limit || 5) +
+        '&countrycodes=id' +
+        '&q=' + encodeURIComponent(query + ', Jawa Tengah');
+      return fetch(urlFallback).then(function (res) { return res.json(); });
+    });
+  }
+
+  var autocompleteTimer = null;
+  var suggestionAbortController = null;
+
+  function tampilkanSuggestions(list) {
+    suggestionsEl.innerHTML = '';
+    if (!list || list.length === 0) {
+      suggestionsEl.innerHTML = '<div class="cl-suggestion-empty">Tidak ada saran. Coba kata kunci lain atau tekan "Cari Alamat".</div>';
+      suggestionsEl.style.display = 'block';
+      return;
+    }
+    list.forEach(function (item) {
+      var div = document.createElement('div');
+      div.className = 'cl-suggestion-item';
+      div.innerHTML = '<i class="fas fa-map-marker-alt"></i><span>' + item.display_name + '</span>';
+      div.addEventListener('click', function () {
+        inputAlamat.value = item.display_name;
+        suggestionsEl.style.display = 'none';
+        prosesLokasi(parseFloat(item.lat), parseFloat(item.lon), item.display_name);
+      });
+      suggestionsEl.appendChild(div);
+    });
+    suggestionsEl.style.display = 'block';
+  }
+
+  inputAlamat.addEventListener('input', function () {
+    var q = inputAlamat.value.trim();
+    clearTimeout(autocompleteTimer);
+    if (q.length < 3) {
+      suggestionsEl.style.display = 'none';
+      return;
+    }
+    autocompleteTimer = setTimeout(function () {
+      cariAlamatNominatim(q, 5).then(function (data) {
+        tampilkanSuggestions(data);
+      }).catch(function () {
+        suggestionsEl.style.display = 'none';
+      });
+    }, 450);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!suggestionsEl.contains(e.target) && e.target !== inputAlamat) {
+      suggestionsEl.style.display = 'none';
+    }
+  });
+
+  function toRad(deg) { return deg * Math.PI / 180; }
+  function jarakKm(lat1, lng1, lat2, lng2) {
+    var R = 6371;
+    var dLat = toRad(lat2 - lat1);
+    var dLng = toRad(lng2 - lng1);
+    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+            Math.sin(dLng/2) * Math.sin(dLng/2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  }
+
+  function deteksiKota(lat, lng) {
+    var terdekat = null, jarakTerdekat = Infinity;
+    for (var i = 0; i < KOTA_SOLORAYA.length; i++) {
+      var k = KOTA_SOLORAYA[i];
+      var d = jarakKm(lat, lng, k.lat, k.lng);
+      if (d < jarakTerdekat) { jarakTerdekat = d; terdekat = k; }
+    }
+    if (terdekat && jarakTerdekat <= terdekat.radiusKm) {
+      return { nama: terdekat.nama, dalamArea: true };
+    }
+    return { nama: terdekat ? terdekat.nama : null, dalamArea: false };
+  }
+
+  function tampilkanPeta(lat, lng) {
+    mapDiv.style.display = 'block';
+    if (!map) {
+      map = L.map('cl-map').setView([lat, lng], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18
+      }).addTo(map);
+      marker = L.marker([lat, lng]).addTo(map);
+    } else {
+      map.setView([lat, lng], 13);
+      marker.setLatLng([lat, lng]);
+      setTimeout(function () { map.invalidateSize(); }, 100);
+    }
+  }
+
+  function prosesLokasiTanpaKoordinat(alamatText) {
+    currentLat = null;
+    currentLng = null;
+    currentAlamatText = alamatText;
+    currentKota = null;
+    mapDiv.style.display = 'none';
+
+    statusEl.className = 'cl-status';
+    statusEl.textContent = 'Alamat dicatat tanpa titik peta pasti. Sales kami akan konfirmasi lokasi lebih lanjut.';
+
+    setTimeout(function () {
+      lokasiInfoEl.textContent = 'Alamat: ' + alamatText + ' (lokasi belum terverifikasi peta)';
+      stepLokasi.style.display = 'none';
+      stepForm.style.display = 'block';
+    }, 600);
+  }
+
+  function prosesLokasi(lat, lng, alamatText) {
+    currentLat = lat;
+    currentLng = lng;
+    currentAlamatText = alamatText || null;
+    tampilkanPeta(lat, lng);
+
+    var hasil = deteksiKota(lat, lng);
+    currentKota = hasil.nama;
+
+    if (hasil.dalamArea) {
+      statusEl.className = 'cl-status success';
+      statusEl.textContent = '✓ Lokasi terdeteksi di area ' + hasil.nama;
+    } else {
+      statusEl.className = 'cl-status';
+      statusEl.textContent = 'Lokasi terdeteksi dekat ' + (hasil.nama || 'Solo Raya') + '. Tetap bisa dicek manual oleh sales kami.';
+    }
+
+    setTimeout(function () {
+      lokasiInfoEl.textContent = 'Lokasi: ' + (alamatText ? alamatText : lat.toFixed(5) + ', ' + lng.toFixed(5)) +
+        (hasil.nama ? ' (dekat ' + hasil.nama + ')' : '');
+      stepLokasi.style.display = 'none';
+      stepForm.style.display = 'block';
+    }, 900);
+  }
+
+  btnBuka.addEventListener('click', function () {
+    modal.style.display = 'flex';
+    if (typeof gtag === 'function') {
+      gtag('event', 'open_cek_lokasi', { page_path: window.location.pathname });
+    }
+    setTimeout(function () { if (map) map.invalidateSize(); }, 200);
+  });
+
+  btnTutup.addEventListener('click', function () { modal.style.display = 'none'; });
+  modal.addEventListener('click', function (e) { if (e.target === modal) modal.style.display = 'none'; });
+
+  btnGunakanLokasi.addEventListener('click', function () {
+    if (!navigator.geolocation) {
+      statusEl.className = 'cl-status error';
+      statusEl.textContent = 'Browser kamu tidak mendukung deteksi lokasi. Gunakan input alamat manual.';
+      return;
+    }
+    statusEl.className = 'cl-status';
+    statusEl.textContent = 'Mendeteksi lokasi kamu...';
+    btnGunakanLokasi.disabled = true;
+
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      btnGunakanLokasi.disabled = false;
+      prosesLokasi(pos.coords.latitude, pos.coords.longitude, null);
+    }, function (err) {
+      btnGunakanLokasi.disabled = false;
+      statusEl.className = 'cl-status error';
+      statusEl.textContent = 'Gagal mengambil lokasi. Coba gunakan input alamat manual di bawah.';
+    }, { enableHighAccuracy: true, timeout: 10000 });
+  });
+
+  btnCariAlamat.addEventListener('click', function () {
+    var alamat = inputAlamat.value.trim();
+    if (!alamat) {
+      statusEl.className = 'cl-status error';
+      statusEl.textContent = 'Masukkan alamat terlebih dahulu.';
+      return;
+    }
+    suggestionsEl.style.display = 'none';
+    statusEl.className = 'cl-status';
+    statusEl.textContent = 'Mencari alamat...';
+    btnCariAlamat.disabled = true;
+
+    cariAlamatNominatim(alamat, 1).then(function (data) {
+      btnCariAlamat.disabled = false;
+      if (data && data.length > 0) {
+        prosesLokasi(parseFloat(data[0].lat), parseFloat(data[0].lon), data[0].display_name);
+      } else {
+        tampilkanTombolLanjutTanpaPeta(alamat);
+      }
+    }).catch(function () {
+      btnCariAlamat.disabled = false;
+      tampilkanTombolLanjutTanpaPeta(alamat);
+    });
+  });
+
+  function tampilkanTombolLanjutTanpaPeta(alamat) {
+    statusEl.className = 'cl-status error';
+    statusEl.innerHTML = 'Alamat tidak ditemukan di peta. ';
+
+    var btnLanjut = document.createElement('button');
+    btnLanjut.type = 'button';
+    btnLanjut.className = 'cl-btn-secondary';
+    btnLanjut.style.marginTop = '10px';
+    btnLanjut.innerHTML = '<i class="fas fa-arrow-right"></i> Tetap Lanjutkan dengan Alamat Ini';
+    btnLanjut.addEventListener('click', function () {
+      prosesLokasiTanpaKoordinat(alamat);
+    });
+
+    // Hindari duplikat tombol kalau user klik cari berkali-kali
+    var existing = document.getElementById('btn-lanjut-tanpa-peta');
+    if (existing) existing.remove();
+    btnLanjut.id = 'btn-lanjut-tanpa-peta';
+    statusEl.parentNode.insertBefore(btnLanjut, statusEl.nextSibling);
+  }
+
+  btnGantiLokasi.addEventListener('click', function () {
+    stepForm.style.display = 'none';
+    stepLokasi.style.display = 'block';
+    statusEl.textContent = '';
+    statusEl.className = 'cl-status';
+  });
+
+  btnKirim.addEventListener('click', function () {
+    var nama = document.getElementById('cl-nama').value.trim();
+    var wa = document.getElementById('cl-wa').value.trim();
+
+    if (!nama || !wa) {
+      alert('Mohon lengkapi nama dan nomor WhatsApp.');
+      return;
+    }
+
+    btnKirim.disabled = true;
+    btnKirim.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
+
+    var mapsLink = 'https://www.google.com/maps?q=' + currentLat + ',' + currentLng;
+    var dataKirim = {
+      timestamp: new Date().toISOString(),
+      nama: nama,
+      whatsapp: wa,
+      latitude: currentLat,
+      longitude: currentLng,
+      alamat: currentAlamatText || '',
+      kotaTerdeteksi: currentKota || '',
+      mapsLink: mapsLink,
+      halaman: window.location.pathname
+    };
+
+    function lanjutKeWA() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'submit_cek_lokasi', {
+          kota_terdeteksi: currentKota || 'unknown',
+          page_path: window.location.pathname
+        });
+      }
+      var pesan = 'Halo kak, saya ' + nama + ', mau cek ketersediaan XL SATU di lokasi saya.\n' +
+        'Lokasi: ' + mapsLink +
+        (currentKota ? '\nArea terdekat: ' + currentKota : '');
+      var waUrl = 'https://wa.me/' + NOMOR_WA_SALES + '?text=' + encodeURIComponent(pesan);
+      window.open(waUrl, '_blank');
+      modal.style.display = 'none';
+      btnKirim.disabled = false;
+      btnKirim.innerHTML = '<i class="fab fa-whatsapp"></i> Kirim & Lanjut ke WhatsApp';
+    }
+
+    if (GOOGLE_SHEET_WEBHOOK_URL && GOOGLE_SHEET_WEBHOOK_URL.indexOf('GANTI_DENGAN') === -1) {
+      fetch(GOOGLE_SHEET_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(dataKirim)
+      }).then(lanjutKeWA).catch(lanjutKeWA);
+    } else {
+      lanjutKeWA();
+    }
+  });
+})();
+</script>
+
+
 </body>
 </html>
