@@ -2402,24 +2402,74 @@ function showWirelessTab(tab) {
   btnTutup.addEventListener('click', function () { modal.style.display = 'none'; });
   modal.addEventListener('click', function (e) { if (e.target === modal) modal.style.display = 'none'; });
 
+  var MAX_TUNGGU_DETIK = 8;
+  var TARGET_AKURASI_METER = 50;
+
   btnGunakanLokasi.addEventListener('click', function () {
     if (!navigator.geolocation) {
       statusEl.className = 'cl-status error';
       statusEl.textContent = 'Browser kamu tidak mendukung deteksi lokasi. Gunakan input alamat manual.';
       return;
     }
-    statusEl.className = 'cl-status';
-    statusEl.textContent = 'Mendeteksi lokasi kamu...';
     btnGunakanLokasi.disabled = true;
 
-    navigator.geolocation.getCurrentPosition(function (pos) {
-      btnGunakanLokasi.disabled = false;
-      prosesLokasi(pos.coords.latitude, pos.coords.longitude, null);
+    var watchId = null;
+    var bestPos = null;
+    var detikTersisa = MAX_TUNGGU_DETIK;
+
+    function bersihkanWatch() {
+      if (watchId !== null) {
+        navigator.geolocation.clearWatch(watchId);
+        watchId = null;
+      }
+      clearInterval(countdownTimer);
+      clearTimeout(timeoutTimer);
+    }
+
+    function updateStatusCountdown() {
+      var akurasiText = bestPos ? '±' + Math.round(bestPos.coords.accuracy) + 'm' : 'mencari sinyal...';
+      statusEl.className = 'cl-status';
+      statusEl.textContent = 'Menyempurnakan lokasi presisi... (' + detikTersisa + ' detik) — Akurasi saat ini: ' + akurasiText;
+    }
+
+    updateStatusCountdown();
+    var countdownTimer = setInterval(function () {
+      detikTersisa -= 1;
+      if (detikTersisa > 0) {
+        updateStatusCountdown();
+      }
+    }, 1000);
+
+    watchId = navigator.geolocation.watchPosition(function (pos) {
+      if (!bestPos || pos.coords.accuracy < bestPos.coords.accuracy) {
+        bestPos = pos;
+      }
+      updateStatusCountdown();
+
+      if (pos.coords.accuracy <= TARGET_AKURASI_METER) {
+        bersihkanWatch();
+        btnGunakanLokasi.disabled = false;
+        prosesLokasi(bestPos.coords.latitude, bestPos.coords.longitude, null);
+      }
     }, function (err) {
+      if (!bestPos) {
+        bersihkanWatch();
+        btnGunakanLokasi.disabled = false;
+        statusEl.className = 'cl-status error';
+        statusEl.textContent = 'Gagal mengambil lokasi. Coba gunakan input alamat manual di bawah.';
+      }
+    }, { enableHighAccuracy: true, timeout: MAX_TUNGGU_DETIK * 1000, maximumAge: 0 });
+
+    var timeoutTimer = setTimeout(function () {
+      bersihkanWatch();
       btnGunakanLokasi.disabled = false;
-      statusEl.className = 'cl-status error';
-      statusEl.textContent = 'Gagal mengambil lokasi. Coba gunakan input alamat manual di bawah.';
-    }, { enableHighAccuracy: true, timeout: 10000 });
+      if (bestPos) {
+        prosesLokasi(bestPos.coords.latitude, bestPos.coords.longitude, null);
+      } else {
+        statusEl.className = 'cl-status error';
+        statusEl.textContent = 'Gagal mengambil lokasi. Coba gunakan input alamat manual di bawah.';
+      }
+    }, MAX_TUNGGU_DETIK * 1000);
   });
 
   btnCariAlamat.addEventListener('click', function () {
