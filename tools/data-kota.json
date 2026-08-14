@@ -22,7 +22,15 @@
       "wireless_badge": "Khusus Area Solo",
       "wa_float_text": "Info XL SATU Solo",
       "wa_widget_text": "Halo kak, saya mau info XL SATU di Solo",
-      "og_description": "Pasang WiFi di Solo (Surakarta) cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan."
+      "og_description": "Pasang WiFi di Solo (Surakarta) cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan.",
+      "kecamatan_list": [
+        "Laweyan",
+        "Serengan",
+        "Pasar Kliwon",
+        "Jebres",
+        "Banjarsari"
+      ],
+      "kecamatan_count": 5
     },
     {
       "slug": "wifi-sukoharjo",
@@ -46,7 +54,22 @@
       "wireless_badge": "Khusus Area Sukoharjo",
       "wa_float_text": "Info XL SATU Sukoharjo",
       "wa_widget_text": "Halo kak, saya mau info XL SATU di Sukoharjo",
-      "og_description": "Pasang WiFi di Sukoharjo cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan."
+      "og_description": "Pasang WiFi di Sukoharjo cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan.",
+      "kecamatan_list": [
+        "Sukoharjo",
+        "Grogol",
+        "Baki",
+        "Gatak",
+        "Kartasura",
+        "Mojolaban",
+        "Polokarto",
+        "Bendosari",
+        "Nguter",
+        "Tawangsari",
+        "Bulu",
+        "Weru"
+      ],
+      "kecamatan_count": 12
     },
     {
       "slug": "wifi-karanganyar",
@@ -70,7 +93,27 @@
       "wireless_badge": "Khusus Area Karanganyar",
       "wa_float_text": "Info XL SATU Karanganyar",
       "wa_widget_text": "Halo kak, saya mau info XL SATU di Karanganyar",
-      "og_description": "Pasang WiFi di Karanganyar cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan."
+      "og_description": "Pasang WiFi di Karanganyar cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan.",
+      "kecamatan_list": [
+        "Colomadu",
+        "Gondangrejo",
+        "Jaten",
+        "Jatipuro",
+        "Jatiyoso",
+        "Jenawi",
+        "Jumantono",
+        "Jumapolo",
+        "Karanganyar",
+        "Karangpandan",
+        "Kebakkramat",
+        "Kerjo",
+        "Matesih",
+        "Mojogedang",
+        "Ngargoyoso",
+        "Tasikmadu",
+        "Tawangmangu"
+      ],
+      "kecamatan_count": 17
     },
     {
       "slug": "wifi-klaten",
@@ -94,7 +137,36 @@
       "wireless_badge": "Khusus Area Klaten",
       "wa_float_text": "Info XL SATU Klaten",
       "wa_widget_text": "Halo kak, saya mau info XL SATU di Klaten",
-      "og_description": "Pasang WiFi di Klaten cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan."
+      "og_description": "Pasang WiFi di Klaten cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan.",
+      "kecamatan_list": [
+        "Prambanan",
+        "Gantiwarno",
+        "Wedi",
+        "Bayat",
+        "Cawas",
+        "Trucuk",
+        "Kalikotes",
+        "Kebonarum",
+        "Jogonalan",
+        "Manisrenggo",
+        "Karangnongko",
+        "Ngawen",
+        "Ceper",
+        "Pedan",
+        "Karangdowo",
+        "Juwiring",
+        "Wonosari",
+        "Delanggu",
+        "Polanharjo",
+        "Karanganom",
+        "Tulung",
+        "Jatinom",
+        "Kemalang",
+        "Klaten Selatan",
+        "Klaten Tengah",
+        "Klaten Utara"
+      ],
+      "kecamatan_count": 26
     },
     {
       "slug": "wifi-boyolali",
@@ -118,7 +190,29 @@
       "wireless_badge": "Khusus Area Boyolali",
       "wa_float_text": "Info XL SATU Boyolali",
       "wa_widget_text": "Halo kak, saya mau info XL SATU di Boyolali",
-      "og_description": "Pasang WiFi di Boyolali cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan."
+      "og_description": "Pasang WiFi di Boyolali cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan.",
+      "kecamatan_list": [
+        "Selo",
+        "Musuk",
+        "Cepogo",
+        "Boyolali",
+        "Mojosongo",
+        "Teras",
+        "Ampel",
+        "Sawit",
+        "Banyudono",
+        "Ngemplak",
+        "Sambi",
+        "Nogosari",
+        "Simo",
+        "Klego",
+        "Andong",
+        "Wonosegoro",
+        "Kemusu",
+        "Juwangi",
+        "Karanggede"
+      ],
+      "kecamatan_count": 19
     }
   ]
 }

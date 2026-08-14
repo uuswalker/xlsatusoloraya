@@ -46,6 +46,15 @@ for (const city of cities) {
   // slug placeholder (used in canonical/og:url etc.)
   html = html.replace(/{{slug}}/g, city.slug);
 
+  // Natural-language kecamatan list: "A, B, C, dan D"
+  if (Array.isArray(city.kecamatan_list) && city.kecamatan_list.length > 0) {
+    const list = city.kecamatan_list;
+    const kecamatanText = list.length === 1
+      ? list[0]
+      : list.slice(0, -1).join(', ') + ', dan ' + list[list.length - 1];
+    html = html.replace(/{{kecamatan_text}}/g, kecamatanText);
+  }
+
   // URL-encoded WA text placeholders (match site's existing style: only spaces -> %20, commas stay literal)
   const waEncode = (s) => encodeURIComponent(s).replace(/%2C/g, ',');
   html = html.replace(/{{wa_float_text_url}}/g, waEncode(city.wa_float_text));
