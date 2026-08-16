@@ -1,7 +1,7 @@
 {
   "name": "XL SATU Solo Raya",
   "short_name": "XL SATU",
-  "description": "XL SATU - Internet Rumah Fiber Optic untuk Solo Raya (Solo, Sukoharjo, Karanganyar, Klaten, Boyolali, Sragen, Wonogiri)",
+  "description": "XL SATU - Internet Rumah Fiber Optic untuk Solo Raya (Solo, Sukoharjo, Karanganyar, Klaten, Boyolali)",
   "icons": [
     { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" },
