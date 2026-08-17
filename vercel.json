@@ -1,3 +1,25 @@
 {
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/wifi-sragen",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wifi-sragen/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wifi-wonogiri",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wifi-wonogiri/",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }
