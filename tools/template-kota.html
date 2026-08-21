@@ -153,11 +153,13 @@
       gap: 8px;
     }
     .dot {
-      width: 10px; 
-      height: 10px; 
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
-      background: rgba(255,255,255,.4); 
-      cursor: pointer; 
+      background: rgba(255,255,255,.4);
+      background-clip: content-box;
+      padding: 7px;
+      cursor: pointer;
       transition: background .3s;
       border: none;
     }
@@ -1844,7 +1846,7 @@
 
     <!-- MONTHLY PLAN -->
     <div id="wireless-monthly" style="display:none;">
-      <div style="max-width:420px; margin:0 auto 24px; background:#fff3e0; border-radius:12px; padding:12px 16px; text-align:center; font-size:13px; font-weight:600; color:#e65100;">
+      <div style="max-width:420px; margin:0 auto 24px; background:#fff3e0; border-radius:12px; padding:12px 16px; text-align:center; font-size:13px; font-weight:600; color:#ac3c00;">
         <i class="fas fa-calendar-check" style="margin-right:6px;"></i> Bayar bulanan, tanpa advance — <strong>Pilot Agustus 2026</strong>
       </div>
       <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:700px; margin:0 auto 32px;">
