@@ -2174,6 +2174,7 @@ function showWirelessTab(tab) {
   for (let i = 0; i < total; i++) {
     const d = document.createElement('button');
     d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Ke slide ' + (i + 1));
     d.onclick = () => goToSlide(i);
     dotsEl.appendChild(d);
   }
