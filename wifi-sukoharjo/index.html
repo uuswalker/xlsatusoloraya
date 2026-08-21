@@ -46,8 +46,13 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQfVNpGcQOzAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQfVNpGcQOzAw==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="image" href="/images/promo-wifi-rumah-koneksi-pasti.webp" fetchpriority="high">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQfVNpGcQOzAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -1305,7 +1310,8 @@
   ]
 }
 </script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Leaflet CSS/JS dimuat lazy saat modal cek lokasi dibuka (lihat script di bawah) -->
+  <link rel="preconnect" href="https://unpkg.com">
 </head>
 <body>
 
@@ -1314,7 +1320,7 @@
   <div class="header-inner">
     <div class="logo">
       <a href="/" title="XL SATU">
-        <img src="/images/logo-xl-satu.png" alt="XL SATU" loading="lazy">
+        <img src="/images/logo-xl-satu.png" alt="XL SATU" width="256" height="204" loading="lazy">
       </a>
     </div>
     <nav role="navigation">
@@ -1334,16 +1340,16 @@
 <div class="slider" id="slider">
   <div class="slides" id="slides">
     <div class="slide" onclick="openWA()">
-      <img src="/images/promo-wifi-rumah-koneksi-pasti.webp" alt="Promo XL SATU" loading="lazy">
+      <img src="/images/promo-wifi-rumah-koneksi-pasti.webp" alt="Promo XL SATU" width="1080" height="1080" fetchpriority="high" loading="eager">
     </div>
     <div class="slide" onclick="openWA()">
-      <img src="/images/promo-paket-internet.webp" alt="Paket Internet" loading="lazy">
+      <img src="/images/promo-paket-internet.webp" alt="Paket Internet" width="1080" height="1080" loading="lazy">
     </div>
     <div class="slide" onclick="goTo('hubungi')">
-      <img src="/images/banner-bayar-tagihan.jpg" alt="Bayar Tagihan" loading="lazy">
+      <img src="/images/banner-bayar-tagihan.jpg" alt="Bayar Tagihan" width="1920" height="546" loading="lazy">
     </div>
     <div class="slide" onclick="goTo('hubungi')">
-      <img src="/images/promo-first-media-xl-satu-square.webp" alt="myXL App" loading="lazy">
+      <img src="/images/promo-first-media-xl-satu-square.webp" alt="myXL App" width="937" height="936" loading="lazy">
     </div>
   </div>
   <button class="slider-btn prev" onclick="moveSlide(-1)">&#8249;</button>
@@ -1934,7 +1940,7 @@ function showWirelessTab(tab) {
       <p>Nikmati internet rumah tambah cepat dengan jaringan tepercaya XLSMART yang membuat setiap momen di rumah lebih nyaman bersama koneksi dan hiburan tanpa batas.</p>
     </div>
     <div class="about-video">
-      <img src="/images/promo-first-media-xl-satu-banner.webp" alt="Video XL SATU" loading="lazy">
+      <img src="/images/promo-first-media-xl-satu-banner.webp" alt="Video XL SATU" width="946" height="532" loading="lazy">
       <div class="play-btn" onclick="openWA()"><i class="fas fa-play"></i></div>
     </div>
   </div>
@@ -2133,7 +2139,7 @@ function showWirelessTab(tab) {
 <footer>
   <div class="footer-inner">
     <div class="footer-left">
-      <img src="/images/logo-xl-satu.png" alt="XL SATU" class="footer-logo" loading="lazy">
+      <img src="/images/logo-xl-satu.png" alt="XL SATU" class="footer-logo" width="256" height="204" loading="lazy">
       <div class="footer-copy">Copyright © 2026 XL SATU. All rights reserved.</div>
     </div>
     <div class="footer-links">
@@ -2363,7 +2369,32 @@ function showWirelessTab(tab) {
   .cl-status.success { color: #037e64; font-weight: 600; }
 </style>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function () {
+  // Lazy-load Leaflet CSS+JS on demand (baru dimuat saat modal cek lokasi dibuka)
+  var leafletPromise = null;
+  window.__loadLeaflet = function () {
+    if (leafletPromise) return leafletPromise;
+    leafletPromise = new Promise(function (resolve, reject) {
+      var css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+      css.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+      css.crossOrigin = '';
+      document.head.appendChild(css);
+
+      var script = document.createElement('script');
+      script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+      script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+      script.crossOrigin = '';
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+    return leafletPromise;
+  };
+})();
+</script>
 <script>
 (function () {
   // ====== KONFIGURASI ======
@@ -2491,18 +2522,20 @@ function showWirelessTab(tab) {
 
   function tampilkanPeta(lat, lng) {
     mapDiv.style.display = 'block';
-    if (!map) {
-      map = L.map('cl-map').setView([lat, lng], 13);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors',
-        maxZoom: 18
-      }).addTo(map);
-      marker = L.marker([lat, lng]).addTo(map);
-    } else {
-      map.setView([lat, lng], 13);
-      marker.setLatLng([lat, lng]);
+    window.__loadLeaflet().then(function () {
+      if (!map) {
+        map = L.map('cl-map').setView([lat, lng], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap contributors',
+          maxZoom: 18
+        }).addTo(map);
+        marker = L.marker([lat, lng]).addTo(map);
+      } else {
+        map.setView([lat, lng], 13);
+        marker.setLatLng([lat, lng]);
+      }
       setTimeout(function () { map.invalidateSize(); }, 100);
-    }
+    });
   }
 
   function prosesLokasiTanpaKoordinat(alamatText) {
@@ -2549,6 +2582,7 @@ function showWirelessTab(tab) {
 
   btnBuka.addEventListener('click', function () {
     modal.style.display = 'flex';
+    window.__loadLeaflet();
     if (typeof gtag === 'function') {
       gtag('event', 'open_cek_lokasi', { page_path: window.location.pathname });
     }

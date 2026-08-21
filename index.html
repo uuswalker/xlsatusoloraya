@@ -191,8 +191,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://satu.xl.co.id">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQfVNpGcQOzAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preload" as="image" href="/images/promo-wifi-rumah-koneksi-pasti.webp" fetchpriority="high">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQfVNpGcQOzAw==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQfVNpGcQOzAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -1361,7 +1366,7 @@
 <div class="slider" id="slider">
   <div class="slides" id="slides">
     <div class="slide" onclick="openWA()">
-      <img src="/images/promo-wifi-rumah-koneksi-pasti.webp" alt="Promo XL SATU" width="1080" height="1080" loading="lazy">
+      <img src="/images/promo-wifi-rumah-koneksi-pasti.webp" alt="Promo XL SATU" width="1080" height="1080" fetchpriority="high" loading="eager">
     </div>
     <div class="slide" onclick="openWA()">
       <img src="/images/promo-paket-internet.webp" alt="Paket Internet" width="1080" height="1080" loading="lazy">
