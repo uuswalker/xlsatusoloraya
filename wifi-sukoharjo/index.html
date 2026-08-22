@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R0LKSXL8Y"></script>
+  <!-- Google tag (gtag.js) - dimuat setelah halaman selesai render, dataLayer tetap siap dari awal jadi tidak ada event yang hilang -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-9R0LKSXL8Y');
+  </script>
+  <script>
+    function __loadGtagScript() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-9R0LKSXL8Y';
+      document.head.appendChild(s);
+    }
+    if (document.readyState === 'complete') {
+      __loadGtagScript();
+    } else {
+      window.addEventListener('load', __loadGtagScript);
+    }
   </script>
 
   <meta charset="UTF-8">
@@ -45,6 +57,7 @@
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQfVNpGcQOzAw==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'">
