@@ -25,6 +25,8 @@ Paket tersedia mulai dari 20 Mbps (Rp 185.000/bulan) hingga 1000 Mbps (Rp 900.00
 - [Fiber vs Wireless](https://xlsatusolo.com/panduan-fiber-vs-wireless/): Perbandingan lengkap internet fiber optic dan wireless untuk membantu memilih jenis koneksi yang tepat.
 - [Kecepatan WiFi Ideal untuk Keluarga](https://xlsatusolo.com/kecepatan-wifi-ideal-keluarga/): Panduan memilih kecepatan WiFi berdasarkan jumlah anggota keluarga dan aktivitas rumah tangga.
 - [WiFi Lemot? Penyebab dan Cara Mengatasi](https://xlsatusolo.com/penyebab-wifi-lemot-cara-mengatasi/): Penyebab umum WiFi lemot di rumah dan langkah-langkah mengatasinya.
+- [Internet Rakyat vs XL SATU](https://xlsatusolo.com/internet-rakyat-vs-xl-satu/): Perbandingan lengkap antara program Internet Rakyat pemerintah dan layanan XL SATU untuk area Solo Raya.
+- [WiFi Tanpa FUP: Unlimited XL SATU Dijelaskan](https://xlsatusolo.com/wifi-tanpa-fup-unlimited/): Penjelasan kebijakan FUP (Fair Usage Policy) pada paket Fiber dan Wireless XL SATU.
 
 ## Informasi Tambahan
 

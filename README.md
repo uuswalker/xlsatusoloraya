@@ -22,6 +22,8 @@ Static landing page untuk layanan XL SATU (fiber optic & wireless internet) area
 ├── penyebab-wifi-lemot-cara-mengatasi/         # Artikel panduan
 ├── kecepatan-wifi-ideal-keluarga/              # Artikel panduan
 ├── wifi-tanpa-fup-unlimited/                   # Artikel panduan
+├── 5-hal-wajib-dicek-sebelum-pasang-wifi-rumah/ # Artikel: checklist sebelum pasang wifi
+├── solusi-internet-daerah-belum-ada-fiber-optik/ # Artikel: FWA untuk area belum ada fiber
 ├── images/                                      # Aset gambar self-hosted
 ├── tools/                                       # Sistem templating (lihat di bawah)
 ├── sitemap.xml
