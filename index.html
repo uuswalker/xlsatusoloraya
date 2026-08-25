@@ -1368,9 +1368,9 @@
       <a href="#bantuan">Bantuan</a>
       <a href="#hubungi">Hubungi Kami</a>
     </nav>
-    <a href="https://wa.me/6287778999141?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="btn-wa-header">
-      <i class="fab fa-whatsapp"></i> Chat WA
-    </a>
+    <button type="button" class="btn-wa-header btn-cek-lokasi-trigger">
+      <i class="fas fa-map-marker-alt"></i> Cek Ketersediaan
+    </button>
   </div>
 </header>
 
@@ -2643,6 +2643,17 @@ function showWirelessTab(tab) {
       gtag('event', 'open_cek_lokasi', { page_path: window.location.pathname });
     }
     setTimeout(function () { if (map) map.invalidateSize(); }, 200);
+  });
+
+  document.querySelectorAll('.btn-cek-lokasi-trigger').forEach(function (el) {
+    el.addEventListener('click', function () {
+      modal.style.display = 'flex';
+      window.__loadLeaflet();
+      if (typeof gtag === 'function') {
+        gtag('event', 'open_cek_lokasi', { page_path: window.location.pathname, trigger: 'header' });
+      }
+      setTimeout(function () { if (map) map.invalidateSize(); }, 200);
+    });
   });
 
   btnTutup.addEventListener('click', function () { modal.style.display = 'none'; });
