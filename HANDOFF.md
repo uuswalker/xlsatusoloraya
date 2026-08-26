@@ -26,7 +26,8 @@
 - Paket wireless aktif: **Advance 50 Mbps Rp650rb & 100 Mbps Rp790rb** (3 bulan + bonus 1 bulan); **Monthly 100 Mbps Rp219.500**. Paket 75/250 wireless SUDAH TIDAK ADA (jangan pernah munculkan lagi).
 - **Klaten = wireless saja** (tidak ada fiber). Solo/Sukoharjo/Karanganyar/Boyolali = fiber & wireless. Surakarta = fiber (alias keyword kota Solo).
 - Fiber: tambahan **Starter 50 Mbps Rp200rb, gratis instalasi**, dan **semua FTTH dapat bonus STB Android TV** (info dari internal, belum ada di web resmi satu.xl.co.id — pegang bukti internal).
-- **`wifi-surakarta`** = halaman alias keyword dengan konten terdiferensiasi (FAQ menjawab "apakah sama dengan Solo"). Watchlist: kanibalisme dengan `wifi-solo`.
+- **`wifi-surakarta`** = halaman kota Solo/Surakarta (fiber & wireless, primer untuk keyword "pasang wifi solo")
+- **`wifi-solo`** = **gateway pemilihan kota** — halaman minimalis yang menangkap traffic "wifi solo" dan mengarahkan ke kota yang tepat. Bukan halaman produk.
 - **`wifi-klaten`** = **WIRELESS SAJA** (tidak ada fiber di Klaten). Template mendukung conditional block `{{#has_fiber}}...{{/has_fiber}}` — jika kota berubah jadi wireless-only, set `has_fiber: false` di `data-kota.json` lalu regenerate.
 - **`/area-layanan/`** = hub 5 wilayah + 79 kecamatan (Solo 5, Sukoharjo 12, Karanganyar 17, Klaten 26, Boyolali 19).
 - Urutan section halaman: Hero(+trust strip) → Area → Paket → Wireless → Kenapa Sales → FAQ → Hubungi. Alasan: jawab pertanyaan pengunjung sesuai urutan pikirannya.
