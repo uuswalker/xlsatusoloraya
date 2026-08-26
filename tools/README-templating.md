@@ -3,14 +3,14 @@
 ## Cara pakai
 
 1. **Update data**: Edit `data-kota.json` untuk ubah teks/meta per kota (harga, deskripsi, FAQ, dll)
-2. **Generate ulang**: Jalankan `node generate.js` — otomatis buat 7 halaman ke folder `output/`
+2. **Generate ulang**: Jalankan `node generate.js` — otomatis buat 6 halaman ke folder `output/`
 3. **Review**: Cek hasil di `output/wifi-<kota>/index.html`
 4. **Deploy**: Copy folder `output/wifi-*` ke root repo, lalu commit & push ke GitHub (Vercel auto-deploy)
 
 ## Struktur file
 
 - `template-kota.html` — template HTML dengan placeholder `{{key}}`, jangan diedit kecuali mau ubah desain/struktur yang SAMA untuk semua kota
-- `data-kota.json` — data unik per 7 kota (Solo, Sukoharjo, Karanganyar, Klaten, Boyolali, Sragen, Wonogiri)
+- `data-kota.json` — data unik per 6 halaman kota: Solo, Surakarta (alias keyword Kota Solo), Sukoharjo, Karanganyar, Klaten, Boyolali
 - `generate.js` — script generator (Node.js, tidak perlu install apapun — pure Node built-in)
 
 ## Kalau mau ubah sesuatu yang SAMA di semua kota
@@ -29,4 +29,7 @@ Contoh: ubah deskripsi FAQ kota tertentu, ubah meta description → edit `data-k
 
 ## Validasi
 
-Sudah dites: hasil generate 100% identik byte-for-byte dengan 7 halaman yang sekarang live di GitHub (per 14 Agustus 2026). Aman dipakai.
+Sudah dites: hasil generate 100% identik byte-for-byte dengan halaman yang live di GitHub. Jalankan ulang pengecekan setelah edit besar:
+`node generate.js` lalu bandingkan `tools/output/wifi-*/index.html` dengan folder kota di root.
+
+Catatan sejarah: Sragen & Wonogiri dihapus dari situs per Agustus 2026 (belum tercover jaringan FTTH/FWA). Redirect /wifi-sragen & /wifi-wonogiri dikonfigurasi di vercel.json.

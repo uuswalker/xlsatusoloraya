@@ -7,6 +7,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
     gtag('config', 'G-9R0LKSXL8Y');
   </script>
 
@@ -456,7 +462,7 @@
       <div class="footer-copy">Copyright © 2026 XL SATU. All rights reserved.</div>
     </div>
     <div class="footer-links">
-      <a href="https://satu.xl.co.id/syarat-ketentuan" target="_blank" rel="noopener noreferrer">Syarat &amp; Ketentuan</a>
+      <a href="/kebijakan-privasi/" style="color:inherit;">Privasi &amp; Cookie</a><a href="https://satu.xl.co.id/syarat-ketentuan" target="_blank" rel="noopener noreferrer">Syarat &amp; Ketentuan</a>
       <a href="https://www.xlsmart.co.id/id/pemberitahuan-privasi" target="_blank" rel="noopener noreferrer">Kebijakan Privasi</a>
     </div>
     <div class="footer-socials">
@@ -482,5 +488,6 @@
       }
     }, true);
   </script>
+  <script src="/site-consent.js" defer></script>
 </body>
 </html>

@@ -25,7 +25,11 @@ Static landing page untuk layanan XL SATU (fiber optic & wireless internet) area
 ├── wifi-tanpa-fup-unlimited/                   # Artikel panduan
 ├── 5-hal-wajib-dicek-sebelum-pasang-wifi-rumah/ # Artikel: checklist sebelum pasang wifi
 ├── solusi-internet-daerah-belum-ada-fiber-optik/ # Artikel: FWA untuk area belum ada fiber
-├── images/                                      # Aset gambar self-hosted
+├── area-layanan/                                  # Hub cakupan 5 kota & 79 kecamatan
+├── kebijakan-privasi/                             # Kebijakan privasi & cookie (UU PDP)
+├── cek-lokasi.js                                  # Widget cek ketersediaan bersama (semua halaman funnel)
+├── site-consent.js                                # Banner cookie + Consent Mode v2
+├── images/                                        # Aset gambar self-hosted
 ├── tools/                                       # Sistem templating (lihat di bawah)
 ├── sitemap.xml
 ├── robots.txt
@@ -43,7 +47,7 @@ Folder-based routing (`/wifi-solo/index.html`) dipakai supaya URL bersih tanpa `
 
 ## Sistem Templating (`tools/`)
 
-5 halaman kota di-generate dari template + data JSON, bukan diedit manual satu-satu lagi:
+6 halaman kota di-generate dari template + data JSON, bukan diedit manual satu-satu lagi:
 
 - `tools/template-kota.html` — template dengan placeholder `{{key}}`
 - `tools/data-kota.json` — data unik per kota (meta, FAQ, kecamatan, dll)

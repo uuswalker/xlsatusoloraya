@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Generator halaman kota XL SATU Solo Raya
- * Baca data-kota.json + template-kota.html -> generate 7 halaman wifi-<kota>/index.html
+ * Baca data-kota.json + template-kota.html -> generate 6 halaman wifi-<kota>/index.html
  *
  * Cara pakai:
  *   node generate.js
