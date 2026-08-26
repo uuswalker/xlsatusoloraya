@@ -44,7 +44,7 @@
 
 (function () {
   // ====== KONFIGURASI ======
-  var GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzLaBgicwAiT80660QwYh0PmGw55HZOJvisYNal4kC6GlqYxoVIb4f-gd05_8ymQt4K/exec";
+  var GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycby-HJaPmYghIburVlV1ZLoAcmHY8s9nbsgVabLYqz3YiFNtV6S2rZZy7stZ5DzfWJ47/exec";
   var NOMOR_WA_SALES = "6287778999141";
 
   var KOTA_SOLORAYA = [
