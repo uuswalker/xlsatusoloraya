@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) - dimuat setelah halaman selesai render, dataLayer tetap siap dari awal jadi tidak ada event yang hilang -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -30,18 +30,18 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pasang WiFi di Solo Raya: pilih kota Anda — Solo, Sukoharjo, Karanganyar, Klaten, atau Boyolali. XL SATU fiber optic &amp; wireless unlimited, sales resmi via WhatsApp.">
-  <meta name="keywords" content="pasang wifi solo, internet rumah solo, wifi solo raya, xl satu solo, internet solo raya, pasang wifi surakarta, pasang wifi sukoharjo, pasang wifi karanganyar, pasang wifi klaten, pasang wifi boyolali">
+  <meta name="description" content="Pasang WiFi di Solo (Surakarta) cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan. Hubungi sales via WhatsApp.">
+  <meta name="keywords" content="pasang wifi solo, internet rumah solo, wifi solo, xl satu solo, fiber optic solo, internet solo, xl satu soloraya, wifi surakarta, pasang wifi surakarta, internet rumah surakarta">
   <meta name="author" content="XL SATU">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#037e64">
-
+  
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Pasang WiFi Solo Raya | XL SATU Internet Rumah Fiber &amp; Wireless">
-  <meta property="og:description" content="Pilih kota Anda di Solo Raya: Solo, Sukoharjo, Karanganyar, Klaten, Boyolali. XL SATU fiber optic &amp; wireless unlimited, mulai Rp 185.000/bulan.">
+  <meta property="og:title" content="Pasang WiFi Solo (Surakarta) | XL SATU Internet Rumah Fiber Optic Solo">
+  <meta property="og:description" content="Pasang WiFi di Solo (Surakarta) cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan.">
   <meta property="og:image" content="/images/promo-wifi-rumah-koneksi-pasti.webp">
   <meta property="og:url" content="https://xlsatusolo.com/wifi-solo/">
-
+  
   <link rel="canonical" href="https://xlsatusolo.com/wifi-solo/">
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
@@ -49,21 +49,19 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-
-  <title>Pasang WiFi Solo Raya | XL SATU Internet Rumah Fiber &amp; Wireless</title>
-
+  
+  <title>Pasang WiFi Solo (Surakarta) | XL SATU Internet Rumah Fiber Optic</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "XL SATU Solo Raya",
     "url": "https://xlsatusolo.com/wifi-solo/",
-    "areaServed": ["Solo", "Surakarta", "Sukoharjo", "Karanganyar", "Klaten", "Boyolali"],
+    "areaServed": ["Solo", "Surakarta"],
     "telephone": "+6287778999141",
     "sameAs": ["https://xlsatusolo.com"]
   }
   </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -74,318 +72,2138 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3H47BmvoKQVM6QjRvjOMwMvqe5s0kfBHlQFzYMqoMeqMxEqCDDJ7YpfMt3F5WqXEQfVNpGcQOzAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   </noscript>
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --green: #037e64;
       --green-dark: #026b55;
       --green-light: #e6f7f3;
+      --gray-bg: #f5f5f5;
       --text: #1a1a1a;
       --text-muted: #6b7280;
       --border: #e5e7eb;
       --white: #ffffff;
     }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      background: var(--white); 
       color: var(--text);
-      background: var(--white);
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
     }
 
-    /* HEADER */
+    /* ── HEADER ── */
     header {
       background: var(--white);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+      position: sticky; 
+      top: 0; 
       z-index: 100;
     }
     .header-inner {
-      max-width: 1100px;
+      max-width: 1200px; 
       margin: 0 auto;
-      padding: 12px 24px;
-      display: flex;
-      align-items: center;
+      padding: 14px 24px;
+      display: flex; 
+      align-items: center; 
       justify-content: space-between;
     }
-    .logo img { height: 36px; width: auto; }
+    .logo img { 
+      height: 36px; 
+      width: auto;
+    }
+    nav { 
+      display: flex; 
+      align-items: center; 
+      gap: 32px; 
+    }
+    nav a {
+      font-size: 14px; 
+      font-weight: 500; 
+      color: var(--text);
+      text-decoration: none; 
+      transition: color .2s;
+    }
+    nav a:hover, 
+    nav a:focus { 
+      color: var(--green); 
+    }
     .btn-wa-header {
-      background: var(--green);
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
+      background: var(--green); 
+      color: var(--white);
+      padding: 10px 22px; 
+      border-radius: 6px;
+      font-size: 14px; 
+      font-weight: 600;
+      text-decoration: none; 
+      display: flex; 
+      align-items: center; 
       gap: 8px;
       transition: background .2s;
+      border: none;
+      cursor: pointer;
     }
-    .btn-wa-header:hover { background: var(--green-dark); }
+    .btn-wa-header:hover { 
+      background: var(--green-dark);
+    }
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #f0faf7 0%, #e6f7f3 50%, #d4f1eb 100%);
-      padding: 64px 24px 56px;
-      text-align: center;
+    /* ── HERO SLIDER ── */
+    .slider { 
+      position: relative; 
+      overflow: hidden;
+      background: #f0f0f0;
     }
-    .hero h1 {
-      font-size: clamp(28px, 5vw, 42px);
-      font-weight: 800;
+    .slides { 
+      display: flex; 
+      transition: transform .6s ease; 
+    }
+    .slide {
+      min-width: 100%;
+      position: relative;
+      cursor: pointer;
+    }
+    .slide img { 
+      width: 100%; 
+      height: 480px; 
+      object-fit: cover; 
+      display: block;
+    }
+    .slider-dots {
+      position: absolute; 
+      bottom: 14px; 
+      left: 50%; 
+      transform: translateX(-50%);
+      display: flex; 
+      gap: 8px;
+    }
+    .dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.4);
+      background-clip: content-box;
+      padding: 7px;
+      cursor: pointer;
+      transition: background .3s;
+      border: none;
+    }
+    .dot:hover { 
+      background: rgba(255,255,255,.7);
+    }
+    .dot.active { 
+      background: var(--white); 
+    }
+    .slider-btn {
+      position: absolute; 
+      top: 50%; 
+      transform: translateY(-50%);
+      background: rgba(255,255,255,.8); 
+      border: none; 
+      border-radius: 50%;
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      cursor: pointer; 
+      font-size: 18px; 
+      color: var(--text); 
+      z-index: 5;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      transition: background .2s;
+    }
+    .slider-btn:hover {
+      background: var(--white);
+    }
+    .slider-btn.prev { 
+      left: 16px; 
+    }
+    .slider-btn.next { 
+      right: 16px; 
+    }
+
+    /* ── QUICK ACTIONS ── */
+    .quick-actions {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .quick-actions-inner {
+      max-width: 1200px; 
+      margin: 0 auto;
+      display: flex; 
+      gap: 0;
+    }
+    .qa-item {
+      flex: 1;
+      display: flex; 
+      align-items: center; 
+      gap: 12px;
+      padding: 16px 28px;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      text-decoration: none; 
       color: var(--text);
-      margin-bottom: 16px;
-      line-height: 1.2;
+      transition: border-color .2s, color .2s;
+      font-size: 13px; 
+      font-weight: 600;
+      justify-content: center;
     }
-    .hero h1 span { color: var(--green); }
-    .hero p {
-      font-size: 17px;
+    .qa-item:hover, 
+    .qa-item.active,
+    .qa-item:focus { 
+      border-bottom-color: var(--green); 
+      color: var(--green);
+    }
+    .qa-item img { 
+      width: 22px; 
+      height: 22px; 
+      object-fit: contain;
+    }
+
+    /* ── SECTION TITLE ── */
+    .section-title {
+      text-align: center; 
+      margin-bottom: 8px;
+      font-size: 26px; 
+      font-weight: 800; 
+      color: var(--text);
+    }
+    .section-sub {
+      text-align: center; 
       color: var(--text-muted);
-      max-width: 560px;
+      font-size: 14px; 
+      margin-bottom: 36px;
+    }
+
+    /* ── PAKET CARDS ── */
+    .paket-section { 
+      background: var(--gray-bg); 
+      padding: 56px 24px; 
+    }
+    .paket-grid {
+      max-width: 1100px; 
+      margin: 0 auto;
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 24px;
+    }
+    .paket-card {
+      background: var(--white); 
+      border-radius: 20px;
+      overflow: hidden; 
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      display: flex; 
+      flex-direction: column;
+      position: relative;
+      transition: box-shadow .2s;
+    }
+    .paket-card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    }
+    .paket-card-header {
+      padding: 24px 24px 0;
+      color: var(--white); 
+      min-height: 120px;
+      display: flex; 
+      flex-direction: column; 
+      justify-content: flex-end;
+    }
+    .paket-card-header.value { 
+      background: linear-gradient(135deg, #1a6b5a 0%, #0d9e7a 100%); 
+    }
+    .paket-card-header.smart { 
+      background: linear-gradient(135deg, #155f8a 0%, #1a8ac0 100%); 
+    }
+    .paket-card-header.family { 
+      background: linear-gradient(135deg, #6b2fa0 0%, #9b4fd4 100%); 
+    }
+    .paket-title { 
+      font-size: 18px; 
+      font-weight: 800; 
+      margin-bottom: 4px; 
+    }
+    .paket-subtitle { 
+      font-size: 12px; 
+      opacity: .85; 
+      margin-bottom: 18px; 
+    }
+    .speed-meter { 
+      margin: 0;
+    }
+    .speed-label { 
+      display: flex; 
+      justify-content: space-between; 
+      font-size: 11px; 
+      color: var(--text-muted); 
+      margin-bottom: 4px; 
+      font-weight: 600; 
+    }
+    .speed-bar-bg { 
+      background: #e5e7eb; 
+      border-radius: 999px; 
+      height: 8px; 
+      margin-bottom: 6px; 
+      position: relative; 
+    }
+    .speed-bar-fill { 
+      height: 100%; 
+      border-radius: 999px; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+    }
+    .speed-bar-dot { 
+      width: 16px; 
+      height: 16px; 
+      border-radius: 50%; 
+      background: var(--white); 
+      border: 3px solid; 
+      position: absolute; 
+      top: 50%; 
+      transform: translateY(-50%); 
+    }
+    .speed-note { 
+      font-size: 11px; 
+      color: var(--text-muted); 
+      margin-bottom: 16px; 
+    }
+
+    .paket-body { 
+      padding: 16px 24px 24px; 
+      flex: 1; 
+      display: flex; 
+      flex-direction: column; 
+    }
+    .ideal-label { 
+      font-size: 11px; 
+      font-weight: 700; 
+      color: var(--text-muted); 
+      text-transform: uppercase; 
+      letter-spacing: .5px; 
+      margin-bottom: 8px; 
+    }
+    .ideal-tags { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 6px; 
+      margin-bottom: 20px; 
+    }
+    .tag {
+      font-size: 11px; 
+      font-weight: 600;
+      padding: 4px 10px; 
+      border-radius: 999px;
+      border: 1px solid var(--border); 
+      color: var(--text-muted);
+    }
+    .fitur-list { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 10px; 
+      margin-bottom: 20px; 
+    }
+    .fitur-item { 
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+      font-size: 13px; 
+      font-weight: 600; 
+    }
+    .fitur-item img { 
+      width: 28px; 
+      height: 28px;
+    }
+
+    .price-box { 
+      margin-top: auto; 
+    }
+    .price-before { 
+      font-size: 13px; 
+      color: var(--text-muted); 
+      text-decoration: line-through;
+    }
+    .price-main { 
+      font-size: 28px; 
+      font-weight: 800; 
+      color: var(--text);
+    }
+    .price-main span { 
+      font-size: 14px; 
+      font-weight: 500; 
+      color: var(--text-muted); 
+    }
+    .price-ppn { 
+      font-size: 12px; 
+      color: var(--text-muted); 
+      margin-bottom: 14px; 
+    }
+    .btn-pilih {
+      display: block; 
+      width: 100%; 
+      text-align: center;
+      background: var(--green); 
+      color: var(--white);
+      padding: 14px; 
+      border-radius: 12px;
+      font-size: 14px; 
+      font-weight: 700;
+      text-decoration: none; 
+      border: none; 
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .btn-pilih:hover { 
+      background: var(--green-dark);
+    }
+    .badge-laris {
+      position: absolute; 
+      top: 12px; 
+      right: 12px;
+      background: #ff6b00; 
+      color: var(--white);
+      font-size: 10px; 
+      font-weight: 700; 
+      text-transform: uppercase;
+      padding: 4px 10px; 
+      border-radius: 999px; 
+    }
+
+    /* ── WIRELESS SECTION ── */
+    .wireless-section {
+      background: var(--white);
+      padding: 56px 24px;
+      border-top: 1px solid var(--border);
+    }
+    .wireless-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .wireless-region-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1a6fb0;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .wireless-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+      margin: 22px 0 32px;
+    }
+    .wireless-promo-banner {
+      max-width: 420px;
+      margin: 0 auto 36px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    }
+    .wireless-promo-top {
+      background: var(--green);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      padding: 10px;
+      letter-spacing: .3px;
+    }
+    .wireless-promo-bottom {
+      background: #0d2b52;
+      color: var(--white);
+      text-align: center;
+      padding: 16px;
+    }
+    .wireless-promo-bottom .big {
+      color: #ffd400;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .wireless-promo-bottom .small {
+      font-size: 13px;
+      font-weight: 600;
+      opacity: .9;
+    }
+    .wireless-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 640px;
       margin: 0 auto 32px;
     }
-
-    /* KOTA GRID */
-    .kota-grid {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 16px;
-    }
-    .kota-card {
+    .wireless-card {
       background: var(--white);
-      border: 2px solid var(--border);
-      border-radius: 16px;
-      padding: 28px 24px;
-      text-decoration: none;
-      color: var(--text);
-      transition: all .2s;
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
-      gap: 12px;
+      transition: box-shadow .2s, border-color .2s;
     }
-    .kota-card:hover {
+    .wireless-card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,.10);
       border-color: var(--green);
-      box-shadow: 0 8px 24px rgba(3, 126, 100, .12);
-      transform: translateY(-2px);
     }
-    .kota-card .icon {
-      width: 56px;
-      height: 56px;
-      background: var(--green-light);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      color: var(--green);
+    .wireless-card .gauge {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 10px;
     }
-    .kota-card .name {
-      font-size: 18px;
-      font-weight: 700;
+    .wireless-card .speed-num {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
     }
-    .kota-card .desc {
-      font-size: 13px;
+    .wireless-card .speed-num span {
+      font-size: 14px;
+      font-weight: 600;
       color: var(--text-muted);
     }
-    .kota-card .btn {
-      background: var(--green);
-      color: #fff;
-      padding: 10px 24px;
-      border-radius: 999px;
-      font-size: 13px;
+    .wireless-card .harga-label {
+      font-size: 11px;
       font-weight: 700;
-      margin-top: 4px;
-      transition: background .2s;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 4px;
     }
-    .kota-card:hover .btn { background: var(--green-dark); }
-
-    /* TRUST */
-    .trust {
-      max-width: 700px;
-      margin: 48px auto 0;
+    .wireless-card .harga-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--green-dark);
+      margin-bottom: 4px;
+    }
+    .wireless-card .harga-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .wireless-perks {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 24px;
-      font-size: 14px;
-      color: var(--text-muted);
-      font-weight: 600;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
     }
-    .trust span { display: flex; align-items: center; gap: 6px; }
-    .trust i { color: var(--green); }
-
-    /* CTA */
-    .cta-section {
-      max-width: 700px;
-      margin: 48px auto;
-      padding: 0 24px;
-      text-align: center;
-    }
-    .cta-section a {
-      display: inline-flex;
+    .wireless-perks .perk-item {
+      display: flex;
       align-items: center;
-      gap: 10px;
-      background: #25d366;
-      color: #fff;
-      padding: 16px 36px;
-      border-radius: 999px;
-      font-size: 16px;
+      gap: 8px;
+      font-size: 12px;
       font-weight: 700;
+      color: var(--text);
+    }
+    .wireless-perks .perk-item i {
+      color: var(--green);
+      font-size: 16px;
+    }
+    @media (max-width: 480px) {
+      .wireless-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+      }
+      .wireless-pills {
+        gap: 16px;
+      }
+    }
+    @media (max-width: 768px) {
+      #wireless-advance > div:nth-child(2),
+      #wireless-monthly > div:nth-child(2) {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+    @media (max-width: 480px) {
+      #wireless-advance > div:nth-child(2),
+      #wireless-monthly > div:nth-child(2) {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    /* ── ABOUT SECTION ── */
+    .about-section { 
+      padding: 64px 24px; 
+      background: var(--white); 
+    }
+    .about-inner {
+      max-width: 1100px; 
+      margin: 0 auto;
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 60px; 
+      align-items: center;
+    }
+    .about-text h2 { 
+      font-size: 28px; 
+      font-weight: 800; 
+      margin-bottom: 16px; 
+    }
+    .about-text p { 
+      font-size: 15px; 
+      color: var(--text-muted); 
+      line-height: 1.7; 
+    }
+    .about-video { 
+      position: relative; 
+      border-radius: 16px; 
+      overflow: hidden; 
+    }
+    .about-video img { 
+      width: 100%; 
+      height: auto;
+      display: block;
+      cursor: pointer;
+    }
+    .play-btn {
+      position: absolute; 
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%,-50%);
+      width: 64px; 
+      height: 64px; 
+      background: rgba(255,255,255,.9);
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      font-size: 24px; 
+      color: var(--green);
+      transition: transform .2s;
+      cursor: pointer;
+    }
+    .about-video:hover .play-btn {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    /* ── FITUR PILLS ── */
+    .fitur-pills {
+      background: var(--white); 
+      border-top: 1px solid var(--border); 
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+    }
+    .fitur-pills-inner {
+      max-width: 1100px; 
+      margin: 0 auto;
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 32px;
+    }
+    .pill-item { 
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+      font-size: 13px; 
+      font-weight: 700; 
+      color: var(--text); 
+    }
+    .pill-item img { 
+      width: 28px; 
+      height: 28px;
+    }
+
+    /* ── MYXL SECTION ── */
+    .myxl-section { 
+      background: var(--white); 
+      padding: 64px 24px; 
+    }
+    .myxl-inner {
+      max-width: 1100px; 
+      margin: 0 auto;
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 60px; 
+      align-items: center;
+    }
+    .myxl-text h2 { 
+      font-size: 28px; 
+      font-weight: 800; 
+      margin-bottom: 12px; 
+    }
+    .myxl-text p { 
+      font-size: 15px; 
+      color: var(--text-muted); 
+      line-height: 1.7; 
+      margin-bottom: 24px; 
+    }
+    .store-btns { 
+      display: flex; 
+      gap: 12px; 
+      flex-wrap: wrap; 
+    }
+    .store-btn img { 
+      height: 44px;
+      width: auto;
+      cursor: pointer;
+    }
+    .myxl-img img { 
+      width: 100%;
+      height: auto;
+    }
+
+    /* ── BANTUAN ── */
+    .bantuan-section { 
+      padding: 64px 24px; 
+      background: var(--white); 
+    }
+    .bantuan-inner { 
+      max-width: 800px; 
+      margin: 0 auto; 
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border); 
+      padding: 16px 0;
+      cursor: pointer;
+    }
+    .faq-q {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      font-size: 14px; 
+      font-weight: 600; 
+      gap: 16px;
+      transition: color .2s;
+    }
+    .faq-item:hover .faq-q {
+      color: var(--green);
+    }
+    .faq-q .icon { 
+      color: var(--green); 
+      font-size: 16px; 
+      flex-shrink: 0; 
+      transition: transform .3s; 
+    }
+    .faq-a { 
+      font-size: 14px; 
+      color: var(--text-muted); 
+      line-height: 1.6; 
+      margin-top: 10px; 
+      display: none; 
+    }
+    .faq-item.open .faq-a { 
+      display: block; 
+    }
+    .faq-item.open .icon { 
+      transform: rotate(45deg); 
+    }
+    .more-btn {
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px;
+      margin-top: 24px; 
+      color: var(--green); 
+      font-size: 14px; 
+      font-weight: 700;
+      text-decoration: none; 
+      border: 1.5px solid var(--green);
+      padding: 10px 20px; 
+      border-radius: 999px; 
+      transition: background .2s;
+    }
+    .more-btn:hover {
+      background: var(--green-light);
+    }
+
+    /* ── HUBUNGI KAMI ── */
+    .hubungi-section {
+      padding: 64px 24px;
+      background: linear-gradient(135deg, #0d7a5f 0%, #037e64 100%);
+      color: var(--white);
+    }
+    .hubungi-inner {
+      max-width: 1100px; 
+      margin: 0 auto;
+      display: grid; 
+      grid-template-columns: 1fr auto; 
+      gap: 48px; 
+      align-items: center;
+    }
+    .hubungi-text h2 { 
+      font-size: 28px; 
+      font-weight: 800; 
+      margin-bottom: 8px; 
+    }
+    .hubungi-text p { 
+      font-size: 15px; 
+      opacity: .85; 
+      margin-bottom: 32px; 
+    }
+    .contact-grid { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 24px; 
+    }
+    .contact-box { 
+      background: rgba(255,255,255,.15); 
+      border-radius: 14px; 
+      padding: 20px; 
+    }
+    .contact-box h4 { 
+      font-size: 13px; 
+      font-weight: 700; 
+      opacity: .8; 
+      margin-bottom: 10px; 
+      text-transform: uppercase; 
+      letter-spacing: .5px; 
+    }
+    .contact-item { 
+      display: flex; 
+      flex-direction: column; 
+      margin-bottom: 8px; 
+    }
+    .contact-label { 
+      font-size: 11px; 
+      opacity: .7; 
+    }
+    .contact-num { 
+      font-size: 18px; 
+      font-weight: 800;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .btn-daftar {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white) !important;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 4px;
+      transition: background .2s;
+    }
+    .btn-daftar:hover { background: var(--green-dark); }
+    .hubungi-img img { 
+      width: 220px;
+      height: auto;
+    }
+
+    /* ── FOOTER ── */
+    footer { 
+      background: #1a1a1a; 
+      color: rgba(255,255,255,.7); 
+      padding: 32px 24px; 
+    }
+    .footer-inner {
+      max-width: 1200px; 
+      margin: 0 auto;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      gap: 16px;
+    }
+    .footer-logo {
+      height: 28px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: .7;
+    }
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .footer-copy { 
+      font-size: 12px; 
+    }
+    .footer-links { 
+      display: flex; 
+      gap: 20px; 
+      font-size: 13px; 
+    }
+    .footer-links a { 
+      color: rgba(255,255,255,.6); 
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-links a:hover { 
+      color: rgba(255,255,255,.8);
+    }
+    .footer-socials { 
+      display: flex; 
+      gap: 12px; 
+    }
+    .footer-socials a {
+      width: 36px; 
+      height: 36px; 
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      color: var(--white); 
+      font-size: 16px; 
       text-decoration: none;
       transition: background .2s;
     }
-    .cta-section a:hover { background: #1da851; }
-    .cta-section p {
-      margin-top: 12px;
-      font-size: 13px;
-      color: var(--text-muted);
+    .footer-socials a:hover { 
+      background: var(--green);
     }
 
-    /* FOOTER */
-    footer {
-      background: #1a1a1a;
-      color: #ccc;
-      padding: 32px 24px;
-      margin-top: 48px;
+    /* ── FLOATING WA ── */
+    .float-wa {
+      position: fixed; 
+      bottom: 24px; 
+      right: 24px; 
+      z-index: 200;
+      background: #25d366; 
+      color: var(--white);
+      border-radius: 999px; 
+      padding: 14px 20px;
+      display: flex; 
+      align-items: center; 
+      gap: 10px;
+      text-decoration: none; 
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      transition: transform .2s;
+      border: none;
+      cursor: pointer;
     }
-    .footer-inner {
+    .float-wa:hover { 
+      transform: scale(1.05); 
+    }
+    .float-wa i { 
+      font-size: 28px; 
+    }
+    .float-wa-text { 
+      line-height: 1.2; 
+    }
+    .float-wa-text small { 
+      font-size: 11px; 
+      opacity: .85; 
+      display: block; 
+    }
+    .float-wa-text strong { 
+      font-size: 14px; 
+      font-weight: 700; 
+    }
+
+    /* ── HERO LOKAL ── */
+    .hero-lokal {
+      background: linear-gradient(135deg, #f0faf7 0%, #e6f7f3 100%);
+      padding: 48px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-lokal-inner {
       max-width: 1100px;
       margin: 0 auto;
+      text-align: center;
+    }
+    .hero-lokal h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .hero-lokal h1 span {
+      color: var(--green);
+    }
+    .hero-lokal p {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+    .hero-lokal-stats {
       display: flex;
+      justify-content: center;
+      gap: 40px;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
+      margin-top: 32px;
+    }
+    .hero-lokal-stat {
+      text-align: center;
+    }
+    .hero-lokal-stat .num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--green);
+      display: block;
+    }
+    .hero-lokal-stat .label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .hero-lokal h1 { font-size: 22px; }
+      .hero-lokal p { font-size: 14px; }
+      .hero-lokal-stats { gap: 24px; }
+      .hero-lokal-stat .num { font-size: 22px; }
+    }
+
+    /* ── AREA LAYANAN ── */
+    .area-section {
+      background: var(--white);
+      padding: 56px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .area-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
+      margin-top: 8px;
     }
-    .footer-logo { height: 32px; opacity: .8; }
-    .footer-copy { font-size: 12px; margin-top: 6px; }
-    .footer-links { display: flex; gap: 20px; font-size: 13px; }
-    .footer-links a { color: #aaa; text-decoration: none; }
-    .footer-links a:hover { color: #fff; }
-    .footer-socials { display: flex; gap: 14px; }
-    .footer-socials a { color: #aaa; font-size: 18px; text-decoration: none; }
-    .footer-socials a:hover { color: #fff; }
-
-    /* FLOAT WA */
-    .float-wa {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: #fff;
-      border-radius: 999px;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      font-size: 14px;
-      box-shadow: 0 4px 16px rgba(0,0,0,.2);
-      z-index: 99;
-      transition: transform .2s;
+    .area-card {
+      background: var(--gray-bg);
+      border-radius: 14px;
+      padding: 20px 16px;
+      text-align: center;
+      border: 1.5px solid transparent;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+      cursor: pointer;
     }
-    .float-wa:hover { transform: scale(1.05); }
-    .float-wa i { font-size: 22px; }
-    .float-wa-text small { display: block; font-size: 11px; opacity: .85; }
-    .float-wa-text strong { font-size: 13px; }
+    .area-card:hover {
+      border-color: var(--green);
+      background: var(--green-light);
+      box-shadow: 0 4px 12px rgba(5,169,134,.1);
+    }
+    .area-card i {
+      color: var(--green);
+      font-size: 22px;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .area-card .area-name {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .area-card .area-desc {
+      font-size: 11px;
+      color: #4b5563;
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .area-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .area-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .area-section { padding: 40px 16px; }
+    }
 
-    @media (max-width: 600px) {
-      .hero { padding: 48px 20px 40px; }
-      .kota-grid { grid-template-columns: 1fr; }
-      .float-wa-text { display: none; }
-      .float-wa { padding: 14px 16px; }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .header-inner {
+        padding: 10px 16px;
+      }
+      .logo img { 
+        height: 28px; 
+      }
+      .btn-wa-header {
+        padding: 8px 16px;
+        font-size: 12px;
+      }
+      nav {
+        display: none;
+      }
+      .paket-grid { 
+        grid-template-columns: 1fr; 
+      }
+      .about-inner, 
+      .myxl-inner { 
+        grid-template-columns: 1fr; 
+        gap: 30px;
+      }
+      .hubungi-inner { 
+        grid-template-columns: 1fr;
+      }
+      .hubungi-img { 
+        display: none; 
+      }
+      .contact-grid { 
+        grid-template-columns: 1fr; 
+      }
+      .slide img { 
+        height: 240px; 
+      }
+      .section-title {
+        font-size: 22px;
+      }
+      .quick-actions-inner {
+        flex-wrap: wrap;
+      }
+      .qa-item {
+        flex: auto;
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-inner {
+        padding: 8px 12px;
+      }
+      .logo img { 
+        height: 24px; 
+      }
+      .paket-section {
+        padding: 32px 16px;
+      }
+      .slide img { 
+        height: 160px; 
+      }
+      .slider-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+      }
+      .section-title {
+        font-size: 18px;
+      }
+      .section-sub {
+        font-size: 12px;
+      }
+      .qa-item {
+        font-size: 11px;
+        padding: 10px 8px;
+      }
+      .about-section,
+      .myxl-section,
+      .bantuan-section,
+      .hubungi-section {
+        padding: 40px 16px;
+      }
+      .about-inner,
+      .myxl-inner,
+      .hubungi-inner {
+        gap: 24px;
+      }
+      .about-text h2,
+      .myxl-text h2,
+      .hubungi-text h2 {
+        font-size: 20px;
+      }
+      .paket-title {
+        font-size: 16px;
+      }
+      .footer-inner {
+        flex-direction: column;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .float-wa {
+        bottom: 16px;
+        right: 16px;
+        padding: 12px 16px;
+      }
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apa itu XL SATU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "XL SATU adalah layanan internet rumah unlimited terbaik, hasil integrasi XL Home dan First Media. Menggunakan jaringan fiber optik XLSMART yang cepat dan stabil untuk seluruh keluarga."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah merger antara XL dan Smartfren akan berdampak pada pelanggan atau layanan XL SATU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Merger XL dan Smartfren tidak berdampak negatif pada layanan XL SATU. Justru dengan bergabungnya kedua jaringan, kualitas dan jangkauan layanan akan semakin meningkat untuk pelanggan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Siapa saja yang dapat berlangganan XL SATU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Siapa pun yang berada di area layanan XL SATU dapat berlangganan. Cukup hubungi sales kami untuk mengecek ketersediaan di area Anda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa saja yang dapat mempengaruhi kecepatan internet XL SATU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Faktor yang mempengaruhi kecepatan antara lain: jumlah perangkat yang terhubung, jarak dari router, interferensi sinyal, dan kondisi jaringan saat jam sibuk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa arti dari First Media Jadi XL SATU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First Media resmi bergabung dengan XL Home menjadi satu layanan bernama XL SATU. Pelanggan lama First Media akan secara otomatis beralih ke layanan XL SATU dengan kualitas yang lebih baik."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah XL SATU tersedia di Kota Solo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya! XL SATU tersedia luas di Kota Solo (Surakarta). Hubungi sales kami untuk mengecek ketersediaan di alamat spesifik Anda — area Kota Solo umumnya sudah terjangkau jaringan fiber."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama proses pemasangan internet di Solo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Proses instalasi biasanya memakan waktu 3–7 hari kerja setelah pendaftaran. Untuk wilayah Kota Solo biasanya lebih cepat karena jaringan sudah terpasang luas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa perbedaan paket Fiber dan Wireless XL SATU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paket Fiber menggunakan kabel fiber optik langsung ke rumah — koneksi paling stabil dan cepat, ideal untuk area yang sudah terjangkau jaringan FTTH. Paket Wireless menggunakan sinyal radio tanpa kabel — solusi untuk area yang belum terjangkau kabel fiber, dengan sistem bayar 3 bulan dan gratis 1 bulan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah paket XL SATU ada batas kuota (FUP)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paket Fiber tidak ada FUP — kecepatan tetap penuh sesuai paket, berapa pun pemakaiannya. Paket Wireless menerapkan FUP dengan batas 1 TB per bulan, jauh di atas pemakaian rumah tangga rata-rata (200-400 GB per bulan), sehingga dalam praktiknya jarang sekali tersentuh."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara daftar XL SATU di Solo Raya?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pendaftaran bisa langsung melalui WhatsApp sales kami di 0877-7899-9141. Cukup kirim nama, alamat lengkap, dan paket yang diinginkan. Tim kami akan memproses dan mengatur jadwal survei serta instalasi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah ada kontrak berlangganan minimum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Untuk paket Fiber, terdapat minimal berlangganan sesuai ketentuan yang berlaku. Untuk paket Wireless, sistem pembayaran adalah per 3 bulan dengan bonus 1 bulan gratis. Hubungi sales kami untuk informasi kontrak terbaru."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah harga sudah termasuk router WiFi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, paket XL SATU sudah termasuk perangkat router WiFi yang disediakan. Router dikelola oleh XL SATU dan akan dirawat/diganti jika ada kerusakan yang bukan disebabkan oleh pengguna."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah internet XL SATU cocok untuk gaming online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sangat cocok! Jaringan fiber optik XL SATU memiliki latensi rendah yang ideal untuk gaming online. Untuk pengalaman gaming terbaik, kami merekomendasikan paket 250 Mbps ke atas. Paket 600 Mbps tersedia untuk cloud gaming dan gaming pro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana jika internet saya bermasalah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anda bisa menghubungi layanan pelanggan XL SATU melalui WhatsApp Care di 08170010820, Call Center 820 (pengguna XL) atau 08170123442 (non-XL). Untuk bantuan teknis cepat di area Solo Raya, bisa juga hubungi sales kami langsung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa pasang XL SATU untuk kos atau kontrakan di Solo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bisa! XL SATU cocok untuk kos, kontrakan, maupun rumah sendiri. Untuk kos dengan banyak penghuni, paket 400 Mbps atau 600 Mbps sangat direkomendasikan karena mendukung banyak perangkat secara bersamaan."
+      }
+    }
+  ]
+}
+</script>
+  <!-- Leaflet CSS/JS dimuat lazy saat modal cek lokasi dibuka (lihat script di bawah) -->
+  <link rel="preconnect" href="https://unpkg.com">
 </head>
 <body>
 
 <!-- HEADER -->
-<header>
+<header role="banner">
   <div class="header-inner">
-    <a href="/" title="XL SATU">
-      <img src="/images/logo-xl-satu.png" alt="XL SATU" width="106" height="85" loading="lazy">
-    </a>
-    <a href="https://wa.me/6287778999141?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU%20di%20Solo%20Raya" target="_blank" rel="noopener noreferrer" class="btn-wa-header">
-      <i class="fab fa-whatsapp"></i> Hubungi Sales
-    </a>
+    <div class="logo">
+      <a href="/" title="XL SATU">
+        <img src="/images/logo-xl-satu.png" alt="XL SATU" width="106" height="85" loading="lazy">
+      </a>
+    </div>
+    <nav role="navigation">
+      <a href="#paket">Paket Fiber</a>
+      <a href="#wireless">Wireless</a>
+      <a href="#area">Area Layanan</a>
+      <a href="#bantuan">Bantuan</a>
+      <a href="#hubungi">Hubungi Kami</a>
+    </nav>
+    <button type="button" class="btn-wa-header btn-cek-lokasi-trigger">
+      <i class="fas fa-map-marker-alt"></i> Cek Ketersediaan
+    </button>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Pasang <span>WiFi di Solo Raya</span></h1>
-  <p>XL SATU hadir di 5 wilayah Solo Raya. Pilih kota Anda untuk lihat paket, harga, dan cara daftar.</p>
+<!-- HERO SLIDER -->
+<div class="slider" id="slider">
+  <div class="slides" id="slides">
+    <div class="slide" onclick="openWA()">
+      <img src="/images/promo-wifi-rumah-koneksi-pasti.webp" alt="Promo XL SATU" width="1080" height="1080" fetchpriority="high" loading="eager">
+    </div>
+    <div class="slide" onclick="openWA()">
+      <img src="/images/promo-paket-internet.webp" alt="Paket Internet" width="1080" height="1080" loading="lazy">
+    </div>
+    <div class="slide" onclick="goTo('hubungi')">
+      <img src="/images/banner-bayar-tagihan.jpg" alt="Bayar Tagihan" width="1920" height="546" loading="lazy">
+    </div>
+    <div class="slide" onclick="goTo('hubungi')">
+      <img src="/images/promo-first-media-xl-satu-square.webp" alt="myXL App" width="937" height="936" loading="lazy">
+    </div>
+  </div>
+  <button class="slider-btn prev" onclick="moveSlide(-1)">&#8249;</button>
+  <button class="slider-btn next" onclick="moveSlide(1)">&#8250;</button>
+  <div class="slider-dots" id="dots"></div>
+</div>
 
-  <!-- KOTA GRID -->
-  <div class="kota-grid">
-    <a href="/wifi-surakarta/" class="kota-card">
-      <div class="icon"><i class="fas fa-city"></i></div>
-      <div class="name">Kota Solo (Surakarta)</div>
-      <div class="desc">Fiber optic unlimited, mulai Rp 185.000/bulan</div>
-      <div class="btn">Lihat Paket <i class="fas fa-arrow-right" style="margin-left:4px;"></i></div>
+<!-- QUICK ACTIONS -->
+<div class="quick-actions">
+  <div class="quick-actions-inner">
+    <a href="https://wa.me/6287778999141?text=Daftar%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="qa-item">
+      <img src="/images/xl-cdn/icon-kalender.svg" alt="" loading="lazy">
+      Daftar Sekarang
     </a>
-    <a href="/wifi-sukoharjo/" class="kota-card">
-      <div class="icon"><i class="fas fa-house-chimney"></i></div>
-      <div class="name">Sukoharjo</div>
-      <div class="desc">Fiber &amp; wireless, mulai Rp 185.000/bulan</div>
-      <div class="btn">Lihat Paket <i class="fas fa-arrow-right" style="margin-left:4px;"></i></div>
+    <a href="#paket" class="qa-item">
+      <img src="/images/xl-cdn/icon-jaringan.svg" alt="" loading="lazy">
+      Cek Paket
     </a>
-    <a href="/wifi-karanganyar/" class="kota-card">
-      <div class="icon"><i class="fas fa-mountain-sun"></i></div>
-      <div class="name">Karanganyar</div>
-      <div class="desc">Fiber &amp; wireless, mulai Rp 185.000/bulan</div>
-      <div class="btn">Lihat Paket <i class="fas fa-arrow-right" style="margin-left:4px;"></i></div>
-    </a>
-    <a href="/wifi-klaten/" class="kota-card">
-      <div class="icon"><i class="fas fa-landmark"></i></div>
-      <div class="name">Klaten</div>
-      <div class="desc">Wireless unlimited, mulai Rp 650.000/bulan</div>
-      <div class="btn">Lihat Paket <i class="fas fa-arrow-right" style="margin-left:4px;"></i></div>
-    </a>
-    <a href="/wifi-boyolali/" class="kota-card">
-      <div class="icon"><i class="fas fa-cow"></i></div>
-      <div class="name">Boyolali</div>
-      <div class="desc">Fiber &amp; wireless, mulai Rp 185.000/bulan</div>
-      <div class="btn">Lihat Paket <i class="fas fa-arrow-right" style="margin-left:4px;"></i></div>
+    <a href="https://wa.me/6287778999141" target="_blank" rel="noopener noreferrer" class="qa-item">
+      <img src="/images/xl-cdn/icon-prabayar.svg" alt="" loading="lazy">
+      Hubungi Sales
     </a>
   </div>
+</div>
 
-  <!-- TRUST -->
-  <div class="trust">
-    <span><i class="fas fa-check-circle"></i> Sales Resmi XL SATU</span>
-    <span><i class="fas fa-check-circle"></i> Harga Transparan</span>
-    <span><i class="fas fa-check-circle"></i> Ditemani Sampai Internet Nyala</span>
+<!-- FITUR PILLS -->
+<div class="fitur-pills">
+  <div class="fitur-pills-inner">
+    <div class="pill-item">
+      <img src="/images/xl-cdn/icon-fiber.svg" alt="" loading="lazy">
+      Fiber Optic
+    </div>
+    <div class="pill-item">
+      <img src="/images/xl-cdn/icon-internet.svg" alt="" loading="lazy">
+      WiFi Unlimited
+    </div>
+    <div class="pill-item">
+      <img src="/images/xl-cdn/icon-transaksi.svg" alt="" loading="lazy">
+      SATU Tagihan
+    </div>
+    <div class="pill-item">
+      <img src="/images/xl-cdn/icon-xl-satu.svg" alt="" loading="lazy">
+      SATU Aplikasi
+    </div>
+  </div>
+</div>
+
+<!-- HERO LOKAL -->
+<section class="hero-lokal">
+  <div class="hero-lokal-inner">
+    <h1>Pasang <span>WiFi Rumah di Solo</span><br>Cepat, Stabil, dan Terjangkau</h1>
+    <p>XL SATU hadir untuk keluarga di <strong>Kota Solo (Surakarta)</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan.</p>
+    <button type="button" id="btn-buka-cek-lokasi" class="btn-pilih" style="display:inline-block; width:auto; padding:14px 32px; border-radius:999px; font-size:15px; border:none; cursor:pointer;">
+      <i class="fas fa-map-marker-alt" style="margin-right:8px;"></i>Cek Ketersediaan di Area Saya
+    </button>
+    <div class="hero-lokal-stats">
+      <div class="hero-lokal-stat">
+        <span class="num">7</span>
+        <span class="label">Kota Soloraya</span>
+      </div>
+      <div class="hero-lokal-stat">
+        <span class="num">6</span>
+        <span class="label">Pilihan Paket</span>
+      </div>
+      <div class="hero-lokal-stat">
+        <span class="num">1000<small style="font-size:16px;">Mbps</small></span>
+        <span class="label">Kecepatan Maksimal</span>
+      </div>
+      <div class="hero-lokal-stat">
+        <span class="num">24/7</span>
+        <span class="label">Layanan Sales</span>
+      </div>
+    </div>
+    <div style="margin-top:20px; display:flex; flex-wrap:wrap; justify-content:center; gap:8px 22px; font-size:13.5px; color:#3d524c; font-weight:600;">
+      <span><i class="fas fa-check-circle" style="color:var(--green); margin-right:6px;"></i>Sales Resmi XL SATU</span>
+      <span><i class="fas fa-check-circle" style="color:var(--green); margin-right:6px;"></i>Harga Transparan, Tanpa Biaya Tersembunyi</span>
+      <span><i class="fas fa-check-circle" style="color:var(--green); margin-right:6px;"></i>Ditemani Sampai Internet Nyala</span>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <a href="https://wa.me/6287778999141?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU%20di%20Solo%20Raya" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-whatsapp" style="font-size:22px;"></i> Chat Sales Sekarang
-  </a>
-  <p>0877-7899-9141 &middot; Konsultasi gratis, tidak wajib daftar</p>
+<!-- AREA LAYANAN -->
+<section class="area-section" id="area">
+  <div class="area-inner">
+    <h2 class="section-title">Area Layanan XL SATU di Solo Raya</h2>
+    <p class="section-sub">Kami melayani pemasangan internet rumah fiber optic dan wireless di 5 kabupaten/kota Soloraya</p>
+    <div class="area-grid">
+      <a href="/wifi-solo/" class="area-card" style="text-decoration:none; border-color:var(--green); background:var(--green-light);">
+        <i class="fas fa-city"></i>
+        <div class="area-name">Kota Solo</div>
+        <div class="area-desc">Fiber & Wireless tersedia</div>
+      </a>
+      <a href="/wifi-surakarta/" class="area-card" style="text-decoration:none;">
+        <i class="fas fa-city"></i>
+        <div class="area-name">Surakarta (Solo)</div>
+        <div class="area-desc">Fiber & Wireless tersedia</div>
+      </a>
+      <a href="/wifi-sukoharjo/" class="area-card" style="text-decoration:none;">
+        <i class="fas fa-city"></i>
+        <div class="area-name">Sukoharjo</div>
+        <div class="area-desc">Fiber & Wireless tersedia</div>
+      </a>
+      <a href="/wifi-karanganyar/" class="area-card" style="text-decoration:none;">
+        <i class="fas fa-city"></i>
+        <div class="area-name">Karanganyar</div>
+        <div class="area-desc">Fiber & Wireless tersedia</div>
+      </a>
+      <a href="/wifi-klaten/" class="area-card" style="text-decoration:none;">
+        <i class="fas fa-city"></i>
+        <div class="area-name">Klaten</div>
+        <div class="area-desc">Wireless tersedia</div>
+      </a>
+      <a href="/wifi-boyolali/" class="area-card" style="text-decoration:none;">
+        <i class="fas fa-city"></i>
+        <div class="area-name">Boyolali</div>
+        <div class="area-desc">Fiber & Wireless tersedia</div>
+      </a>
+      <div class="area-card" style="background:var(--green); border-color:var(--green);">
+        <i class="fas fa-question-circle" style="color:#fff;"></i>
+        <div class="area-name" style="color:#fff;">Area Lain?</div>
+        <div class="area-desc" style="color:rgba(255,255,255,.85);">
+          <a href="https://wa.me/6287778999141?text=Halo,%20saya%20mau%20cek%20apakah%20area%20saya%20tersedia%20XL%20SATU" target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:underline;">Tanya Sales Kami</a>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:22px; text-align:center;">
+      <a href="/area-layanan/" style="display:inline-block; background:#fff; color:var(--green-dark); font-weight:700; font-size:13.5px; padding:9px 22px; border-radius:999px; border:1.5px solid var(--green); text-decoration:none;">
+        <i class="fas fa-map-location-dot" style="margin-right:6px;"></i>Lihat Cakupan Lengkap: 5 Kota, 79 Kecamatan
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- KECAMATAN COVERAGE -->
+<section class="area-section" style="padding-top:0;">
+  <div class="area-inner">
+    <div style="background:#f7faf9; border:1px solid #e3ece9; border-radius:16px; padding:24px 28px; text-align:left;">
+      <p style="margin:0; font-size:15px; line-height:1.7; color:#3a4a45;">
+        <i class="fas fa-map-marker-alt" style="color:var(--green); margin-right:6px;"></i>
+        Kami melayani pemasangan XL SATU di Solo, termasuk kecamatan Laweyan, Serengan, Pasar Kliwon, Jebres, dan Banjarsari. Belum yakin area kamu sudah terjangkau? <a href="https://wa.me/6287778999141?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU%20di%20Solo" style="color:var(--green); font-weight:600; text-decoration:underline;">Cek langsung ke sales kami</a> untuk kepastian jaringan di alamat spesifik Anda.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- PAKET -->
+<section class="paket-section" id="paket">
+  <div style="text-align:center; margin-bottom: 16px;">
+    <span style="background:var(--green); color:#fff; font-size:12px; font-weight:700; padding:6px 18px; border-radius:999px; display:inline-block; letter-spacing:.3px;">Promo XL Satu Solo</span>
+  </div>
+  <h2 class="section-title">Internet Cepat untuk Keluarga Bahagia!</h2>
+  <p class="section-sub">Nikmati koneksi stabil untuk streaming, belajar, bekerja, dan hiburan tanpa batas · Harga belum termasuk PPN · Syarat &amp; ketentuan berlaku</p>
+
+  <div class="paket-grid">
+
+    <!-- XL SATU STARTER 20 Mbps -->
+    <div class="paket-card">
+      <div class="paket-card-header value">
+        <div class="paket-title">XL Satu Starter — 20 Mbps</div>
+        <div class="paket-subtitle">Internet Only</div>
+      </div>
+      <div style="padding: 16px 24px 0;">
+        <div class="speed-label"><span>0 Mbps</span><span>20 Mbps</span></div>
+        <div class="speed-bar-bg">
+          <div class="speed-bar-fill" style="width:20%; background:linear-gradient(90deg,#0d9e7a,#037e64);"></div>
+          <div class="speed-bar-dot" style="left:calc(20% - 8px); border-color:#037e64;"></div>
+        </div>
+        <div class="speed-note">Ideal untuk browsing &amp; sosmed</div>
+      </div>
+      <div class="paket-body">
+        <div class="ideal-tags">
+          <span class="tag">Browsing</span>
+          <span class="tag">Media Sosial</span>
+          <span class="tag">Streaming SD</span>
+        </div>
+        <div class="fitur-list">
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-ac9c1ffe.webp" alt="" loading="lazy">
+            Hingga 5 Perangkat
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-f9963b35.webp" alt="" loading="lazy">
+            Biaya Instalasi Rp 100.000
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-65c6fd67.webp" alt="" loading="lazy">
+            Bonus STB Android TV
+          </div>
+        </div>
+        <div class="price-box">
+          <div class="price-main">Rp 185.000<span>/bulan</span></div>
+          <div class="price-ppn">Belum termasuk PPN</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20paket%20XL%20Satu%20Starter%2020%20Mbps%20Rp185.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- XL SATU STARTER 50 Mbps -->
+    <div class="paket-card">
+      <div class="paket-card-header value">
+        <div class="paket-title">XL Satu Starter — 50 Mbps</div>
+        <div class="paket-subtitle">Internet Only</div>
+      </div>
+      <div style="padding: 16px 24px 0;">
+        <div class="speed-label"><span>0 Mbps</span><span>50 Mbps</span></div>
+        <div class="speed-bar-bg">
+          <div class="speed-bar-fill" style="width:35%; background:linear-gradient(90deg,#0d9e7a,#037e64);"></div>
+          <div class="speed-bar-dot" style="left:calc(35% - 8px); border-color:#037e64;"></div>
+        </div>
+        <div class="speed-note">Ideal untuk streaming &amp; keluarga kecil</div>
+      </div>
+      <div class="paket-body">
+        <div class="ideal-tags">
+          <span class="tag">Streaming HD</span>
+          <span class="tag">Video Call</span>
+          <span class="tag">WFH Ringan</span>
+        </div>
+        <div class="fitur-list">
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-ac9c1ffe.webp" alt="" loading="lazy">
+            Hingga 10 Perangkat
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-52c191fd.webp" alt="" loading="lazy">
+            Gratis Biaya Instalasi
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-65c6fd67.webp" alt="" loading="lazy">
+            Bonus STB Android TV
+          </div>
+        </div>
+        <div class="price-box">
+          <div class="price-main">Rp 200.000<span>/bulan</span></div>
+          <div class="price-ppn">Belum termasuk PPN</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20paket%20XL%20Satu%20Starter%2050%20Mbps%20Rp200.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- XL SATU SPARK 250 Mbps - BEST SELLER -->
+    <div class="paket-card">
+      <div class="badge-laris">Best Seller</div>
+      <div class="paket-card-header smart">
+        <div class="paket-title">XL Satu Spark — 250 Mbps</div>
+        <div class="paket-subtitle">Internet Only</div>
+      </div>
+      <div style="padding: 16px 24px 0;">
+        <div class="speed-label"><span>0 Mbps</span><span>250 Mbps</span></div>
+        <div class="speed-bar-bg">
+          <div class="speed-bar-fill" style="width:74%; background:linear-gradient(90deg,#1a8ac0,#2ba8e0);"></div>
+          <div class="speed-bar-dot" style="left:calc(74% - 8px); border-color:#1a8ac0;"></div>
+        </div>
+        <div class="speed-note">Ideal untuk streaming &amp; WFH</div>
+      </div>
+      <div class="paket-body">
+        <div class="ideal-tags">
+          <span class="tag">Streaming HD</span>
+          <span class="tag">Gaming Online</span>
+          <span class="tag">WFH</span>
+        </div>
+        <div class="fitur-list">
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-52c191fd.webp" alt="" loading="lazy">
+            Hingga 10 Perangkat
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-e7c772b8.webp" alt="" loading="lazy">
+            Gratis Biaya Instalasi
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-65c6fd67.webp" alt="" loading="lazy">
+            Bonus STB Android TV
+          </div>
+        </div>
+        <div class="price-box">
+          <div class="price-main">Rp 229.000<span>/bulan</span></div>
+          <div class="price-ppn">Belum termasuk PPN</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20paket%20XL%20Satu%20Spark%20250%20Mbps%20Rp229.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- XL SATU SPARK 350 Mbps -->
+    <div class="paket-card">
+      <div class="paket-card-header family">
+        <div class="paket-title">XL Satu Spark — 350 Mbps</div>
+        <div class="paket-subtitle">Internet Only</div>
+      </div>
+      <div style="padding: 16px 24px 0;">
+        <div class="speed-label"><span>0 Mbps</span><span>350 Mbps</span></div>
+        <div class="speed-bar-bg">
+          <div class="speed-bar-fill" style="width:80%; background:linear-gradient(90deg,#6b2fa0,#9b4fd4);"></div>
+          <div class="speed-bar-dot" style="left:calc(80% - 8px); border-color:#9b4fd4;"></div>
+        </div>
+        <div class="speed-note">Ideal untuk streaming 4K &amp; gaming</div>
+      </div>
+      <div class="paket-body">
+        <div class="ideal-tags">
+          <span class="tag">Streaming 4K</span>
+          <span class="tag">Gaming Pro</span>
+          <span class="tag">Video Call HD</span>
+        </div>
+        <div class="fitur-list">
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-65c6fd67.webp" alt="" loading="lazy">
+            Hingga 14 Perangkat
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-4409f8f4.webp" alt="" loading="lazy">
+            Gratis Biaya Instalasi
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-65c6fd67.webp" alt="" loading="lazy">
+            Bonus STB Android TV
+          </div>
+        </div>
+        <div class="price-box">
+          <div class="price-main">Rp 279.000<span>/bulan</span></div>
+          <div class="price-ppn">Belum termasuk PPN</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20paket%20XL%20Satu%20Spark%20350%20Mbps%20Rp279.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOGGLE MORE PAKET -->
+    <div id="paket-extra" style="display:contents;">
+    <!-- XL SATU SPARK 400 Mbps -->
+    <div class="paket-card">
+      <div class="paket-card-header value">
+        <div class="paket-title">XL Satu Spark — 400 Mbps</div>
+        <div class="paket-subtitle">Internet Only</div>
+      </div>
+      <div style="padding: 16px 24px 0;">
+        <div class="speed-label"><span>0 Mbps</span><span>400 Mbps</span></div>
+        <div class="speed-bar-bg">
+          <div class="speed-bar-fill" style="width:82%; background:linear-gradient(90deg,#0d9e7a,#037e64);"></div>
+          <div class="speed-bar-dot" style="left:calc(82% - 8px); border-color:#037e64;"></div>
+        </div>
+        <div class="speed-note">Ideal untuk multi-streaming &amp; smart home</div>
+      </div>
+      <div class="paket-body">
+        <div class="ideal-tags">
+          <span class="tag">Multi-streaming</span>
+          <span class="tag">Gaming Pro</span>
+          <span class="tag">Smart Home</span>
+        </div>
+        <div class="fitur-list">
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-ac9c1ffe.webp" alt="" loading="lazy">
+            Hingga 16 Perangkat
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-f9963b35.webp" alt="" loading="lazy">
+            Gratis Biaya Instalasi
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-65c6fd67.webp" alt="" loading="lazy">
+            Bonus STB Android TV
+          </div>
+        </div>
+        <div class="price-box">
+          <div class="price-main">Rp 300.000<span>/bulan</span></div>
+          <div class="price-ppn">Belum termasuk PPN</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20paket%20XL%20Satu%20Spark%20400%20Mbps%20Rp300.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- XL SATU SPARK 600 Mbps -->
+    <div class="paket-card">
+      <div class="paket-card-header smart">
+        <div class="paket-title">XL Satu Spark — 600 Mbps</div>
+        <div class="paket-subtitle">Internet Only</div>
+      </div>
+      <div style="padding: 16px 24px 0;">
+        <div class="speed-label"><span>0 Mbps</span><span>600 Mbps</span></div>
+        <div class="speed-bar-bg">
+          <div class="speed-bar-fill" style="width:88%; background:linear-gradient(90deg,#1a8ac0,#2ba8e0);"></div>
+          <div class="speed-bar-dot" style="left:calc(88% - 8px); border-color:#1a8ac0;"></div>
+        </div>
+        <div class="speed-note">Ideal untuk power user &amp; konten kreator</div>
+      </div>
+      <div class="paket-body">
+        <div class="ideal-tags">
+          <span class="tag">Power User</span>
+          <span class="tag">Cloud Gaming</span>
+          <span class="tag">Konten Kreator</span>
+        </div>
+        <div class="fitur-list">
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-52c191fd.webp" alt="" loading="lazy">
+            Hingga 24 Perangkat
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-e7c772b8.webp" alt="" loading="lazy">
+            Gratis Biaya Instalasi
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-65c6fd67.webp" alt="" loading="lazy">
+            Bonus STB Android TV
+          </div>
+        </div>
+        <div class="price-box">
+          <div class="price-main">Rp 500.000<span>/bulan</span></div>
+          <div class="price-ppn">Belum termasuk PPN</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20paket%20XL%20Satu%20Spark%20600%20Mbps%20Rp500.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- XL SATU SPARK 1000 Mbps -->
+    <div class="paket-card">
+      <div class="paket-card-header family">
+        <div class="paket-title">XL Satu Spark — 1000 Mbps</div>
+        <div class="paket-subtitle">Internet Only</div>
+      </div>
+      <div style="padding: 16px 24px 0;">
+        <div class="speed-label"><span>0 Mbps</span><span>1000 Mbps</span></div>
+        <div class="speed-bar-bg">
+          <div class="speed-bar-fill" style="width:96%; background:linear-gradient(90deg,#6b2fa0,#9b4fd4);"></div>
+          <div class="speed-bar-dot" style="left:calc(96% - 8px); border-color:#9b4fd4;"></div>
+        </div>
+        <div class="speed-note">Kecepatan penuh 1000 Mbps</div>
+      </div>
+      <div class="paket-body">
+        <div class="ideal-tags">
+          <span class="tag">Enterprise</span>
+          <span class="tag">Data Center</span>
+          <span class="tag">Ultra HD</span>
+        </div>
+        <div class="fitur-list">
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-65c6fd67.webp" alt="" loading="lazy">
+            Unlimited Perangkat
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-4409f8f4.webp" alt="" loading="lazy">
+            Gratis Biaya Instalasi
+          </div>
+          <div class="fitur-item">
+            <img src="/images/xl-cdn/post-65c6fd67.webp" alt="" loading="lazy">
+            Bonus STB Android TV
+          </div>
+        </div>
+        <div class="price-box">
+          <div class="price-main">Rp 900.000<span>/bulan</span></div>
+          <div class="price-ppn">Belum termasuk PPN</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20paket%20XL%20Satu%20Spark%201000%20Mbps%20Rp900.000" target="_blank" rel="noopener noreferrer" class="btn-pilih">Saya Pilih Ini</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end paket-extra -->
+  </div><!-- end paket-grid -->
+
+  <div id="toggle-wrap" style="text-align:center; margin-top: 28px;">
+    <button onclick="togglePaket()" id="toggle-btn" style="background:var(--white); border:1.5px solid var(--green); color:var(--green); font-size:14px; font-weight:700; padding:12px 28px; border-radius:999px; cursor:pointer; transition:background .2s; display:none;" onmouseover="this.style.background='var(--green-light)'" onmouseout="this.style.background='var(--white)'">
+      Lihat Semua Paket <i class="fas fa-chevron-down" id="toggle-icon" style="margin-left:6px;"></i>
+    </button>
+  </div>
+</section>
+
+
+
+<!-- WIRELESS SECTION (Non-FTTH) -->
+<section class="wireless-section" id="wireless">
+  <div class="wireless-inner">
+    <div style="text-align:center;">
+      <span class="wireless-region-badge"><i class="fas fa-location-dot"></i> Khusus Area Solo</span>
+      <h2 class="section-title">WiFi Rumah Tanpa Kabel</h2>
+      <p class="section-sub" style="margin-bottom: 0;">Internet cepat, stabil, tanpa ribet — solusi wireless untuk area yang belum terjangkau kabel fiber. Baca <a href="/solusi-internet-daerah-belum-ada-fiber-optik/" style="color:var(--green); font-weight:600;">kenapa daerahmu mungkin belum ada fiber & solusinya</a>.</p>
+    </div>
+
+    <div class="wireless-pills">
+      <div class="pill-item">
+        <i class="fas fa-wifi" style="color:var(--green); font-size:20px;"></i>
+        Sinyal Stabil Di Setiap Ruangan
+      </div>
+      <div class="pill-item">
+        <i class="fas fa-gauge-high" style="color:var(--green); font-size:20px;"></i>
+        Internet Cepat Tanpa Batas Kuota
+      </div>
+      <div class="pill-item">
+        <i class="fas fa-plug-circle-check" style="color:var(--green); font-size:20px;"></i>
+        Praktis, Tanpa Kabel Tanpa Repot
+      </div>
+    </div>
+
+    <!-- TAB TOGGLE -->
+    <div style="display:flex; justify-content:center; gap:12px; margin:24px 0 32px;">
+      <button onclick="showWirelessTab('advance')" id="tab-advance"
+        style="padding:10px 28px; border-radius:999px; border:2px solid var(--green); background:var(--green); color:#fff; font-size:14px; font-weight:700; cursor:pointer; transition:.2s;">
+        Advance Payment
+      </button>
+      <button onclick="showWirelessTab('monthly')" id="tab-monthly"
+        style="padding:10px 28px; border-radius:999px; border:2px solid var(--green); background:#fff; color:var(--green); font-size:14px; font-weight:700; cursor:pointer; transition:.2s;">
+        Monthly Plan
+      </button>
+    </div>
+
+    <!-- ADVANCE PAYMENT -->
+    <div id="wireless-advance">
+      <div style="max-width:420px; margin:0 auto 24px; background:var(--green-light); border-radius:12px; padding:12px 16px; text-align:center; font-size:13px; font-weight:600; color:var(--green-dark);">
+        <i class="fas fa-gift" style="margin-right:6px;"></i> Semua paket include <strong>Free 3 Bulan Vidio + Catchplay</strong>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; max-width:680px; margin:0 auto 32px;">
+
+        <!-- 50 Mbps -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:var(--green);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">Tersedia</span>
+          <i class="fas fa-gauge" style="color:var(--green);font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num">50 <span>Mbps</span></div>
+          <div class="harga-label">Advance Payment</div>
+          <div class="harga-value">Rp 650.000</div>
+          <div class="harga-note">3 bulan + bonus 1 bulan</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%2050%20Mbps%20Advance%20Rp650.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:8px;">Saya Pilih Ini</a>
+        </div>
+
+        <!-- 100 Mbps -->
+        <div class="wireless-card" style="position:relative;">
+          <span style="position:absolute;top:10px;right:10px;background:var(--green);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;">Tersedia</span>
+          <i class="fas fa-gauge-high" style="color:var(--green);font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num">100 <span>Mbps</span></div>
+          <div class="harga-label">Advance Payment</div>
+          <div class="harga-value">Rp 790.000</div>
+          <div class="harga-note">3 bulan + bonus 1 bulan</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%20100%20Mbps%20Advance%20Rp790.000" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:8px;">Saya Pilih Ini</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MONTHLY PLAN -->
+    <div id="wireless-monthly" style="display:none;">
+      <div style="max-width:420px; margin:0 auto 24px; background:#fff3e0; border-radius:12px; padding:12px 16px; text-align:center; font-size:13px; font-weight:600; color:#ac3c00;">
+        <i class="fas fa-calendar-check" style="margin-right:6px;"></i> Bayar bulanan, tanpa advance — <strong>Pilot Agustus 2026</strong>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; max-width:400px; margin:0 auto 32px;">
+
+        <!-- Monthly 100 Mbps -->
+        <div class="wireless-card" style="position:relative;">
+          <i class="fas fa-gauge-high" style="color:var(--green);font-size:36px;margin-bottom:8px;"></i>
+          <div class="speed-num">100 <span>Mbps</span></div>
+          <div class="harga-label">Monthly Plan</div>
+          <div class="harga-value">Rp 219.500</div>
+          <div class="harga-note">/bulan</div>
+          <a href="https://wa.me/6287778999141?text=Saya%20minat%20XL%20Satu%20Wireless%20Monthly%20100%20Mbps%20Rp219.500" target="_blank" rel="noopener noreferrer" class="btn-pilih" style="width:100%;margin-top:12px;">Saya Pilih Ini</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="wireless-perks">
+      <div class="perk-item"><i class="fas fa-circle-check"></i> Belum Termasuk PPN</div>
+      <div class="perk-item"><i class="fas fa-gear"></i> Bebas Biaya Instalasi</div>
+      <div class="perk-item"><i class="fas fa-circle-play"></i> Free Vidio Lite &amp; Catchplay (3 Bulan)</div>
+    </div>
+  </div>
+</section>
+
+<script>
+function showWirelessTab(tab) {
+  document.getElementById('wireless-advance').style.display = tab === 'advance' ? 'block' : 'none';
+  document.getElementById('wireless-monthly').style.display = tab === 'monthly' ? 'block' : 'none';
+  document.getElementById('tab-advance').style.background = tab === 'advance' ? 'var(--green)' : '#fff';
+  document.getElementById('tab-advance').style.color = tab === 'advance' ? '#fff' : 'var(--green)';
+  document.getElementById('tab-monthly').style.background = tab === 'monthly' ? 'var(--green)' : '#fff';
+  document.getElementById('tab-monthly').style.color = tab === 'monthly' ? '#fff' : 'var(--green)';
+}
+</script>
+
+
+<!-- KENAPA PILIH KAMI -->
+<section class="area-section" style="background:#f7faf9;">
+  <div class="area-inner">
+    <h2 class="section-title">Kenapa Pilih Sales Resmi Kami?</h2>
+    <p class="section-sub">Bukan sekadar jualan — kami yang pegang tanggung jawab dari daftar sampai internet nyala</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin-top:32px; text-align:left;">
+      <div style="background:#fff; border:1px solid #e3ece9; border-radius:14px; padding:24px;">
+        <i class="fab fa-whatsapp" style="color:var(--green); font-size:28px; margin-bottom:12px; display:block;"></i>
+        <h3 style="font-size:16px; margin-bottom:8px;">Sigap Membalas Pesan</h3>
+        <p style="font-size:14px; color:#5a6b66; margin:0;">Chat langsung ke satu nomor sales yang sama dari awal konsultasi sampai internet aktif — bukan admin generik yang cuma "read" tanpa balasan.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #e3ece9; border-radius:14px; padding:24px;">
+        <i class="fas fa-ticket-alt" style="color:var(--green); font-size:28px; margin-bottom:12px; display:block;"></i>
+        <h3 style="font-size:16px; margin-bottom:8px;">Kendala? Kami Buatkan Tiket Aduan</h3>
+        <p style="font-size:14px; color:#5a6b66; margin:0;">Kalau internet bermasalah, Anda tidak perlu bingung sendiri hubungi call center. Kami yang langsung buatkan tiket aduan resmi ke pihak XL dan kawal sampai selesai.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #e3ece9; border-radius:14px; padding:24px;">
+        <i class="fas fa-hand-holding-usd" style="color:var(--green); font-size:28px; margin-bottom:12px; display:block;"></i>
+        <h3 style="font-size:16px; margin-bottom:8px;">Harga Transparan Sejak Awal</h3>
+        <p style="font-size:14px; color:#5a6b66; margin:0;">Semua biaya paket dan instalasi dijelaskan di depan sebelum Anda daftar — tidak ada biaya tersembunyi yang muncul belakangan.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #e3ece9; border-radius:14px; padding:24px;">
+        <i class="fas fa-map-marked-alt" style="color:var(--green); font-size:28px; margin-bottom:12px; display:block;"></i>
+        <h3 style="font-size:16px; margin-bottom:8px;">Paham Medan Solo Raya</h3>
+        <p style="font-size:14px; color:#5a6b66; margin:0;">Sales lokal yang benar-benar tahu area Solo, Sukoharjo, Karanganyar, Klaten, dan Boyolali — bukan customer service pusat yang tidak familiar dengan lokasi Anda.</p>
+      </div>
+    </div>
+    <p style="margin-top:24px; text-align:center; font-size:14px; color:#5a6b66;">
+      Mau tahu apa lagi yang perlu dicek sebelum daftar internet rumah manapun? Baca <a href="/5-hal-wajib-dicek-sebelum-pasang-wifi-rumah/" style="color:var(--green); font-weight:600;">5 hal wajib dicek sebelum pasang WiFi rumah</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+  <div class="about-inner">
+    <div class="about-text">
+      <h2>First Media Jadi XL SATU</h2>
+      <p>Nikmati internet rumah tambah cepat dengan jaringan tepercaya XLSMART yang membuat setiap momen di rumah lebih nyaman bersama koneksi dan hiburan tanpa batas.</p>
+    </div>
+    <div class="about-video">
+      <img src="/images/promo-first-media-xl-satu-banner.webp" alt="Video XL SATU" width="946" height="532" loading="lazy">
+      <div class="play-btn" onclick="openWA()"><i class="fas fa-play"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- MYXL SECTION -->
+<section class="myxl-section">
+  <div class="myxl-inner">
+    <div class="myxl-img">
+      <img src="/images/xl-cdn/myxl-app.png" alt="myXL App" loading="lazy">
+    </div>
+    <div class="myxl-text">
+      <h2>Atur Semua Layanan Kamu Cuma Butuh myXL</h2>
+      <p>Dan nikmati berbagai promo eksklusif, poin myXL, serta fitur pendukung XL SATU lainnya</p>
+      <div class="store-btns">
+        <a href="https://apps.apple.com/id/app/myxl-cek-kuota-beli-paket-xl/id683141076" target="_blank" rel="noopener noreferrer">
+          <img src="/images/xl-cdn/badge-appstore.png" alt="App Store" loading="lazy">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.apps.MyXL" target="_blank" rel="noopener noreferrer">
+          <img src="/images/xl-cdn/badge-googleplay.png" alt="Google Play" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANTUAN -->
+<section class="bantuan-section" id="bantuan">
+  <div class="bantuan-inner">
+    <h2 class="section-title">Bantuan</h2>
+    <p class="section-sub">Pertanyaan yang sering ditanyakan</p>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apa itu XL SATU?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">XL SATU adalah layanan internet rumah unlimited terbaik, hasil integrasi XL Home dan First Media. Menggunakan jaringan fiber optik XLSMART yang cepat dan stabil untuk seluruh keluarga.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apakah merger antara XL dan Smartfren akan berdampak pada pelanggan atau layanan XL SATU?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Merger XL dan Smartfren tidak berdampak negatif pada layanan XL SATU. Justru dengan bergabungnya kedua jaringan, kualitas dan jangkauan layanan akan semakin meningkat untuk pelanggan.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Siapa saja yang dapat berlangganan XL SATU?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Siapa pun yang berada di area layanan XL SATU dapat berlangganan. Cukup hubungi sales kami untuk mengecek ketersediaan di area Anda.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apa saja yang dapat mempengaruhi kecepatan internet XL SATU?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Faktor yang mempengaruhi kecepatan antara lain: jumlah perangkat yang terhubung, jarak dari router, interferensi sinyal, dan kondisi jaringan saat jam sibuk.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apa arti dari First Media Jadi XL SATU?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">First Media resmi bergabung dengan XL Home menjadi satu layanan bernama XL SATU. Pelanggan lama First Media akan secara otomatis beralih ke layanan XL SATU dengan kualitas yang lebih baik.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apakah XL SATU tersedia di Kota Solo?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Ya! XL SATU tersedia luas di Kota Solo (Surakarta). Hubungi sales kami untuk mengecek ketersediaan di alamat spesifik Anda — area Kota Solo umumnya sudah terjangkau jaringan fiber.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Berapa lama proses pemasangan internet di Solo?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Proses instalasi biasanya memakan waktu 3–7 hari kerja setelah pendaftaran. Untuk wilayah Kota Solo biasanya lebih cepat karena jaringan sudah terpasang luas.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apa perbedaan paket Fiber dan Wireless XL SATU?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Paket Fiber menggunakan kabel fiber optik langsung ke rumah — koneksi paling stabil dan cepat, ideal untuk area yang sudah terjangkau jaringan FTTH. Paket Wireless menggunakan sinyal radio tanpa kabel — solusi untuk area yang belum terjangkau kabel fiber, dengan sistem bayar 3 bulan dan gratis 1 bulan.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apakah paket XL SATU ada batas kuota (FUP)?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Paket Fiber tidak ada FUP — kecepatan tetap penuh sesuai paket, berapa pun pemakaiannya. Paket Wireless menerapkan FUP dengan batas 1 TB per bulan, jauh di atas pemakaian rumah tangga rata-rata (200-400 GB). Baca <a href="/wifi-tanpa-fup-unlimited/">penjelasan lengkap soal FUP XL SATU</a>.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Bagaimana cara daftar XL SATU di Solo Raya?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Pendaftaran bisa langsung melalui WhatsApp sales kami di 0877-7899-9141. Cukup kirim nama, alamat lengkap, dan paket yang diinginkan. Tim kami akan memproses dan mengatur jadwal survei serta instalasi. Baca <a href="/cara-daftar-pasang-wifi-xl-satu-solo/">panduan lengkap cara daftar & syarat pemasangan</a> untuk detail langkah demi langkah.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apakah ada kontrak berlangganan minimum?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Untuk paket Fiber, terdapat minimal berlangganan sesuai ketentuan yang berlaku. Untuk paket Wireless, sistem pembayaran adalah per 3 bulan dengan bonus 1 bulan gratis. Hubungi sales kami untuk informasi kontrak terbaru.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apakah harga sudah termasuk router WiFi?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Ya, paket XL SATU sudah termasuk perangkat router WiFi yang disediakan. Router dikelola oleh XL SATU dan akan dirawat/diganti jika ada kerusakan yang bukan disebabkan oleh pengguna.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apakah internet XL SATU cocok untuk gaming online?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Sangat cocok! Jaringan fiber optik XL SATU memiliki latensi rendah yang ideal untuk gaming online. Untuk pengalaman gaming terbaik, kami merekomendasikan paket 250 Mbps ke atas. Paket 600 Mbps tersedia untuk cloud gaming dan gaming pro.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Bagaimana jika internet saya bermasalah?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Anda bisa menghubungi layanan pelanggan XL SATU melalui WhatsApp Care di 08170010820, Call Center 820 (pengguna XL) atau 08170123442 (non-XL). Untuk bantuan teknis cepat di area Solo Raya, bisa juga hubungi sales kami langsung.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span>Apakah bisa pasang XL SATU untuk kos atau kontrakan di Solo?</span>
+        <i class="fas fa-plus icon"></i>
+      </div>
+      <div class="faq-a">Bisa! XL SATU cocok untuk kos, kontrakan, maupun rumah sendiri. Untuk kos dengan banyak penghuni, paket 400 Mbps atau 600 Mbps sangat direkomendasikan karena mendukung banyak perangkat secara bersamaan.</div>
+    </div>
+
+    <div style="text-align:center; margin-top: 24px;">
+      <a href="https://wa.me/6287778999141?text=Halo%20kak%2C%20saya%20punya%20pertanyaan%20lainnya%20soal%20XL%20SATU%20di%20Solo" target="_blank" rel="noopener noreferrer" class="more-btn">
+        Punya Pertanyaan Lainnya? Chat Sales <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- HUBUNGI KAMI -->
+<section class="hubungi-section" id="hubungi">
+  <div class="hubungi-inner">
+    <div class="hubungi-text">
+      <h2>Hubungi Kami</h2>
+      <p>Kami siap bantu kamu untuk semua informasi tentang XL SATU</p>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Sales Center</h3>
+          <div class="contact-item">
+            <a href="https://wa.me/6287778999141" target="_blank" rel="noopener noreferrer" class="contact-num">0877-7899-9141</a>
+          </div>
+          <div class="contact-item">
+            <a href="https://wa.me/6287778999141?text=Halo%20kak,%20saya%20mau%20Daftar%20XL%20SATU" target="_blank" rel="noopener noreferrer" class="contact-num btn-daftar">Daftar Sekarang!</a>
+          </div>
+        </div>
+        <div class="contact-box">
+          <h3>Kami Siap Membantu Anda</h3>
+          <div class="contact-item">
+            <span class="contact-label">Hubungi Call Center kami di nomor berikut ini:</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">WhatsApp XL SATU Care</span>
+            <a href="https://wa.me/628170010820" target="_blank" rel="noopener noreferrer" class="contact-num">08170010820</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Call Center (khusus pengguna XL)</span>
+            <a href="tel:820" class="contact-num">820</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Call Center (non-XL)</span>
+            <a href="tel:08170123442" class="contact-num">08170123442</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hubungi-img">
+      <img src="/images/xl-cdn/support-team.png" alt="Support Team" loading="lazy">
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div>
-      <img src="/images/logo-xl-satu.png" alt="XL SATU" class="footer-logo" width="106" height="85" loading="lazy">
-      <div class="footer-copy">Copyright &copy; 2026 XL SATU. All rights reserved.</div>
+    <div class="footer-left">
+      <img src="/images/logo-xl-satu.png" alt="XL SATU" class="footer-logo" loading="lazy">
+      <div class="footer-copy">Copyright © 2026 XL SATU. All rights reserved.</div>
     </div>
     <div class="footer-links">
-      <a href="/kebijakan-privasi/">Privasi &amp; Cookie</a>
-      <a href="https://satu.xl.co.id/syarat-ketentuan" target="_blank" rel="noopener noreferrer">Syarat &amp; Ketentuan</a>
-      <a href="https://www.xlsmart.co.id/id/pemberitahuan-privasi" target="_blank" rel="noopener noreferrer">Kebijakan Privasi XL</a>
+      <a href="/kebijakan-privasi/" style="color:inherit;">Privasi &amp; Cookie</a><a href="https://satu.xl.co.id/syarat-ketentuan" target="_blank" rel="noopener noreferrer">Syarat &amp; Ketentuan</a>
+      <a href="https://www.xlsmart.co.id/id/pemberitahuan-privasi" target="_blank" rel="noopener noreferrer">Kebijakan Privasi</a>
     </div>
     <div class="footer-socials">
       <a href="https://www.facebook.com/xlsatu" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -396,7 +2214,7 @@
 </footer>
 
 <!-- FLOATING WA -->
-<a href="https://wa.me/6287778999141?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU%20di%20Solo%20Raya" target="_blank" rel="noopener noreferrer" class="float-wa">
+<a href="https://wa.me/6287778999141?text=Info%20XL%20SATU%20Solo" target="_blank" rel="noopener noreferrer" class="float-wa">
   <i class="fab fa-whatsapp"></i>
   <div class="float-wa-text">
     <small>Hubungi Sales</small>
@@ -404,21 +2222,95 @@
   </div>
 </a>
 
-<!-- WhatsApp click tracking -->
 <script>
-  document.addEventListener('click', function (e) {
-    var link = e.target.closest('a[href*="wa.me"]');
-    if (!link) return;
-    var label = (link.textContent || '').trim().slice(0, 100) || link.className || 'wa_link';
-    if (typeof gtag === 'function') {
-      gtag('event', 'click_whatsapp', {
-        link_text: label,
-        link_url: link.href,
-        page_path: window.location.pathname
-      });
+  // Mobile paket toggle
+  function initPaketToggle() {
+    const isMobile = window.innerWidth <= 768;
+    const extra = document.getElementById('paket-extra');
+    const btn = document.getElementById('toggle-btn');
+    if (!extra || !btn) return;
+    if (isMobile) {
+      extra.style.display = 'none';
+      btn.style.display = 'inline-flex';
+      btn.style.alignItems = 'center';
+    } else {
+      extra.style.display = 'contents';
+      btn.style.display = 'none';
     }
-  }, true);
+  }
+  function togglePaket() {
+    const extra = document.getElementById('paket-extra');
+    const icon = document.getElementById('toggle-icon');
+    const btn = document.getElementById('toggle-btn');
+    if (extra.style.display === 'none') {
+      extra.style.display = 'contents';
+      btn.innerHTML = 'Sembunyikan Paket <i class="fas fa-chevron-up" id="toggle-icon" style="margin-left:6px;"></i>';
+    } else {
+      extra.style.display = 'none';
+      btn.innerHTML = 'Lihat Semua Paket <i class="fas fa-chevron-down" id="toggle-icon" style="margin-left:6px;"></i>';
+    }
+  }
+  window.addEventListener('resize', initPaketToggle);
+  window.addEventListener('DOMContentLoaded', initPaketToggle);
+
+  let cur = 0;
+  const total = 4;
+  const slidesEl = document.getElementById('slides');
+  const dotsEl = document.getElementById('dots');
+
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Ke slide ' + (i + 1));
+    d.onclick = () => goToSlide(i);
+    dotsEl.appendChild(d);
+  }
+
+  function goToSlide(n) {
+    cur = (n + total) % total;
+    slidesEl.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+  }
+
+  function moveSlide(dir) { 
+    goToSlide(cur + dir); 
+  }
+
+  setInterval(() => moveSlide(1), 5000);
+
+  function toggleFaq(el) {
+    el.classList.toggle('open');
+  }
+
+  function openWA() {
+    window.open('https://wa.me/6287778999141?text=Halo%20kak,%20saya%20mau%20info%20XL%20SATU%20di%20Solo', '_blank');
+  }
+
+  function goTo(section) {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 </script>
-<script src="/site-consent.js" defer></script>
+  <!-- WhatsApp click tracking (GA4 event: click_whatsapp) -->
+  <script>
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href*="wa.me"]');
+      if (!link) return;
+      var label = (link.textContent || '').trim().slice(0, 100) || link.className || 'wa_link';
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_whatsapp', {
+          link_text: label,
+          link_url: link.href,
+          page_path: window.location.pathname
+        });
+      }
+    }, true);
+  </script>
+<!-- ===== MODAL CEK KETERSEDIAAN LOKASI ===== -->
+<script src="/cek-lokasi.js" defer></script>
+
+  <script src="/site-consent.js" defer></script>
 </body>
 </html>
