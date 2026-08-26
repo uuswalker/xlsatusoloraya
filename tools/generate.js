@@ -17,7 +17,7 @@ const OUTPUT_ROOT = path.join(__dirname, 'output');
 const template = fs.readFileSync(path.join(BUILD_DIR, 'template-kota.html'), 'utf-8');
 const { cities } = JSON.parse(fs.readFileSync(path.join(BUILD_DIR, 'data-kota.json'), 'utf-8'));
 
-function renderAreaCards(activeSlug) {
+function renderAreaCards(activeSlug, cities) {
   // Replace each {{AREA_CARD:slug:label}} marker with the full <a> block,
   // highlighting the one matching the current page's slug.
   return (html) => html.replace(/\{\{AREA_CARD:([a-z-]+):([^}]+)\}\}/g, (match, slug, label) => {
@@ -25,10 +25,14 @@ function renderAreaCards(activeSlug) {
     const style = isActive
       ? 'text-decoration:none; border-color:var(--green); background:var(--green-light);'
       : 'text-decoration:none;';
+    const city = cities.find(c => c.slug === slug);
+    const tipe = city
+      ? (city.has_fiber && city.has_wireless ? 'Fiber & Wireless' : city.has_fiber ? 'Fiber Optic' : 'Wireless')
+      : 'Fiber & Wireless';
     return `<a href="/${slug}/" class="area-card" style="${style}">
         <i class="fas fa-city"></i>
         <div class="area-name">${label}</div>
-        <div class="area-desc">Fiber & Wireless tersedia</div>
+        <div class="area-desc">${tipe} tersedia</div>
       </a>`;
   });
 }
@@ -36,6 +40,13 @@ function renderAreaCards(activeSlug) {
 let generated = 0;
 for (const city of cities) {
   let html = template;
+
+  // Conditional blocks: {{#has_fiber}}...{{/has_fiber}} / {{#has_wireless}}...{{/has_wireless}}
+  // If flag is truthy, keep content; if falsy, remove entire block (including markers).
+  html = html.replace(/\{\{#has_fiber\}\}([\s\S]*?)\{\{\/has_fiber\}\}/g,
+    city.has_fiber ? '$1' : '');
+  html = html.replace(/\{\{#has_wireless\}\}([\s\S]*?)\{\{\/has_wireless\}\}/g,
+    city.has_wireless ? '$1' : '');
 
   // Simple {{key}} substitutions
   for (const [key, value] of Object.entries(city)) {
@@ -61,7 +72,7 @@ for (const city of cities) {
   html = html.replace(/{{wa_widget_text_url}}/g, waEncode(city.wa_widget_text));
 
   // Area card grid with active-city highlight
-  html = renderAreaCards(city.slug)(html);
+  html = renderAreaCards(city.slug, cities)(html);
 
   const outDir = path.join(OUTPUT_ROOT, city.slug);
   fs.mkdirSync(outDir, { recursive: true });

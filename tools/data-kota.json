@@ -30,7 +30,10 @@
         "Jebres",
         "Banjarsari"
       ],
-      "kecamatan_count": 5
+      "kecamatan_count": 5,
+      "has_fiber": true,
+      "has_wireless": true,
+      "hero_intro": "XL SATU hadir untuk keluarga di <strong>Kota Solo (Surakarta)</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
       "slug": "wifi-surakarta",
@@ -62,7 +65,10 @@
         "Serengan",
         "Pasar Kliwon"
       ],
-      "kecamatan_count": 5
+      "kecamatan_count": 5,
+      "has_fiber": true,
+      "has_wireless": true,
+      "hero_intro": "XL SATU hadir untuk keluarga di <strong>Kota Surakarta (Solo)</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
       "slug": "wifi-sukoharjo",
@@ -101,7 +107,10 @@
         "Bulu",
         "Weru"
       ],
-      "kecamatan_count": 12
+      "kecamatan_count": 12,
+      "has_fiber": true,
+      "has_wireless": true,
+      "hero_intro": "XL SATU hadir untuk keluarga di <strong>Sukoharjo</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
       "slug": "wifi-karanganyar",
@@ -145,7 +154,10 @@
         "Tasikmadu",
         "Tawangmangu"
       ],
-      "kecamatan_count": 17
+      "kecamatan_count": 17,
+      "has_fiber": true,
+      "has_wireless": true,
+      "hero_intro": "XL SATU hadir untuk keluarga di <strong>Karanganyar</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
       "slug": "wifi-klaten",
@@ -153,10 +165,10 @@
       "nama_lengkap": "Klaten",
       "nama_display": "Klaten",
       "nama_h1": "Klaten",
-      "meta_description": "Pasang WiFi di Klaten cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan. Hubungi sales via WhatsApp.",
-      "meta_keywords": "pasang wifi klaten, internet rumah klaten, wifi klaten, xl satu klaten, fiber optic klaten, internet klaten, xl satu soloraya",
-      "og_title": "Pasang WiFi Klaten | XL SATU Internet Rumah Fiber Optic Klaten",
-      "title": "Pasang WiFi Klaten | XL SATU Internet Rumah Fiber Optic Klaten",
+      "meta_description": "Pasang WiFi di Klaten cepat &amp; mudah. Paket XL SATU wireless unlimited 50–100 Mbps. Instalasi cepat, harga mulai Rp 650.000/bulan. Hubungi sales via WhatsApp.",
+      "meta_keywords": "pasang wifi klaten, internet rumah klaten, wifi klaten, xl satu klaten, wireless klaten, internet klaten, xl satu soloraya",
+      "og_title": "Pasang WiFi Klaten | XL SATU Internet Rumah Wireless Klaten",
+      "title": "Pasang WiFi Klaten | XL SATU Internet Rumah Wireless Klaten",
       "area_served_json": "\"Klaten\"",
       "faq1_q": "Apakah XL SATU tersedia di Klaten?",
       "faq1_a": "Ya! XL SATU tersedia di wilayah Klaten. Hubungi sales kami untuk mengecek ketersediaan di alamat spesifik Anda.",
@@ -169,7 +181,7 @@
       "wireless_badge": "Khusus Area Klaten",
       "wa_float_text": "Info XL SATU Klaten",
       "wa_widget_text": "Halo kak, saya mau info XL SATU di Klaten",
-      "og_description": "Pasang WiFi di Klaten cepat &amp; mudah. Paket XL SATU fiber optic unlimited 20–1000 Mbps. Instalasi cepat, harga mulai Rp 185.000/bulan.",
+      "og_description": "Pasang WiFi di Klaten cepat &amp; mudah. Paket XL SATU wireless unlimited 50–100 Mbps. Instalasi cepat, harga mulai Rp 650.000/bulan.",
       "kecamatan_list": [
         "Prambanan",
         "Gantiwarno",
@@ -198,7 +210,10 @@
         "Klaten Tengah",
         "Klaten Utara"
       ],
-      "kecamatan_count": 26
+      "kecamatan_count": 26,
+      "has_fiber": false,
+      "has_wireless": true,
+      "hero_intro": "XL SATU hadir untuk keluarga di <strong>Klaten</strong>. Internet wireless unlimited mulai Rp 650.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
       "slug": "wifi-boyolali",
@@ -244,7 +259,10 @@
         "Juwangi",
         "Karanggede"
       ],
-      "kecamatan_count": 19
+      "kecamatan_count": 19,
+      "has_fiber": true,
+      "has_wireless": true,
+      "hero_intro": "XL SATU hadir untuk keluarga di <strong>Boyolali</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     }
   ]
 }

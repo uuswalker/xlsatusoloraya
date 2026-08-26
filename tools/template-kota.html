@@ -1351,8 +1351,8 @@
       </a>
     </div>
     <nav role="navigation">
-      <a href="#paket">Paket Fiber</a>
-      <a href="#wireless">Wireless</a>
+      {{#has_fiber}}<a href="#paket">Paket Fiber</a>{{/has_fiber}}
+      {{#has_wireless}}<a href="#wireless">Wireless</a>{{/has_wireless}}
       <a href="#area">Area Layanan</a>
       <a href="#bantuan">Bantuan</a>
       <a href="#hubungi">Hubungi Kami</a>
@@ -1405,10 +1405,10 @@
 <!-- FITUR PILLS -->
 <div class="fitur-pills">
   <div class="fitur-pills-inner">
-    <div class="pill-item">
+    {{#has_fiber}}<div class="pill-item">
       <img src="/images/xl-cdn/icon-fiber.svg" alt="" loading="lazy">
       Fiber Optic
-    </div>
+    </div>{{/has_fiber}}
     <div class="pill-item">
       <img src="/images/xl-cdn/icon-internet.svg" alt="" loading="lazy">
       WiFi Unlimited
@@ -1428,7 +1428,7 @@
 <section class="hero-lokal">
   <div class="hero-lokal-inner">
     <h1>Pasang <span>WiFi Rumah di {{h1_kota}}</span><br>Cepat, Stabil, dan Terjangkau</h1>
-    <p>XL SATU hadir untuk keluarga di <strong>{{intro_strong}}</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan.</p>
+    <p>{{hero_intro}}</p>
     <button type="button" id="btn-buka-cek-lokasi" class="btn-pilih" style="display:inline-block; width:auto; padding:14px 32px; border-radius:999px; font-size:15px; border:none; cursor:pointer;">
       <i class="fas fa-map-marker-alt" style="margin-right:8px;"></i>Cek Ketersediaan di Area Saya
     </button>
@@ -1498,6 +1498,7 @@
   </div>
 </section>
 
+{{#has_fiber}}
 <!-- PAKET -->
 <section class="paket-section" id="paket">
   <div style="text-align:center; margin-bottom: 16px;">
@@ -1814,7 +1815,9 @@
     </button>
   </div>
 </section>
+{{/has_fiber}}
 
+{{#has_wireless}}
 <!-- WIRELESS SECTION (Non-FTTH) -->
 <section class="wireless-section" id="wireless">
   <div class="wireless-inner">
@@ -1921,6 +1924,7 @@ function showWirelessTab(tab) {
   document.getElementById('tab-monthly').style.color = tab === 'monthly' ? '#fff' : 'var(--green)';
 }
 </script>
+{{/has_wireless}}
 
 <!-- KENAPA PILIH KAMI -->
 <section class="area-section" style="background:#f7faf9;">
