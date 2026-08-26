@@ -184,7 +184,37 @@
     });
   }
 
-  // ---- Soft-lead DIHAPUS: hanya kirim data saat user klik "Kirim & Lanjut ke WhatsApp". ----
+  // ---- Soft-lead: lokasi dicatat ke Sheet SEBELUM form nama/WA. ----
+  var softLeadTerkirim = false;
+  function kirimSoftLead() {
+    if (softLeadTerkirim) return;
+    softLeadTerkirim = true;
+
+    var mapsLink = (currentLat != null && currentLng != null)
+      ? 'https://www.google.com/maps?q=' + currentLat + ',' + currentLng
+      : '';
+    var data = {
+      timestamp: new Date().toISOString(),
+      tipe: 'lokasi-saja',
+      nama: '',
+      whatsapp: '',
+      latitude: currentLat,
+      longitude: currentLng,
+      alamat: currentAlamatText || '',
+      kotaTerdeteksi: currentKota || '',
+      mapsLink: mapsLink,
+      halaman: window.location.pathname,
+      referrer: document.referrer || ''
+    };
+    if (GOOGLE_SHEET_WEBHOOK_URL && GOOGLE_SHEET_WEBHOOK_URL.indexOf('GANTI_DENGAN') === -1) {
+      fetch(GOOGLE_SHEET_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(data)
+      }).catch(function () {});
+    }
+  }
 
   function fokusForm() {
     setTimeout(function () {
@@ -199,6 +229,7 @@
     currentAlamatText = alamatText;
     currentKota = null;
     mapDiv.style.display = 'none';
+    kirimSoftLead();
     fokusForm();
     if (typeof gtag === 'function') {
       gtag('event', 'lokasi_dikonfirmasi', { kota_terdeteksi: 'unknown', page_path: window.location.pathname });
@@ -219,6 +250,7 @@
     currentLng = lng;
     currentAlamatText = alamatText || null;
     tampilkanPeta(lat, lng);
+    kirimSoftLead();
     fokusForm();
 
     var hasil = deteksiKota(lat, lng);
