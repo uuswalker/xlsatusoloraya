@@ -33,6 +33,38 @@
       "kecamatan_count": 5
     },
     {
+      "slug": "wifi-surakarta",
+      "nama": "Surakarta",
+      "nama_lengkap": "Kota Surakarta (Solo)",
+      "nama_display": "Surakarta (Solo)",
+      "nama_h1": "Surakarta",
+      "meta_description": "Pasang WiFi di Kota Surakarta (Solo) cepat &amp; mudah. Paket XL SATU fiber optic unlimited dengan bonus STB Android TV. Mulai Rp 185.000/bulan, sales lokal via WhatsApp.",
+      "meta_keywords": "pasang wifi surakarta, internet surakarta, wifi surakarta, xl satu surakarta, fiber optic surakarta, internet rumah surakarta, internet solo, pasang wifi solo",
+      "og_title": "Pasang WiFi Surakarta | XL SATU Internet Rumah Fiber Optic Surakarta",
+      "title": "Pasang WiFi Surakarta | XL SATU Internet Rumah Fiber Optic Surakarta",
+      "area_served_json": "[\"Surakarta\", \"Solo\"]",
+      "faq1_q": "Apakah XL SATU tersedia di Kota Surakarta?",
+      "faq1_a": "Ya! Kota Surakarta adalah nama resmi Kota Solo, dan jaringan XL SATU sudah terjangkau luas di seluruh wilayahnya. Hubungi sales kami untuk cek ketersediaan di alamat spesifik Anda.",
+      "faq2_q": "Apakah pemasangan WiFi di Surakarta sama dengan di Solo?",
+      "faq2_a": "Sama, karena Surakarta dan Solo adalah satu kota yang sama. Proses instalasi memakan waktu 3-7 hari kerja setelah survei lokasi, dengan penanganan langsung oleh sales lokal yang paham wilayah Solo Raya.",
+      "faq3_q": "Apakah ada paket WiFi Surakarta untuk kos atau kontrakan?",
+      "h1_kota": "Surakarta",
+      "intro_strong": "Kota Surakarta (Solo)",
+      "promo_badge": "Promo XL Satu Surakarta",
+      "wireless_badge": "Khusus Area Surakarta",
+      "wa_float_text": "Info XL SATU Surakarta",
+      "wa_widget_text": "Halo kak, saya mau info XL SATU di Surakarta",
+      "og_description": "Pasang WiFi di Kota Surakarta (Solo) cepat &amp; mudah. Paket XL SATU fiber optic unlimited dengan bonus STB Android TV. Mulai Rp 185.000/bulan, sales lokal via WhatsApp.",
+      "kecamatan_list": [
+        "Jebres",
+        "Banjarsari",
+        "Laweyan",
+        "Serengan",
+        "Pasar Kliwon"
+      ],
+      "kecamatan_count": 5
+    },
+    {
       "slug": "wifi-sukoharjo",
       "nama": "Sukoharjo",
       "nama_lengkap": "Sukoharjo",

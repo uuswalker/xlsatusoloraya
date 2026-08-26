@@ -10,6 +10,7 @@ Static landing page untuk layanan XL SATU (fiber optic & wireless internet) area
 /
 ├── index.html                                  # Halaman utama
 ├── wifi-solo/index.html                        # Landing page kota Solo
+├── wifi-surakarta/index.html                   # Landing page Surakarta (alias kata kunci Kota Solo)
 ├── wifi-sukoharjo/index.html                   # Landing page kota Sukoharjo
 ├── wifi-karanganyar/index.html                 # Landing page kota Karanganyar
 ├── wifi-klaten/index.html                      # Landing page kota Klaten
