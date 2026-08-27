@@ -4,7 +4,7 @@
    Dipasang dengan: <script src="/cek-lokasi.js" defer></script>
    ============================================================ */
 (function () {
-  var CSS = "\r\n  .cl-modal-overlay {\r\n    position: fixed; inset: 0; background: rgba(0,0,0,0.55);\r\n    z-index: 9999; display: flex; align-items: center; justify-content: center;\r\n    padding: 16px;\r\n  }\r\n  .cl-modal-box {\r\n    background: #fff; border-radius: 16px; max-width: 480px; width: 100%;\r\n    max-height: 90vh; overflow-y: auto; padding: 28px 24px; position: relative;\r\n    box-shadow: 0 20px 60px rgba(0,0,0,0.3);\r\n  }\r\n  .cl-modal-close {\r\n    position: absolute; top: 14px; right: 16px; background: none; border: none;\r\n    font-size: 28px; line-height: 1; color: #999; cursor: pointer; padding: 4px;\r\n  }\r\n  .cl-modal-close:hover { color: #333; }\r\n  .cl-title { font-size: 19px; font-weight: 700; margin: 0 0 8px 0; color: #1a1a1a; display:flex; align-items:center; gap:8px; }\r\n  .cl-title i { color: #037e64; }\r\n  .cl-sub { font-size: 14px; color: #666; margin: 0 0 20px 0; line-height: 1.5; }\r\n  .cl-btn-primary {\r\n    width: 100%; background: linear-gradient(135deg, #0d7a5f 0%, #037e64 100%);\r\n    color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 15px;\r\n    font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center;\r\n    gap: 8px; transition: opacity 0.2s;\r\n  }\r\n  .cl-btn-primary:hover { opacity: 0.9; }\r\n  .cl-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }\r\n  .cl-btn-secondary {\r\n    width: 100%; background: #f0f9f7; color: #037e64; border: 1.5px solid #037e64;\r\n    padding: 12px; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer;\r\n    display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px;\r\n  }\r\n  .cl-btn-text {\r\n    width: 100%; background: none; border: none; color: #888; font-size: 13px;\r\n    text-decoration: underline; cursor: pointer; margin-top: 10px; padding: 6px;\r\n  }\r\n  .cl-divider { text-align: center; margin: 18px 0; position: relative; color: #aaa; font-size: 13px; }\r\n  .cl-divider::before, .cl-divider::after {\r\n    content: ''; position: absolute; top: 50%; width: 40%; height: 1px; background: #e5e5e5;\r\n  }\r\n  .cl-divider::before { left: 0; }\r\n  .cl-divider::after { right: 0; }\r\n  .cl-label { display: block; font-size: 13px; font-weight: 600; color: #444; margin: 14px 0 6px 0; }\r\n  .cl-input {\r\n    width: 100%; padding: 12px 14px; border: 1.5px solid #e0e0e0; border-radius: 10px;\r\n    font-size: 14px; box-sizing: border-box;\r\n  }\r\n  .cl-input:focus { outline: none; border-color: #037e64; }\r\n  .cl-autocomplete-wrap { position: relative; }\r\n  .cl-suggestions {\r\n    position: absolute; top: calc(100% + 4px); left: 0; right: 0;\r\n    background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px;\r\n    max-height: 220px; overflow-y: auto; z-index: 10;\r\n    box-shadow: 0 8px 24px rgba(0,0,0,0.12);\r\n  }\r\n  .cl-suggestion-item {\r\n    padding: 11px 14px; font-size: 13.5px; color: #333; cursor: pointer;\r\n    border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 8px;\r\n  }\r\n  .cl-suggestion-item:last-child { border-bottom: none; }\r\n  .cl-suggestion-item:hover, .cl-suggestion-item.active { background: #f0f9f7; }\r\n  .cl-suggestion-item i { color: #037e64; margin-top: 2px; flex-shrink: 0; }\r\n  .cl-suggestion-empty { padding: 12px 14px; font-size: 13px; color: #999; text-align: center; }\r\n  #cl-map {\r\n    width: 100%; height: 220px; border-radius: 12px; margin-top: 16px; overflow: hidden;\r\n    border: 1.5px solid #e0e0e0;\r\n  }\r\n  .cl-status {\r\n    font-size: 13px; color: #666; margin-top: 12px; text-align: center; min-height: 18px;\r\n  }\r\n  .cl-status.error { color: #d33; }\r\n  .cl-status.success { color: #037e64; font-weight: 600; }\r\n";
+  var CSS = "\r\n  .cl-modal-overlay {\r\n    position: fixed; inset: 0; background: rgba(0,0,0,0.55);\r\n    z-index: 9999; display: flex; align-items: center; justify-content: center;\r\n    padding: 16px;\r\n  }\r\n  .cl-modal-box {\r\n    background: #fff; border-radius: 16px; max-width: 480px; width: 100%;\r\n    max-height: 90vh; overflow-y: auto; padding: 28px 24px; position: relative;\r\n    box-shadow: 0 20px 60px rgba(0,0,0,0.3);\r\n  }\r\n  .cl-modal-close {\r\n    position: absolute; top: 14px; right: 16px; background: none; border: none;\r\n    font-size: 28px; line-height: 1; color: #999; cursor: pointer; padding: 4px;\r\n  }\r\n  .cl-modal-close:hover { color: #333; }\r\n  .cl-title { font-size: 19px; font-weight: 700; margin: 0 0 8px 0; color: #1a1a1a; display:flex; align-items:center; gap:8px; }\r\n  .cl-title i { color: #037e64; }\r\n  .cl-sub { font-size: 14px; color: #666; margin: 0 0 20px 0; line-height: 1.5; }\r\n  .cl-btn-primary {\r\n    width: 100%; background: linear-gradient(135deg, #0d7a5f 0%, #037e64 100%);\r\n    color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 15px;\r\n    font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center;\r\n    gap: 8px; transition: opacity 0.2s;\r\n  }\r\n  .cl-btn-primary:hover { opacity: 0.9; }\r\n  .cl-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }\r\n  .cl-btn-secondary {\r\n    width: 100%; background: #f0f9f7; color: #037e64; border: 1.5px solid #037e64;\r\n    padding: 12px; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer;\r\n    display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px;\r\n  }\r\n  .cl-btn-text {\r\n    width: 100%; background: none; border: none; color: #888; font-size: 13px;\r\n    text-decoration: underline; cursor: pointer; margin-top: 10px; padding: 6px;\r\n  }\r\n  .cl-geo-fallback { background: #fff8f0; border: 1px solid #fed7aa; border-radius: 12px; padding: 16px; margin-top: 14px; }\r\n  .cl-geo-fallback .cl-label { margin-top: 10px; }\r\n  .cl-geo-fallback .cl-input { border-color: #fdba74; }\r\n  .cl-divider { text-align: center; margin: 18px 0; position: relative; color: #aaa; font-size: 13px; }\r\n  .cl-divider::before, .cl-divider::after {\r\n    content: ''; position: absolute; top: 50%; width: 40%; height: 1px; background: #e5e5e5;\r\n  }\r\n  .cl-divider::before { left: 0; }\r\n  .cl-divider::after { right: 0; }\r\n  .cl-label { display: block; font-size: 13px; font-weight: 600; color: #444; margin: 14px 0 6px 0; }\r\n  .cl-input {\r\n    width: 100%; padding: 12px 14px; border: 1.5px solid #e0e0e0; border-radius: 10px;\r\n    font-size: 14px; box-sizing: border-box;\r\n  }\r\n  .cl-input:focus { outline: none; border-color: #037e64; }\r\n  .cl-autocomplete-wrap { position: relative; }\r\n  .cl-suggestions {\r\n    position: absolute; top: calc(100% + 4px); left: 0; right: 0;\r\n    background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px;\r\n    max-height: 220px; overflow-y: auto; z-index: 10;\r\n    box-shadow: 0 8px 24px rgba(0,0,0,0.12);\r\n  }\r\n  .cl-suggestion-item {\r\n    padding: 11px 14px; font-size: 13.5px; color: #333; cursor: pointer;\r\n    border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 8px;\r\n  }\r\n  .cl-suggestion-item:last-child { border-bottom: none; }\r\n  .cl-suggestion-item:hover, .cl-suggestion-item.active { background: #f0f9f7; }\r\n  .cl-suggestion-item i { color: #037e64; margin-top: 2px; flex-shrink: 0; }\r\n  .cl-suggestion-empty { padding: 12px 14px; font-size: 13px; color: #999; text-align: center; }\r\n  #cl-map {\r\n    width: 100%; height: 220px; border-radius: 12px; margin-top: 16px; overflow: hidden;\r\n    border: 1.5px solid #e0e0e0;\r\n  }\r\n  .cl-status {\r\n    font-size: 13px; color: #666; margin-top: 12px; text-align: center; min-height: 18px;\r\n  }\r\n  .cl-status.error { color: #d33; }\r\n  .cl-status.success { color: #037e64; font-weight: 600; }\r\n";
 
   var HTML = "<div id=\"modal-cek-lokasi\" class=\"cl-modal-overlay\" style=\"display:none;\">\r\n  <div class=\"cl-modal-box\">\r\n    <button type=\"button\" id=\"btn-tutup-cek-lokasi\" class=\"cl-modal-close\" aria-label=\"Tutup\">&times;</button>\r\n\r\n    <div id=\"cl-step-lokasi\">\r\n      <h3 class=\"cl-title\"><i class=\"fas fa-map-marker-alt\"></i> Cek Ketersediaan di Lokasimu</h3>\r\n      <p class=\"cl-sub\">Bagikan lokasimu supaya sales kami bisa cek jangkauan XL SATU lebih cepat dan akurat.</p>\r\n\r\n      <button type=\"button\" id=\"btn-gunakan-lokasi\" class=\"cl-btn-primary\">\r\n        <i class=\"fas fa-location-crosshairs\"></i> Gunakan Lokasi Saya Sekarang\r\n      </button>\r\n\r\n      <div class=\"cl-divider\"><span>atau</span></div>\r\n\r\n      <label for=\"cl-alamat-manual\" class=\"cl-label\">Masukkan alamat manual</label>\r\n      <div class=\"cl-autocomplete-wrap\">\r\n        <input type=\"text\" id=\"cl-alamat-manual\" class=\"cl-input\" placeholder=\"Contoh: Jl. Slamet Riyadi, Solo\" autocomplete=\"off\">\r\n        <div id=\"cl-suggestions\" class=\"cl-suggestions\" style=\"display:none;\"></div>\r\n      </div>\r\n      <button type=\"button\" id=\"btn-cari-alamat\" class=\"cl-btn-secondary\">\r\n        <i class=\"fas fa-search\"></i> Cari Alamat\r\n      </button>\r\n\r\n      <div id=\"cl-map\" style=\"display:none;\"></div>\r\n      <p id=\"cl-status-lokasi\" class=\"cl-status\"></p>\r\n    </div>\r\n\r\n    <div id=\"cl-step-form\" style=\"display:none;\">\r\n      <h3 class=\"cl-title\"><i class=\"fas fa-check-circle\" style=\"color:#037e64;\"></i> Lokasi Ditemukan!</h3>\r\n      <p class=\"cl-sub\" id=\"cl-lokasi-info\"></p>\r\n\r\n      <label for=\"cl-nama\" class=\"cl-label\">Nama Lengkap</label>\r\n      <input type=\"text\" id=\"cl-nama\" class=\"cl-input\" placeholder=\"Nama kamu\" required>\r\n\r\n      <label for=\"cl-wa\" class=\"cl-label\">Nomor WhatsApp</label>\r\n      <input type=\"tel\" id=\"cl-wa\" class=\"cl-input\" placeholder=\"08xxxxxxxxxx\" required>\r\n\r\n      <button type=\"button\" id=\"btn-kirim-cek-lokasi\" class=\"cl-btn-primary\">\r\n        <i class=\"fab fa-whatsapp\"></i> Kirim & Lanjut ke WhatsApp\r\n      </button>\r\n      <button type=\"button\" id=\"btn-ganti-lokasi\" class=\"cl-btn-text\">Ganti Lokasi</button>\r\n    </div>\r\n  </div>\r\n</div>\n";
 
@@ -351,8 +351,7 @@
       if (!bestPos) {
         bersihkanWatch();
         btnGunakanLokasi.disabled = false;
-        statusEl.className = 'cl-status error';
-        statusEl.textContent = 'Gagal mengambil lokasi. Coba gunakan input alamat manual di bawah.';
+        tampilkanFallbackGeo();
       }
     }, { enableHighAccuracy: true, timeout: MAX_TUNGGU_DETIK * 1000, maximumAge: 0 });
 
@@ -362,11 +361,48 @@
       if (bestPos) {
         prosesLokasi(bestPos.coords.latitude, bestPos.coords.longitude, null);
       } else {
-        statusEl.className = 'cl-status error';
-        statusEl.textContent = 'Gagal mengambil lokasi. Coba gunakan input alamat manual di bawah.';
+        tampilkanFallbackGeo();
       }
     }, MAX_TUNGGU_DETIK * 1000);
   });
+
+  // ---- Fallback inline: geolocation gagal -> minta alamat manual di dalam step lokasi ----
+  var fallbackGeoKontainer = null;
+  function tampilkanFallbackGeo() {
+    // hapus container lama jika ada
+    if (fallbackGeoKontainer && fallbackGeoKontainer.parentNode) {
+      fallbackGeoKontainer.parentNode.removeChild(fallbackGeoKontainer);
+    }
+    statusEl.className = 'cl-status error';
+    statusEl.textContent = 'Aktifkan izin lokasi di browser lalu coba lagi, atau isi alamat di bawah.';
+
+    fallbackGeoKontainer = document.createElement('div');
+    fallbackGeoKontainer.className = 'cl-geo-fallback';
+    fallbackGeoKontainer.innerHTML =
+      '<div style="font-size:14px; font-weight:700; color:#9a3412; display:flex; align-items:center; gap:8px;">' +
+        '<i class="fas fa-map-pin"></i> Opsional: Isi Alamat Manual</div>' +
+      '<label for="cl-fallback-alamat" class="cl-label">Nama area / jalan / landmark</label>' +
+      '<input type="text" id="cl-fallback-alamat" class="cl-input" placeholder="Contoh: Jl. Slamet Riyadi, Solo">' +
+      '<button type="button" id="btn-fallback-lanjut" class="cl-btn-secondary">' +
+        '<i class="fas fa-arrow-right"></i> Lanjutkan dengan Alamat Ini</button>';
+    stepLokasi.appendChild(fallbackGeoKontainer);
+
+    document.getElementById('btn-fallback-lanjut').addEventListener('click', function () {
+      var alamat = document.getElementById('cl-fallback-alamat').value.trim();
+      if (alamat) {
+        cariAlamatNominatim(alamat, 1).then(function (res) {
+          if (res && res.length > 0) {
+            prosesLokasi(parseFloat(res[0].lat), parseFloat(res[0].lon), res[0].display_name);
+          } else {
+            prosesLokasiTanpaKoordinat(alamat);
+          }
+        }).catch(function () { prosesLokasiTanpaKoordinat(alamat); });
+      } else {
+        statusEl.className = 'cl-status error';
+        statusEl.textContent = 'Isi alamat manual dulu (contoh: Jl. Slamet Riyadi, Solo) atau coba aktifkan izin lokasi.';
+      }
+    });
+  }
 
   btnCariAlamat.addEventListener('click', function () {
     var alamat = inputAlamat.value.trim();
@@ -434,16 +470,24 @@
 
   btnKirim.addEventListener('click', function () {
     var nama = document.getElementById('cl-nama').value.trim();
-    var wa = document.getElementById('cl-wa').value.trim().replace(/\D/g, '');
+    var wa = document.getElementById('cl-wa').value.trim().replace(/[^\d+]/g, '');
 
-    // normalisasi nomor: 08xx / 8xx -> 628xx
+    // normalisasi nomor: 08xx / 8xx / +628xx -> 628xx
+    if (wa.indexOf('+') === 0) wa = wa.slice(1);
     if (wa.indexOf('0') === 0) wa = '62' + wa.slice(1);
     else if (wa.indexOf('8') === 0) wa = '62' + wa;
 
-    if (!nama || wa.length < 9) {
-      tampilkanErrorForm(nama
-        ? 'Nomor WhatsApp sepertinya belum benar. Contoh: 0812xxxxxxx.'
-        : 'Mohon lengkapi nama dan nomor WhatsApp.');
+    // Validasi: nama DAN no WA wajib, no WA harus nomor valid Indonesia (10-13 digit setelah 62)
+    if (!nama || nama.length < 2) {
+      tampilkanErrorForm('Mohon isi nama lengkap dulu.');
+      return;
+    }
+    if (!wa) {
+      tampilkanErrorForm('Nomor WhatsApp wajib diisi agar sales bisa menghubungi kamu. Contoh: 0812xxxxxxx.');
+      return;
+    }
+    if (wa.length < 11 || wa.length > 14) {
+      tampilkanErrorForm('Nomor WhatsApp sepertinya belum benar. Contoh: 081234567890 (8-13 digit).');
       return;
     }
     document.getElementById('cl-wa').value = wa;
