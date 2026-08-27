@@ -39,6 +39,10 @@ function renderAreaCards(activeSlug, cities) {
 
 let generated = 0;
 for (const city of cities) {
+  if (city.skip_generate) {
+    console.log(`⏭ ${city.slug}/ — dilewati (skip_generate)`);
+    continue;
+  }
   let html = template;
 
   // Conditional blocks: {{#has_fiber}}...{{/has_fiber}} / {{#has_wireless}}...{{/has_wireless}}

@@ -2,6 +2,7 @@
   "cities": [
     {
       "slug": "wifi-solo",
+      "skip_generate": true,
       "nama": "Solo",
       "nama_lengkap": "Kota Solo (Surakarta)",
       "nama_display": "Solo (Surakarta)",
@@ -33,6 +34,7 @@
       "kecamatan_count": 5,
       "has_fiber": true,
       "has_wireless": true,
+      "paket_count": "9",
       "hero_intro": "XL SATU hadir untuk keluarga di <strong>Kota Solo (Surakarta)</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
@@ -68,6 +70,7 @@
       "kecamatan_count": 5,
       "has_fiber": true,
       "has_wireless": true,
+      "paket_count": "9",
       "hero_intro": "XL SATU hadir untuk keluarga di <strong>Kota Surakarta (Solo)</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
@@ -110,6 +113,7 @@
       "kecamatan_count": 12,
       "has_fiber": true,
       "has_wireless": true,
+      "paket_count": "9",
       "hero_intro": "XL SATU hadir untuk keluarga di <strong>Sukoharjo</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
@@ -157,6 +161,7 @@
       "kecamatan_count": 17,
       "has_fiber": true,
       "has_wireless": true,
+      "paket_count": "9",
       "hero_intro": "XL SATU hadir untuk keluarga di <strong>Karanganyar</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
@@ -213,6 +218,7 @@
       "kecamatan_count": 26,
       "has_fiber": false,
       "has_wireless": true,
+      "paket_count": "3",
       "hero_intro": "XL SATU hadir untuk keluarga di <strong>Klaten</strong>. Internet wireless unlimited mulai Rp 650.000/bulan — tanpa batas kuota, tanpa gangguan."
     },
     {
@@ -262,6 +268,7 @@
       "kecamatan_count": 19,
       "has_fiber": true,
       "has_wireless": true,
+      "paket_count": "9",
       "hero_intro": "XL SATU hadir untuk keluarga di <strong>Boyolali</strong>. Internet fiber optic unlimited mulai Rp 185.000/bulan — tanpa batas kuota, tanpa gangguan."
     }
   ]
