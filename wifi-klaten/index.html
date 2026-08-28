@@ -905,11 +905,16 @@
       gap: 16px;
     }
     .footer-logo {
-      height: 28px;
-      width: auto;
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
       flex: 0 0 auto;
       filter: brightness(0) invert(1);
-      opacity: .7;
+      opacity: .85;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 8px;
+      padding: 4px;
     }
     .footer-left {
       display: flex;
@@ -1918,7 +1923,7 @@ function showWirelessTab(tab) {
 <footer>
   <div class="footer-inner">
     <div class="footer-left">
-      <img src="/images/logo-xl-satu.png" alt="XL SATU" class="footer-logo" width="35" height="28" loading="lazy">
+      <img src="/images/logo-xl-satu.png" alt="XL SATU" class="footer-logo" loading="lazy">
       <div class="footer-copy">Copyright © 2026 XL SATU. All rights reserved.</div>
     </div>
     <div class="footer-links">
