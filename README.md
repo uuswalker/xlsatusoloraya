@@ -22,6 +22,7 @@ Static landing page untuk layanan XL SATU (fiber optic & wireless internet) area
 ├── panduan-wifi-kos-solo/                      # Artikel panduan
 ├── penyebab-wifi-lemot-cara-mengatasi/         # Artikel panduan
 ├── kecepatan-wifi-ideal-keluarga/              # Artikel panduan
+├── berapa-mbps-untuk-berapa-orang/             # Artikel: panduan Mbps per jumlah orang
 ├── wifi-tanpa-fup-unlimited/                   # Artikel panduan
 ├── 5-hal-wajib-dicek-sebelum-pasang-wifi-rumah/ # Artikel: checklist sebelum pasang wifi
 ├── solusi-internet-daerah-belum-ada-fiber-optik/ # Artikel: FWA untuk area belum ada fiber
