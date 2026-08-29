@@ -45,6 +45,7 @@
 (function () {
   // ====== KONFIGURASI ======
   var GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwI8F89uYp98dJPWKZbPwJWIdhEGg1cXd-u5N46QxROnpBfXhaUJlNYIYRtGzE2JNjN/exec";
+  var TOKEN = "xlsr_2026_s0lor4y4";
   var NOMOR_WA_SALES = "6287778999141";
 
   var KOTA_SOLORAYA = [
@@ -196,6 +197,7 @@
     var data = {
       timestamp: new Date().toISOString(),
       tipe: 'lokasi-saja',
+      token: TOKEN,
       nama: '',
       whatsapp: '',
       latitude: currentLat,
@@ -501,6 +503,7 @@
     var dataKirim = {
       timestamp: new Date().toISOString(),
       tipe: 'lengkap',
+      token: TOKEN,
       nama: nama,
       whatsapp: wa,
       latitude: currentLat,

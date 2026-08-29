@@ -1,7 +1,7 @@
 # HANDOFF — Konteks untuk AI Agent (xlsatusolo.com)
 
 > **Untuk agent:** baca file ini di awal sesi agar langsung paham tanpa penjelasan ulang dari pemilik.
-> Update file ini di setiap milestone besar (bukan tiap commit kecil). Terakhir diupdate: 26 Agustus 2026.
+> Update file ini di setiap milestone besar (bukan tiap commit kecil). Terakhir diupdate: 29 Agustus 2026.
 
 ## Bisnis & Tujuan Situs
 
@@ -15,7 +15,7 @@
 - **Auth**: user memberikan GitHub PAT dan di-set ke remote URL (`.git/config`) — workflow disepakati eksplisit, jangan ceramah soal token.
 - **Disiplin commit**: jangan commit/push tanpa diminta. User biasanya bilang "push".
 - **Templating halaman kota**: edit `tools/template-kota.html` (perubahan sama semua kota) atau `tools/data-kota.json` (per kota) → `node tools/generate.js` → **copy `tools/output/wifi-*` ke folder kota di root** → baru commit. Verifikasi sync dengan membandingkan hash. **Conditional blocks**: `{{#has_fiber}}...{{/has_fiber}}` dan `{{#has_wireless}}...{{/has_wireless}}` didukung — gunakan untuk sembunyikan section fiber/wireless di kota tertentu (contoh: Klaten = wireless only, `has_fiber: false`).
-- **`cek-lokasi.js`** = widget funnel bersama (modal GPS/alamat manual, soft-lead ke Google Sheet webhook, deteksi kota IP via ipwho.is, strip ajakan lokasi, normalisasi nomor WA, event GA4). SEMUA perubahan funnel cukup edit file ini — jangan duplikat ke HTML.
+- **`cek-lokasi.js`** = widget funnel bersama (modal GPS/alamat manual, soft-lead ke Google Sheet webhook, deteksi kota IP via ipwho.is, strip ajakan lokasi, normalisasi nomor WA, event GA4). SEMUA perubahan funnel cukup edit file ini — jangan duplikat ke HTML. **v4 (29 Agu 2026)**: kirim field `token` di payload (cocok dengan `SECRET_TOKEN` di `tools/Code.gs`) untuk memblokir bot acak. Jika ganti token, ganti di KEDUA file sekaligus.
 - **`site-consent.js`** = banner cookie + Google Consent Mode v2 (default `analytics_storage: denied`, di-set sebelum gtag config di `<head>` tiap halaman). Konsekuensi: angka GA4 sedikit lebih rendah — by design, UU PDP compliance.
 - **Gotcha teknis**: PowerShell sering merusak inline `node -e` dengan regex/quote → **tulis script ke file `.js` dulu lalu jalankan**. File HTML di working tree pakai CRLF, output generator LF — git menormalisasi, bukan error.
 - **Vercel kadang tidak trigger build** pada push tertentu (pernah terjadi): gejala = halaman baru 404 tapi halaman lama 200. Cek dashboard Deployments; fix = empty commit (`git commit --allow-empty`) + push.
@@ -44,6 +44,7 @@
 - **9 September 2026**: user kirim export GSC (Queries + Pages, 28 hari) → evaluasi CTR FUP/cara-daftar, kanibalisme solo-vs-surakarta, performa halaman baru. Keputusan lanjutan ada di percakapan roadmap.
 - Funnel GA4: `open_cek_lokasi` → `lokasi_dikonfirmasi` → `submit_cek_lokasi`; plus `ip_kota_terdeteksi`, `lokasi_strip_muncul/tutup`.
 - Soft-lead masuk Google Sheet dengan kolom `tipe` ('lengkap'/'lokasi-saja') & `referrer` — pastikan sheet punya kolom itu.
+- **Apps Script webhook v4 (29 Agu 2026)**: `tools/Code.gs` `doPost` kini (a) menolak payload tanpa `token` yang cocok dengan `SECRET_TOKEN`, dan (b) di jalur append menolak simpan data yang TIDAK punya salah satu dari: nomor WA valid (>=9 digit setelah normalisasi), koordinat lat+lng keduanya angka, ATAU alamat >=5 karakter (return `ok:dropped-empty`). Tujuannya: kurangi data kosong/spam tanpa mematikan soft-lead. **Setelah edit `Code.gs`, WAJIB re-deploy ulang di Apps Script** (Deploy → Manage deployments → Edit → Version) agar perubahan aktif. Jika deploy dalam mode "Anybody", token adalah perlindungan utama terhadap spam — jangan dihapus.
 
 ## Tugas Tertunda / Di Rak
 

@@ -14,9 +14,18 @@
 
 var SHEET_NAME = 'Lead'; // sesuaikan dengan nama sheet kamu
 
+// Token sederhana untuk memblokir bot acak yang menembak endpoint tanpa lewat situs.
+// Cocokkan dengan konstanta TOKEN di cek-lokasi.js. Bukan kriptografi sempurna
+// (bisa terlihat dari source static site), tapi cukup menolak spam /curl/ acak.
+var SECRET_TOKEN = 'xlsr_2026_s0lor4y4';
+
 function doPost(e) {
   try {
     var json = JSON.parse(e.postData.contents);
+    if (!json.token || json.token !== SECRET_TOKEN) {
+      return ContentService.createTextOutput('error:forbidden')
+        .setMimeType(ContentService.MimeType.TEXT);
+    }
     var ss = SpreadsheetApp.getActiveSpreadsheet();
     var sheet = ss.getSheetByName(SHEET_NAME);
     if (!sheet) sheet = ss.getActiveSheet();
@@ -148,6 +157,19 @@ function doPost(e) {
     }
 
     // ---- 3) Baris baru (append) ----
+    // Validasi minimal: jangan simpan data kosong/spam. Simpan hanya jika ada
+    // minimal satu dari: nomor WA valid (>=9 digit setelah normalisasi),
+    // koordinat valid (lat & lng keduanya angka), ATAU alamat dengan teks wajar (>=5 char).
+    var waLen = String(wa || '').length;
+    var latNum = Number(json.latitude), lngNum = Number(json.longitude);
+    var latOk = !isNaN(latNum) && String(json.latitude || '').trim() !== '';
+    var lngOk = !isNaN(lngNum) && String(json.longitude || '').trim() !== '';
+    var alamatLen = String(json.alamat || '').trim().length;
+    if (!(waLen >= 9 || (latOk && lngOk) || alamatLen >= 5)) {
+      return ContentService.createTextOutput('ok:dropped-empty')
+        .setMimeType(ContentService.MimeType.TEXT);
+    }
+
     var newRow = [
       now, tipe, json.nama || '', wa || '',
       (json.latitude != null ? json.latitude : ''),
