@@ -44,7 +44,7 @@
 
 (function () {
   // ====== KONFIGURASI ======
-  var GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwI8F89uYp98dJPWKZbPwJWIdhEGg1cXd-u5N46QxROnpBfXhaUJlNYIYRtGzE2JNjN/exec";
+  var GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzKgSJ1EWEM20mlu4GTa7_wod8nm4fmSGTSjOLgJ6fzrklvSvnvBhsUatoWfIawWNzo/exec";
   var TOKEN = "xlsr_2026_s0lor4y4";
   var NOMOR_WA_SALES = "6287778999141";
 
