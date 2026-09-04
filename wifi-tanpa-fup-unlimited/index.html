@@ -325,5 +325,10 @@
   // Google Ads - WA click conversion (AW-938834270/uoD7CPXb27ADEN7y1b8D)
   document.addEventListener('click', function(e){ var l=e.target.closest('a[href*="wa.me"]'); if(!l) return; if(typeof gtag==='function') gtag('event','conversion',{'send_to':'AW-938834270/uoD7CPXb27ADEN7y1b8D'}); }, true);
 </script>
+<script>
+// Anti-copy ringan: cegah drag & save gambar, teks tetap bisa dicopy
+ document.addEventListener('contextmenu', function(e){ if(e.target.tagName==='IMG') e.preventDefault(); }, false);
+ document.addEventListener('dragstart', function(e){ if(e.target.tagName==='IMG') e.preventDefault(); }, false);
+</script>
 </body>
 </html>

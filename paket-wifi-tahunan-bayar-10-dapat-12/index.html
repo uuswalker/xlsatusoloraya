@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -242,5 +242,10 @@ document.addEventListener('click', function(e){ var l=e.target.closest('a[href*=
     }, true);
   </script>
   <script src="/site-consent.js" defer></script>
+<script>
+// Anti-copy ringan: cegah drag & save gambar, teks tetap bisa dicopy
+ document.addEventListener('contextmenu', function(e){ if(e.target.tagName==='IMG') e.preventDefault(); }, false);
+ document.addEventListener('dragstart', function(e){ if(e.target.tagName==='IMG') e.preventDefault(); }, false);
+</script>
 </body>
 </html>
